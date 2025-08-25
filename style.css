@@ -1,4 +1,10 @@
 @charset "utf-8";
+div {
+  width: 1220px;
+}
 img {
-  width: 300px;
+  vertical-align: middle;
+}
+html {
+  scroll-behavior: smooth;
 }
