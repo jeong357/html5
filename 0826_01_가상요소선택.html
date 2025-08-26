@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상요소선택</title>
+    <style>
+      span:first-child {
+        color: rgb(255, 0, 0);
+      }
+      span::before {
+        content: "이전";
+      }
+      .after {
+        content: "이후";
+      }
+      p.txt::selection {
+        color: red;
+      }
+      /* p#tit {
+        color: green;
+      } */
+      p.txt {
+        color: magenta;
+      }
+      p {
+        color: blue !important;
+      }
+    </style>
+  </head>
+  <body>
+    <span>인라인태그</span>
+    <span id="two">인라인태그</span>
+    <span class="txt">인라인태그</span>
+    <span>인라인태그</span>
+    <span>인라인태그</span>
+    <p class="txt" id="tit" style="color: #ccc">블록태그</p>
+  </body>
+</html>
