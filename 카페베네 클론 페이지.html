@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position</title>
+    <style>
+      ul{
+        text-align: center;
+        list-style: none;
+      }
+      ul li.list{
+        position: relative;
+        display: inline-block;
+        width: 130px;
+        top: 55px;
+        left: 50px;
+      }
+      ul li.list2{
+        position: relative;
+        display: inline-block;
+        width: 130px;
+        top: 55px;
+        left: 70px;
+      }
+      ul li.complex{
+        position: relative;
+        display: inline-block;
+        width: 130px;
+        top: 55px;
+        left: 125px;
+      }
+      p.banner{
+        position: absolute;
+        top: 125px;
+      }
+      img {
+        width: 100%;
+      }
+      p.logo{
+        position: absolute;
+        width: 132px;
+        left: 350px;
+        top: 20px;
+      }
+      p.insta{
+        position: absolute;
+        width: 35px;
+        right: 250px;
+        top: 200px;
+      }
+      p.blog{
+        position: absolute;
+        width: 35px;
+        right: 250px;
+        top: 250px;
+      }
+      ul li.complex{
+        background-color: #00A5B1;
+        width: 133px;
+        border-radius: 40px;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p class="logo"><img src="http://www.caffebene.co.kr/images/common/logo.png" alt="logo img"></p>
+      <ul>
+        <li class="list">CAFFEBENE</li>
+        <li class="list">MENU</li>
+        <li class="list">STORE</li>
+        <li class="list2">MEMBERSHIP</li>
+        <li class="list2">GLOBAL</li>
+        <li class="list2">CONTENTS</li>
+        <li class="complex">가맹문의</li>
+      </ul>
+      <p class="banner"><img src="http://www.caffebene.co.kr/uploads/banner/20241222735743.jpg" alt="main banner"></p>
+      <ul>
+        <p class="insta"><img src="./images/insta logo.png" alt="insta"></p>
+        <p class="blog"><img src="./images/blog logo.png" alt="blog"></p>
+      </ul>
+    </div>
+</html>
