@@ -13,7 +13,11 @@
       .con img {
         width: 490px;
       }
-      p:last-child {
+      .con > div {
+        position: relative;
+        top: 100px;
+      }
+      .con > p {
         position: absolute;
         right: 0;
         top: 0;
@@ -22,11 +26,14 @@
   </head>
   <body>
     <div class="con">
-      <h1>이미지+텍스트 배너</h1>
-      <p>
-        간단한 이미지 2장과 텍스트 만으로 전체 사이즈 베리에이션이 가능합니다<br />
-        텍스트 위주 소구 캠페인에 적합한 배너 솔루션입니다.
-      </p>
+      <div>
+        <h1>이미지+텍스트 배너</h1>
+        <p>
+          간단한 이미지 2장과 텍스트 만으로 전체 사이즈 베리에이션이
+          가능합니다<br />
+          텍스트 위주 소구 캠페인에 적합한 배너 솔루션입니다.
+        </p>
+      </div>
       <p>
         <img
           src="https://nhnace.com/static/media/format_1.ff2590122beb317bcc34.png"
