@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position</title>
+    <style>
+      .con {
+        position: relative;
+        width: 1200px;
+        margin: 0 auto;
+        border: 1px solid;
+      }
+      .con img {
+        width: 200px;
+      }
+      p:nth-child(2) {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <p>
+        <img
+          src="https://cdn.pixabay.com/photo/2023/02/12/13/16/dog-7785066_640.jpg"
+          alt=""
+        />
+      </p>
+      <p>
+        <img
+          src="https://cdn.pixabay.com/photo/2023/02/12/13/16/dog-7785066_640.jpg"
+          alt=""
+        />
+      </p>
+    </div>
+  </body>
+</html>
