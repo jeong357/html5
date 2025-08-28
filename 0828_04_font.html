@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>font</title>
+    <link rel="stylesheet" href="./css/all.css"></link>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <style>
+      @font-face {
+        font-family: regular;
+        src: url(./webfonts/fa-regular-400.woff2);
+      }
+      p{
+        font-family: regular;
+        font-size: 150%;
+      }
+      p::before{
+        content: "\f2bd";
+      }
+    </style>
+  </head>
+  <body>
+    <i class="fa-regular fa-house"></i>
+    <p>&#xf015;</p>
+    <span class="material-symbols-outlined"> search </span>
+    <p>one 하나</p>
+    <span>인라인</span>
+  </body>
+</html>
