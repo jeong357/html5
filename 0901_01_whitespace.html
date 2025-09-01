@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p{
+      width: 500px;
+      border: 1px solid;
+    }
+    .normal{
+      white-space: normal;
+    }
+    .nowrap{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .pre{
+      white-space: pre;
+    }
+    .pre-wrap{
+      white-space: pre-wrap; 
+    }
+    .pre-line{
+      white-space: pre-line;
+    }
+    .multi{
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+  </style>
+</head>
+<body>
+  <p class="noraml">
+    L                 orem Ipsum is simply dummy 
+    text of the printing and typesetting industry.
+  </p>
+  <p class="nowrap">
+    L                 orem Ipsum is simply dummy 
+    text of the printing and typesetting industry.
+  </p>
+  <p class="pre">
+    L                 orem Ipsum is simply dummy text of the printing and typesetting industry.
+  </p>
+  <p class="pre-wrap">
+    L                 orem Ipsum is simply dummy text of the printing and typesetting industry.
+  </p>
+  <p class="pre-line">
+    L                 orem Ipsum is simply dummy text of the printing and typesetting industry.
+  </p>
+  <p class="multi">L                 orem Ipsum is simply dummy text of the printing and typesetting industry.
+  </p>L                 orem Ipsum is simply dummy text of the printing and typesetting industry.
+  </p>L                 orem Ipsum is simply dummy text of the printing and typesetting industry.
+  </p></p>
+</body>
+</html>
