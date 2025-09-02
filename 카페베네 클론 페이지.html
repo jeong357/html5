@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CAFFEBENE</title>
     <style>
+      @font-face {
+        font-family: 'Nanumgodik';
+        src: url('FileName.eot');
+        src: url('FileName.eot?#iefix') format('embedded-opentype'),
+           url('FileName.woff') format('woff'),
+      }
       *{
         margin: 0;
         padding: 0;
       }
       div{
-        position: relative;
+
         width: 100%;
       }
       h1{
-        position: absolute;
-        display: inline-block;
         width: 132px;
         height: 64px;
         background-image: url(http://www.caffebene.co.kr/images/common/logo.png);
@@ -23,21 +27,40 @@
         margin: 50px;
       }
       ul{
+        display: inline-block;
         list-style: none;
+      }
+      ul li{
+        float: left;
+        text-align: center;
+        padding: 20px;
+      }
+      ul li a{
+        text-decoration: none;
       }
     </style>
   </head>
   <body>
-    <div>
+    <div class="menu">
       <h1><a href="http://www.caffebene.co.kr/"></a></h1>
       <ul>
         <li>
-          <p>CAFFEBENE</p>
-          <p>MENU</p>
-          <p>STORP</p>
-          <p>MEMBERSHIP</p>
-          <p>GLOBAL</p>
-          <p>CONTENTS</p>
+          <a href="">CAFFEBENE</a>
+        </li>
+        <li>
+          <a href="">MENU</a>
+        </li>
+        <li>
+          <a href="">STORE</a>
+        </li>
+        <li>
+          <a href="">MEMBERSHIP</a>
+        </li>
+        <li>
+          <a href="">CAFFEBENE</a>
+        </li>
+        <li>
+          <a href="">CONTENTS</a>
         </li>
       </ul>
       <p class="banner"><img src="http://www.caffebene.co.kr/uploads/banner/20241222735743.jpg" alt="main banner"></p>

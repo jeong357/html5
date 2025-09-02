@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        height: 500px;
+        background-image: url(https://nhnace.com/static/media/scale_img.6cabdabd4e329f7e282a.png);
+        margin: 90px;
+        /* background-position: center center; */
+        background-size: 500px;
+        background-repeat: no-repeat;
+        border: 50px solid rgba(255, 0, 0, 0.5);
+        padding: 50px;
+      }
+      p:first-child {
+        background-origin: border-box;
+      }
+      p:nth-child(2) {
+        background-origin: content-box;
+      }
+      p:nth-child(3) {
+        background-origin: padding-box;
+      }
+    </style>
+  </head>
+  <body>
+    <p>백그라운드이미지</p>
+    <p>백그라운드이미지</p>
+    <p>백그라운드이미지</p>
+  </body>
+</html>
