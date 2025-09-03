@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 500px;
+        height: 500px;
+        margin: 20px;
+      }
+      p:nth-child(1) {
+        background-image: conic-gradient(red, yellow, green);
+      }
+      p:nth-child(2) {
+        background-image: conic-gradient(red 45deg, yellow 90deg, green 210deg);
+      }
+      p:nth-child(3) {
+        background-image: conic-gradient(
+          red 0deg,
+          red 90deg,
+          yellow 90deg,
+          yellow 180deg,
+          green 180deg,
+          green 270deg,
+          blue 270deg
+        );
+      }
+      p:nth-child(4) {
+        background-image: conic-gradient(from 90deg, red, yellow, green);
+      }
+      p:nth-child(5) {
+        background-image: radial-gradient(
+          farthest-corner at 10% 30%,
+          red,
+          blue
+        );
+      }
+      p:nth-child(6) {
+        background-image: repeating-conic-gradient(
+          red 0deg 10deg,
+          yellow 10deg 20deg,
+          blue 20deg 30deg
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+  </body>
+</html>
