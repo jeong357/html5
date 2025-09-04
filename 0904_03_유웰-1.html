@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
+          format("woff");
+        font-weight: 100;
+        font-display: swap;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        width: 1200px;
+        margin: 50px auto;
+        font-family: "Pretendard";
+      }
+      ul li {
+        position: relative;
+        width: 382px;
+        height: 263px;
+        padding: 0 36px 36px 36px;
+        background-size: cover;
+        box-sizing: border-box;
+      }
+
+      ul li:first-child {
+        background-image: url(https://www.uwurology.com/inc/img/sub/prost_center_point1.jpg);
+      }
+      ul li:nth-child(2) {
+        background-image: url(https://www.uwurology.com/inc/img/sub/prost_center_point2.jpg);
+      }
+      ul li:nth-child(3) {
+        background-image: url(https://www.uwurology.com/inc/img/sub/prost_center_point3.jpg);
+      }
+      ul li::before {
+        content: "";
+        width: 100%;
+        height: 150px;
+        background: linear-gradient(
+          to bottom,
+          rgba(35, 35, 35, 0) 0%,
+          rgba(35, 35, 35, 0.5) 69%,
+          rgba(35, 35, 35, 0.8) 100%
+        );
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+      ul li div {
+        position: absolute;
+        bottom: 36px;
+      }
+      ul li h4 {
+        font-size: 14px;
+      }
+      ul li h2 {
+        font-size: 22px;
+      }
+      /* background: linear-gradient(
+        to bottom,
+        rgba(35, 35, 35, 0) 0%,
+        rgba(35, 35, 35, 0.5) 69%,
+        rgba(35, 35, 35, 0.8) 100%
+      ); */
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div>
+          <h4>Point 01</h4>
+          <h2>비뇨기계 암에 대한 모든 검사 가능</h2>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h4>Point 01</h4>
+          <h2>비뇨기계 암에 대한 모든 검사 가능</h2>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h4>Point 01</h4>
+          <h2>비뇨기계 암에 대한 모든 검사 가능</h2>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>

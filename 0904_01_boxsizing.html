@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: auto;
+        height: 500px;
+        background: #ccc;
+        padding: 100px 0;
+        border: 50px solid rgba(0, 0, 0, 0.5);
+        box-sizing: border-box;
+      }
+      ul {
+        width: 1200px;
+        margin: 0 auto;
+        border: 1px solid;
+        list-style: none;
+        overflow: hidden;
+        box-shadow: 20px 20px 20px 0px rgba(0, 0, 0, 0.5), 0 0 20px 10px red,
+          inset 20px 0 10px 20px yellow;
+      }
+      ul li {
+        width: 400px;
+        height: 300px;
+        float: left;
+        box-sizing: border-box;
+      }
+      ul li:first-child {
+        background: #aaa;
+        padding: 10px;
+      }
+      ul li:nth-child(2) {
+        background: #bbb;
+      }
+      ul li:nth-child(3) {
+        background: #ccc;
+      }
+      div {
+        width: 500px;
+        height: 500px;
+        box-shadow: 0 0 20px 0 red, inset 20px 20px 20px 0 yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <div></div>
+  </body>
+</html>
