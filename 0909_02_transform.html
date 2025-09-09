@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        margin: 20px 0;
+      }
+      p:nth-child(1) {
+        /* transform: translate(100px, 50px); */
+      }
+      p:nth-child(2) {
+        transform: rotateZ(-10deg);
+      }
+      p:nth-child(3) {
+        transform: scale(2, 0.5) translate(200px);
+      }
+      p:nth-child(4) {
+        transform: skew(20deg, 30deg);
+      }
+      p:nth-child(5) {
+        transform: translate(200px) scale(2, 0.5);
+      }
+      div {
+        width: 500px;
+        height: 500px;
+        border: 1px solid;
+      }
+      div p {
+        transform: scale(2);
+        transform-origin: 0 0;
+      }
+      p:nth-child(7) {
+        transform: translate(100px) scale(2) rotate(20deg) skew(30deg);
+      }
+    </style>
+  </head>
+  <body>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+    <div>
+      <p>6</p>
+    </div>
+    <p>7</p>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        border: 1px solid;
+      }
+      p {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: red;
+        /* left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); */
+        margin: 0 auto;
+      }
+      div:nth-child(2) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p></p>
+    </div>
+    <div>
+      <span>인라인태그</span>
+    </div>
+  </body>
+</html>

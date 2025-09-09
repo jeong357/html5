@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>우리카드</title>
+    <style>
+      @import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex-container {
+        width: 1080px;
+        height: 100px;
+        margin-top: 50px;
+        margin-left: 100px;
+        font-family: Nanum Square;
+        display: flex;
+        justify-content: space-around;
+        background: #e2fdfe;
+      }
+      ul {
+        padding: 30px;
+        list-style: none;
+      }
+      ul li {
+        flex: 1;
+        border-right: 1px solid #ccc;
+      }
+      ul li:last-child {
+        border-right: none;
+      }
+      ul li a {
+        text-decoration: none;
+        color: #222222;
+      }
+      ul li p {
+        text-align: center;
+        letter-spacing: -1px;
+      }
+      ul li p:nth-child(2) {
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="flex-container">
+      <li>
+        <a href="">
+          <p>
+            <img
+              src="	https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu1.png"
+              alt=""
+            />
+          </p>
+          <p>이용대금명세서</p>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <p>
+            <img
+              src="	https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu2.png"
+              alt=""
+            />
+          </p>
+          <p>결제예상금액</p>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <p>
+            <img
+              src="	https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu3.png"
+              alt=""
+            />
+          </p>
+          <p>이용내역조회</p>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <p>
+            <img
+              src="	https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu4.png"
+              alt=""
+            />
+          </p>
+          <p>내정보변경</p>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <p>
+            <img
+              src="	https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu5.png"
+              alt=""
+            />
+          </p>
+          <p>카드분실신고</p>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <p>
+            <img
+              src="	https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu6.png"
+              alt=""
+            />
+          </p>
+          <p>카드사용등록</p>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>
