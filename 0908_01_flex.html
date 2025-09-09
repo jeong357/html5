@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex-container {
+        background: #ccc;
+        display: flex;
+        gap: 40px;
+        width: 1200px;
+        /* flex-direction: column-reverse;
+        flex-wrap: wrap; */
+        flex-flow: column-reverse wrap;
+        height: 800px;
+        align-content: flex-start;
+      }
+      .item {
+        width: 20%;
+        height: 40%;
+        border: 1px solid;
+        flex-shrink: 0;
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+  </body>
+</html>

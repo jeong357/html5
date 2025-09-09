@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOCUMENT</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex-container {
+        display: flex;
+        background-color: #ffe300;
+        border: 5px solid;
+        height: 500px;
+        align-items: flex-start;
+      }
+      .item {
+        /* width: 50px; */
+        flex-basis: 50px;
+        background-color: #26ab1c;
+        border: 5px solid;
+      }
+      .item:nth-child(1) {
+        order: 3;
+      }
+      .item:nth-child(2) {
+        align-self: center;
+        order: 1;
+      }
+      .item:nth-child(3) {
+        order: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="item">1</div>
+      <div class="item">2222222222222222</div>
+      <div class="item">3</div>
+    </div>
+  </body>
+</html>
