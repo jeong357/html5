@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "Pretendard";
+        src: url(./webfonts/PretendardVariable.woff2);
+        font-weight: 400px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div.main {
+        font-family: Pretendard;
+      }
+      h1 {
+        margin-left: 250px;
+      }
+      ul {
+        list-style: none;
+        width: 1440px;
+        height: 510px;
+        margin: 50px auto;
+        display: flex;
+        gap: 20px;
+        text-align: center;
+      }
+      ul li p {
+        flex: 1;
+        overflow: hidden;
+      }
+      ul li img {
+        height: 100%;
+        transition: 1s;
+      }
+      ul li:nth-child(1):hover img {
+        transform: scale(1.3);
+      }
+      ul li:nth-child(2):hover img {
+        transform: scale(1.3);
+      }
+      ul li:nth-child(3):hover img {
+        transform: scale(1.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>
+        친환경 혁신을 통한<br />
+        피코그램의 지속 가능한 미래
+      </h1>
+      <ul>
+        <li>
+          <p>
+            <img
+              src="http://picogram.co.kr/upload/maindata8/maindata892631_0.jpg"
+              alt=""
+            />
+          </p>
+          <div>
+            <h2>생활환경가전</h2>
+            <p>
+              원천기술 개발과 차별화된 소재 기술을 통한 혁신적인 제품으로<br />
+              생활 환경가전 전문기업이 되도록 노력하겠습니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="http://picogram.co.kr/upload/maindata8/maindata889376_0.jpg"
+              alt=""
+            />
+          </p>
+          <div>
+            <h2>첨단소재&부품</h2>
+            <p>
+              첨단소재 & 부품 등 다양한 분야의 솔루션을 제안하고,<br />
+              새로운 글로벌 친환경 시대를 이끌어가는 기업이 되고자 합니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="http://picogram.co.kr/upload/maindata8/maindata892605_0.jpg"
+              alt=""
+            />
+          </p>
+          <div>
+            <h2>바이오&헬스케어</h2>
+            <p>
+              인류의 건강을 증진시키고 풍요로운 삶을 누릴 수 있도록<br />
+              차별화된 차세대 바이오 제품과 솔루션을 제공하고자 합니다.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
