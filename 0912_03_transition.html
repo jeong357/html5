@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NHN ACE</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul.gnb {
+        display: flex;
+        width: 653px;
+        border: 1px solid;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      ul {
+        list-style: none;
+      }
+      ul.gnb > li {
+        position: relative;
+        flex: 1;
+        text-align: center;
+        line-height: 100px;
+      }
+      ul.gnb > li ul.sub {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background: #ccc;
+        /* height: 200px; */
+        height: 0;
+        overflow: hidden;
+        transition: 1s;
+      }
+      ul.gnb > li:hover ul.sub {
+        height: 200px;
+      }
+      ul.gnb > li:hover > a,
+      ul.gnb > li ul.sub li:hover a {
+        color: red;
+      }
+      ul.gnb > li ul.sub li {
+        line-height: 50px;
+      }
+      ul.gnb > li > a {
+        position: relative;
+        padding: 0 20px;
+      }
+      ul.gnb > li > a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -20px;
+        width: 100%;
+        height: 3px;
+        background: red;
+        transform: scale(0);
+        transform-origin: left top;
+        transition: 0.5s;
+      }
+      ul.gnb > li:hover > a::after {
+        transform: scale(1);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul class="gnb">
+        <li>
+          <a href="#">Solutions</a>
+          <ul class="sub">
+            <li><a href="#">ACE Trader</a></li>
+            <li><a href="#">ACE eXchange</a></li>
+            <li><a href="#">ACE ADLIB</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Resource</a>
+          <ul class="sub">
+            <li><a href="#">Notice</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">자료실</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Company</a>
+          <ul class="sub">
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">오시는길</a></li>
+            <li><a href="#">채용</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

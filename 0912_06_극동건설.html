@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LS투자증권</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      ul li {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        background: #ccc;
+        margin: 100px auto;
+      }
+      ul li .line {
+        position: absolute;
+        background: #07348c;
+      }
+      ul li .line.top {
+        width: 100%;
+        height: 5px;
+        left: 0;
+        top: 0;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: 0.5s;
+      }
+      ul li:hover .line.top {
+        transform: scaleX(1);
+        transition: 0.5s ease-in-out;
+      }
+      ul li .line.right {
+        width: 5px;
+        height: 100%;
+        right: 0;
+        top: 0;
+        transform: scaleY(0);
+        transform-origin: center;
+        transition: 0.5s;
+      }
+      ul li:hover .line.right {
+        transform: scaleY(1);
+        transition: 0.5s;
+      }
+      ul li .line.bottom {
+        width: 100%;
+        height: 5px;
+        left: 0;
+        bottom: 0;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: 0.5s;
+      }
+      ul li:hover .line.bottom {
+        transform: scaleX(1);
+        transition: 0.5s;
+      }
+      ul li .line.left {
+        width: 5px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        transform: scaleY(0);
+        transform-origin: center;
+        transition: 0.5s ease-in-out;
+      }
+      ul li:hover .line.left {
+        transform: scaleY(1);
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <span class="line top"></span>
+        <span class="line right"></span>
+        <span class="line bottom"></span>
+        <span class="line left"></span>
+      </li>
+    </ul>
+  </body>
+</html>
