@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .wrap {
+        width: 800px;
+        margin: 0 auto;
+        font-size: 0;
+      }
+      .wrap > div {
+        display: flex;
+      }
+      .wrap .top {
+        height: 24px;
+      }
+      .wrap .menu {
+        height: 13px;
+        justify-content: space-between;
+      }
+      .wrap .menu div {
+        display: flex;
+      }
+      .wrap .menu div ul {
+        display: flex;
+        gap: 50px;
+      }
+      .wrap .menu ul li a {
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+      .wrap .main {
+        height: 744px;
+        align-items: flex-end;
+      }
+      .wrap .foot {
+        height: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="top">
+        <p><img src="./images/food_img/top.gif" alt="" /></p>
+      </div>
+      <div class="menu">
+        <p><img src="./images/food_img/food_01.gif" alt="" /></p>
+        <div>
+          <ul>
+            <li><a href="#">august / 2003 /</a></li>
+            <li><a href="#">summer</a></li>
+            <li><a href="#">special</a></li>
+            <li><a href="#">e·magazine</a></li>
+          </ul>
+          <p><img src="./images/food_img/food_02.gif" alt="" /></p>
+        </div>
+      </div>
+      <div class="main">
+        <p><img src="./images/food_img/note.gif" alt="" /></p>
+        <p><img src="./images/food_img/image.gif" alt="" /></p>
+        <div>
+          <p><img src="./images/food_img/number.gif" alt="" /></p>
+          <p><img src="./images/food_img/navigation.gif" alt="" /></p>
+        </div>
+        <p><img src="./images/food_img/page.gif" alt="" /></p>
+      </div>
+      <div class="foot">
+        <p><img src="./images/food_img/bottom.gif" alt="" /></p>
+      </div>
+    </div>
+  </body>
+</html>
