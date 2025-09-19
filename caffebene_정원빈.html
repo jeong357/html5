@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ssgfood</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+      @font-face {
+        font-family: "NotoSans";
+        src: url(./webfonts/NotoSans-VariableFont_wdth\wght.woff);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        position: fixed;
+        width: 1905px;
+        top: 0;
+        background: #fff;
+      }
+      nav {
+        position: relative;
+        margin: 0 auto;
+        padding-top: 10px;
+        width: 1190px;
+        height: 123px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+      }
+      ul {
+        list-style: none;
+        align-items: center;
+        gap: 50px;
+        font-size: 15px;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      nav > ul {
+        display: flex;
+        margin-left: 25px;
+        width: 70%;
+      }
+      button {
+        font-family: "NotoSans", sans-serif;
+        width: 133px;
+        font-size: 14px;
+        border-style: none;
+        background: #00a5b1;
+        border-radius: 20px;
+        padding: 8px 0 9px;
+      }
+      div.lang a {
+        position: relative;
+        font-family: NotoSans, sans-serif;
+        font-size: 14px;
+        right: 60px;
+        bottom: 40px;
+        flex: 1;
+        border-right: 1px solid #d4d4d4;
+      }
+      div.lang a:nth-child(2) {
+        border-right: none;
+      }
+      div p img {
+        position: relative;
+        right: 300px;
+        background-image: url(http://www.caffebene.co.kr/uploads/banner/20241222735743.jpg);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <p>
+          <a href="http://www.caffebene.co.kr/"
+            ><img
+              src="http://www.caffebene.co.kr/images/common/logo.png"
+              alt=""
+          /></a>
+        </p>
+        <ul>
+          <li>
+            <a href="#">CAFFEBENE</a>
+          </li>
+          <li>
+            <a href="#">MENU</a>
+          </li>
+          <li>
+            <a href="#">STORE</a>
+          </li>
+          <li>
+            <a href="#">MEMBERSHIP</a>
+          </li>
+          <li>
+            <a href="#">GLOBAL</a>
+          </li>
+          <li>
+            <a href="#">CONTENTS</a>
+          </li>
+        </ul>
+        <button type="button">가맹문의</button>
+        <div class="lang">
+          <a href="#">KR</a>
+          <a href="#">EN</a>
+        </div>
+      </nav>
+      <div>
+        <p>
+          <img
+            src="http://www.caffebene.co.kr/uploads/banner/20241222735743.jpg"
+            alt=""
+          />
+        </p>
+      </div>
+    </header>
+  </body>
+</html>

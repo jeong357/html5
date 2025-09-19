@@ -19,11 +19,9 @@
       body {
         background: #d3222a;
       }
-      .wrap {
+      .wrap .top {
         width: 1000px;
         margin: 0 auto;
-      }
-      .wrap .top {
         display: flex;
         justify-content: flex-end;
       }
@@ -36,11 +34,17 @@
         color: #fff;
         text-transform: uppercase;
       }
-      .pattern {
+      .wrap .bg {
         background: url(./images/instory/pattern.gif);
         height: 82px;
       }
+      .wrap .bg .pattern {
+        width: 1000px;
+        margin: 0 auto;
+      }
       .wrap .main {
+        width: 1000px;
+        margin: 0 auto;
         display: flex;
         height: 625px;
       }
@@ -68,8 +72,10 @@
           <li><a href="#">italian</a></li>
         </ul>
       </div>
-      <div class="pattern">
-        <p><img src="./images/instory/index_pattern.gif" alt="" /></p>
+      <div class="bg">
+        <div class="pattern">
+          <p><img src="./images/instory/index_pattern.gif" alt="" /></p>
+        </div>
       </div>
       <div class="main">
         <div>
