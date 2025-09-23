@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>d</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        position: relative;
+      }
+      div p {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+      }
+      div p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+      }
+      #photo1:checked ~ div p:first-child img {
+        opacity: 1;
+      }
+      #photo2:checked ~ div p:nth-child(2) img {
+        opacity: 1;
+      }
+      #photo3:checked ~ div p:nth-child(3) img {
+        opacity: 1;
+      }
+      #photo4:checked ~ div p:nth-child(4) img {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="radio" name="photo" id="photo1" checked />
+    <input type="radio" name="photo" id="photo2" />
+    <input type="radio" name="photo" id="photo3" />
+    <input type="radio" name="photo" id="photo4" />
+    <label for="photo1">photo1</label>
+    <label for="photo2">photo2</label>
+    <label for="photo3">photo3</label>
+    <label for="photo4">photo4</label>
+    <div>
+      <p>
+        <img src="./images/photo1.jpg" alt="" />
+        <img src="./images/photo2.jpg" alt="" />
+        <img src="./images/photo3.jpg" alt="" />
+        <img src="./images/photo4.jpg" alt="" />
+      </p>
+    </div>
+  </body>
+</html>

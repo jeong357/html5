@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>d</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div.photo {
+        position: relative;
+        width: 500px;
+        height: 300px;
+      }
+      div.photo p {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      div.photo p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+      }
+      #photo1:checked ~ div p:first-child img,
+      #photo2:checked ~ div p:nth-child(2) img,
+      #photo3:checked ~ div p:nth-child(3) img,
+      #photo4:checked ~ div p:nth-child(4) img,
+      #photo5:checked ~ div p:nth-child(5) img,
+      #photo6:checked ~ div p:nth-child(6) img {
+        opacity: 1;
+      }
+      #photo1:checked ~ div .btn label:first-child,
+      #photo2:checked ~ div .btn label:nth-child(2),
+      #photo3:checked ~ div .btn label:nth-child(3),
+      #photo4:checked ~ div .btn label:nth-child(4),
+      #photo5:checked ~ div .btn label:nth-child(5),
+      #photo6:checked ~ div .btn label:nth-child(6) {
+        background: #699;
+      }
+      div.btn {
+        display: flex;
+        width: 500px;
+        height: 60px;
+      }
+      div.btn label {
+        display: block;
+        flex: 1;
+        height: 100%;
+        text-align: center;
+        background: #9cc;
+        line-height: 60px;
+        cursor: pointer;
+      }
+      div.btn label:hover {
+        background: #669;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="radio" name="photo" id="photo1" checked />
+    <input type="radio" name="photo" id="photo2" />
+    <input type="radio" name="photo" id="photo3" />
+    <input type="radio" name="photo" id="photo4" />
+    <input type="radio" name="photo" id="photo5" />
+    <input type="radio" name="photo" id="photo6" />
+    <div class="photo">
+      <p><img src="./images/photo1.jpg" alt="" /></p>
+      <p><img src="./images/photo2.jpg" alt="" /></p>
+      <p><img src="./images/photo3.jpg" alt="" /></p>
+      <p><img src="./images/photo4.jpg" alt="" /></p>
+      <p><img src="./images/photo5.jpg" alt="" /></p>
+      <p><img src="./images/photo6.jpg" alt="" /></p>
+    </div>
+    <div class="btn">
+      <label for="photo1">photo1</label>
+      <label for="photo2">photo2</label>
+      <label for="photo3">photo3</label>
+      <label for="photo4">photo4</label>
+      <label for="photo4">photo5</label>
+      <label for="photo4">photo6</label>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>삼성중공업</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        width: 1905px;
+        height: 90px;
+        display: flex;
+        margin: 20px auto;
+      }
+      ul {
+        list-style: none;
+      }
+      ul li a {
+        margin-left: 50px;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      p img {
+        width: 220px;
+        height: 34%;
+      }
+      label {
+        position: relative;
+        display: block;
+        width: 50px;
+        height: 50px;
+        z-index: 1;
+      }
+      label span {
+        display: block;
+        height: 2px;
+        background: #333;
+        margin: 6px 0;
+        transition: 0.5s;
+      }
+      label .bar1 {
+        width: 50%;
+        top: 18px;
+      }
+      label .bar2 {
+        width: 100%;
+        bottom: 18px;
+      }
+      #meun:checked ~ label .bar1 {
+        width: 100%;
+        transform: translate(0, -7.5px) rotate(45deg);
+      }
+      #meun:checked ~ label .bar2 {
+        transform: translate(0, -20px) rotate(-45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        <img src="https://www.samsungshi.com/images/logo_point.png" alt="" />
+      </p>
+      <div class="menu">
+        <ul>
+          <li><a href="#">제품 기술</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">회사소개</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">투자정보</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">뉴스 미디어</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">인재채용</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">지속가능경영</a></li>
+        </ul>
+      </div>
+      <div>
+        <button type="button" class="Lmenu">
+          <a href="#"><span>KO</span></a>
+        </button>
+      </div>
+      <div>
+        <input type="checkbox" name="mobile" id="menu" />
+        <label for="menu">
+          <span class="bar1"></span>
+          <span class="bar2"></span>
+        </label>
+      </div>
+    </div>
+  </body>
+</html>
