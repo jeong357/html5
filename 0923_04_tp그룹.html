@@ -44,15 +44,16 @@
       #photo6:checked ~ div.txt label:nth-child(6) {
         color: #000;
         font-weight: bold;
+        text-decoration: underline #5cb3e6;
       }
       div.txt {
         display: flex;
-        width: 1724px;
+        /* width: 1724px; */
         height: 42px;
+        justify-content: center;
       }
       div.txt label {
         display: block;
-        flex: 1;
         height: 100%;
         color: #999;
         font-size: 22px;
@@ -62,7 +63,11 @@
       }
       .txt label::after {
         content: "|";
-        margin-left: 80px;
+        padding: 0 40px;
+        color: #999;
+      }
+      .txt label:last-child::after {
+        content: "";
       }
     </style>
   </head>
