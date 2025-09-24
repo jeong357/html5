@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul li a {
+        text-decoration: none;
+        color: #000;
+      }
+      a span {
+        color: #000;
+        text-decoration: underline #000;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .platform {
+        display: flex;
+        width: 1420px;
+        margin: 0 auto;
+      }
+      .platform > div:first-child {
+        width: 500px;
+        padding-top: 100px;
+        position: sticky;
+        top: 0;
+        height: 100%;
+      }
+      div.item {
+        display: flex;
+        padding-top: 100px;
+      }
+      .platform > div:nth-child(2) {
+        flex: 1;
+      }
+      .platform > div:nth-child(3) {
+        display: flex;
+        width: 100%;
+      }
+      .platform > div:nth-child(2) img {
+        width: 100%;
+      }
+      .platform > div:nth-child(2) .item:target > span {
+        color: #82dc28;
+      }
+      .platform > footer {
+        height: 1000px;
+      }
+      div.info {
+        position: relative;
+        left: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="platform">
+      <div>
+        <h1>OLIVE YOUNG<br />Platforms</h1>
+        <ul>
+          <li><a href="#shop">올리브영 매장</a></li>
+          <li><a href="#Online">올리브영 Online (국내)</a></li>
+          <li><a href="#Global">올리브영 글로벌</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="item" id="shop">
+          <span>01</span>
+          <div class="info">
+            <p class="thumb">
+              <img
+                src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform1-cf428ca64855adc4a1062251b83cf683.jpg"
+                alt=""
+              />
+            </p>
+            <strong
+              >고객과 가장 가까운 곳에서<br />건강한 아름다움을
+              제안합니다.</strong
+            >
+            <p class="desc">
+              우리는 1,370여개의 매장을 기반으로 고객에게 뷰티&amp;헬스 상품을
+              큐레이션합니다.<br />또한 체험형 콘텐츠와 커머스의 연계를 통해
+              파트너사들에게 <br />매력적인 브랜딩, 마케팅 채널로 진화하고
+              있습니다.
+            </p>
+            <a href="#"
+              ><span class="text">올리브영 매장이 보고 싶다면?</span></a
+            >
+          </div>
+        </div>
+        <div class="item" id="Online">
+          <span>02</span>
+          <div class="info">
+            <p class="thumb">
+              <img
+                src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform2-777eecd5b0d28e7c17848bfe3dffe645.jpg"
+                alt=""
+              />
+            </p>
+            <strong
+              >고객이 건강한 아름다움을 찾아가는<br />온라인 PLAYGROUND를
+              제공합니다.</strong
+            >
+            <p class="desc">
+              우리는 차별화된 온라인 콘텐츠와 AI기술 기반 상품 추천을 통해 월
+              이용자 수<br />532만명, 멤버십 회원 수 1,560만명 이상의
+              뷰티&amp;또한 업계 최초 당일 배송 서비스인 오늘드림을 실행하여
+              고객경험을 혁신했습니<br />다.
+            </p>
+            <a href="#"
+              ><span class="text">올리브영 Online 서비스가 궁금하다면?</span></a
+            >
+          </div>
+        </div>
+        <div class="item" id="Global">
+          <span>03</span>
+          <div class="info">
+            <p class="thumb">
+              <img
+                src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform1-cf428ca64855adc4a1062251b83cf683.jpg"
+                alt=""
+              />
+            </p>
+            <strong>전세계에 한국의<br />뷰티&amp;헬스를 알립니다.</strong>
+            <p class="desc">
+              우리는 한국의 뷰티&amp;헬스 브랜드들이 세계로 뻗어 나가는 교두보
+              역할을 수행합<br />니다. 2019년 런칭한 글로벌몰과 연간 약 500만명
+              이상이 외국인 고객이 방문하<br />는 국내 글로벌 특화매장은
+              파트너사와 함께 글로벌 시장에서 동반 성장을 할 수<br />
+              있는 핵심 원동력입니다.
+            </p>
+            <a href="#"
+              ><span class="text"
+                >올리브영의 글로벌 플랫폼을 보고싶다면?</span
+              ></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <p><a href="#">Top</a></p>
+    <footer></footer>
+  </body>
+</html>
