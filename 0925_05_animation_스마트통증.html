@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        position: relative;
+        width: 113px;
+        height: 113px;
+        background: rgba(35, 35, 35, 0.8);
+        border-radius: 50%;
+      }
+
+      p img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      p img:last-child {
+        animation-name: move;
+        animation-duration: 6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      @keyframes move {
+        from {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        to {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <img
+        src="	http://www.smart-pain.com/new/images/main/quick_icon.png"
+        alt=""
+      />
+      <img
+        src="	http://www.smart-pain.com/new/images/main/quick_txt.png"
+        alt=""
+      />
+    </p>
+  </body>
+</html>

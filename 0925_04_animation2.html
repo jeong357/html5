@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: red;
+        border-radius: 50px;
+        animation-name: move;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+      }
+      @keyframes move {
+        from,
+        to {
+          bottom: 0;
+          animation-timing-function: ease-out;
+        }
+        50% {
+          bottom: 250px;
+          animation-timing-function: ease-in;
+        }
+        /* to {
+          bottom: 0;
+          animation-timing-function: ease-out;
+        } */
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+  </body>
+</html>
