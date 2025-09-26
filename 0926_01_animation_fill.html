@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        position: relative;
+        /* animation-name: move;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-delay: 2s; */
+        animation: move 10s linear 2s;
+      }
+      p.none {
+        animation-fill-mode: none;
+      }
+      p.forwards {
+        animation-fill-mode: forwards;
+      }
+      p.backwards {
+        animation-fill-mode: backwards;
+      }
+      p.both {
+        animation-fill-mode: both;
+      }
+      @keyframes move {
+        0% {
+          left: 0;
+          background: red;
+        }
+        100% {
+          left: 500px;
+          background: yellow;
+        }
+      }
+      #start:checked ~ p {
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="start" />
+    <p class="none">none</p>
+    <p class="forwards">forwards</p>
+    <p class="backwards">backwards</p>
+    <p class="both">both</p>
+  </body>
+</html>

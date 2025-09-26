@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div.ani {
+        text-align: center;
+      }
+      p {
+        width: 100%;
+        height: 100%;
+      }
+      @keyframes left {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(-1080deg);
+        }
+      }
+      @keyframes right {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(1080deg);
+        }
+      }
+      #Left:checked ~ div.box p img:last-child {
+        animation: left 2s linear infinite;
+      }
+      #Right:checked ~ div.box p img:last-child {
+        animation: right 2s linear infinite;
+      }
+      #Off:checked ~ div.box p img:last-child {
+        animation-play-state: paused;
+      }
+      .btn label:hover {
+        background: #ccc;
+      }
+      div.btn label {
+        border: 1px solid;
+        padding: 10px 20px;
+        border-radius: 100px;
+        cursor: pointer;
+      }
+      #Left:checked ~ .btn label:first-child,
+      #Right:checked ~ .btn label:nth-child(2),
+      #Off:checked ~ .btn label:last-child {
+        background: #000;
+        color: #fff;
+      }
+      div.box p img:first-child {
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ani">
+      <input type="radio" name="btn" id="Left" />
+      <input type="radio" name="btn" id="Right" />
+      <input type="radio" name="btn" id="Off" />
+      <div class="box">
+        <p>
+          <img src="./images/pipe.png" alt="" />
+          <img src="./images/propeller.png" alt="" />
+        </p>
+        <div class="btn">
+          <label for="Left">Turn Left</label>
+          <label for="Right">Turn Right</label>
+          <label for="Off">Turn Off</label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

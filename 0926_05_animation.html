@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        margin-left: 500px;
+      }
+      div.img ul {
+        display: flex;
+        gap: 50px;
+        cursor: pointer;
+        list-style: none;
+      }
+      ul li:hover {
+        animation: move 1s linear infinite;
+      }
+      ul li {
+        width: 142px;
+        height: 142px;
+      }
+      li:first-child {
+        background-image: url(./images/bg_info_m02.png);
+      }
+      li:nth-child(2) {
+        background-image: url(./images/bg_info_m03.png);
+      }
+      li:nth-child(3) {
+        background-image: url(./images/bg_info_m04.png);
+      }
+      li:nth-child(4) {
+        background-image: url(./images/bg_info_m06.png);
+      }
+      @keyframes move {
+        0% {
+          transform: translateY(1px);
+          animation-timing-function: ease-in;
+        }
+        50% {
+          transform: translateY(10px);
+          animation-timing-function: ease-out;
+        }
+        to {
+          transform: translateY(0);
+          animation-timing-function: ease-in;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </body>
+</html>

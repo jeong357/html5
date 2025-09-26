@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div.rd {
+        text-align: center;
+      }
+      p {
+        margin: 50px auto;
+        width: 0;
+        height: 0;
+        border: 10px solid #000;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        border-right: none;
+      }
+      @keyframes start {
+        from {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(10px);
+        }
+        to {
+          transform: translatX(0);
+        }
+      }
+      div.btn label {
+        cursor: pointer;
+      }
+      #start:checked ~ p {
+        animation-name: start;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      #stop:checked ~ p {
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rd">
+      <input type="radio" name="btn" id="start" checked />
+      <input type="radio" name="btn" id="stop" />
+      <p></p>
+      <div class="btn">
+        <label for="start">start</label>
+        <label for="stop">stop</label>
+      </div>
+    </div>
+  </body>
+</html>

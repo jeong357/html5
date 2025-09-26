@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .txt {
+        position: relative;
+        font-style: 70px;
+        font-weight: bold;
+      }
+      .txt .dark {
+        position: absolute;
+        left: 0;
+        right: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: txt 3s infinite;
+      }
+      .txt .gray {
+        color: #e6e6e6;
+        white-space: nowrap;
+      }
+      @keyframes txt {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      h1 {
+        font-size: 100px;
+        -webkit-text-stroke: 1px red;
+        color: transparent;
+      }
+      h1 span {
+        -webkit-text-stroke: 1px red;
+        color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="txt">
+      <p class="dark">Haness Your Data</p>
+      <p class="gray">Haness Your Data</p>
+    </div>
+    <h1><span>text-</span>stroke</h1>
+  </body>
+</html>
