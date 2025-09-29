@@ -11,6 +11,7 @@
       }
       ul {
         list-style: none;
+        cursor: pointer;
       }
       a {
         text-decoration: none;
@@ -19,21 +20,118 @@
       ul.list {
         display: flex;
         justify-content: center;
+        gap: 50px;
       }
-      ul li p {
+      ul.list li {
+        border: 1px solid #e5e5e5;
+        border-radius: 2.4rem;
+        margin-top: 50px;
+        padding: 20px;
+        width: 282px;
+        height: 359px;
+        transition: 0.5s;
+      }
+      ul.list li:hover {
+        border-color: #007aff;
+        transform: translateY(-40px);
+      }
+      ul li p.imgani {
         width: 120px;
         height: 120px;
       }
-      ul li:first-child p {
+      ul.list li h3 {
+        background: #f1f4fb;
+        text-align: center;
+        width: 230px;
+        padding: 8px;
+        border-radius: 30px;
+      }
+      ul.list li:first-child a p.imgani {
+        background-image: url(./images/icon_main_data.png);
+      }
+      ul.list li:first-child:hover a p.imgani {
+        background-image: url(./images/icon_main_data_play.png);
+        background-size: 10920px 120px;
+        animation: adplay 3s steps(91) infinite;
+      }
+      ul.list li:nth-child(2) a p.imgani {
+        background-image: url(./images/icon_main_sol.png);
+      }
+      ul.list li:nth-child(2):hover a p.imgani {
+        background-image: url(./images/icon_main_solution_play.png);
+        background-size: 11040px 120px;
+        animation: solutionplay 3s steps(92) infinite;
+      }
+      ul.list li:nth-child(3) a p.imgani {
         background-image: url(./images/icon_main_ad.png);
+      }
+      ul.list li:nth-child(3):hover a p.imgani {
+        background-image: url(./images/icon_main_ad_play-Bu6Qtql2.png);
+        background-size: 10920px 120px;
+        animation: adplay 3s steps(91) infinite;
+      }
+      ul.list li:nth-child(4) a p.imgani {
+        background-image: url(./images/icon_main_api.png);
+      }
+      ul.list li:nth-child(4):hover a p.imgani {
+        background-image: url(./images/icon_main_api_play.png);
+        background-size: 10920px 120px;
+        animation: adplay 3s steps(91) infinite;
+      }
+      @keyframes adplay {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -10920px 0;
+        }
+      }
+      @keyframes solutionplay {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -11040px 0;
+        }
       }
     </style>
   </head>
   <body>
-    <ul class="list">
-      <li>
-        <p></p>
-      </li>
-    </ul>
+    <div class="menu">
+      <ul class="list">
+        <li>
+          <a href="">
+            <span>다양한</span>
+            <h2>Data서비스</h2>
+            <p class="imgani"></p>
+            <h3 class="txt">Data One-Stop Service</h3>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span>혁신적인</span>
+            <h2>솔루션서비스</h2>
+            <p class="imgani"></p>
+            <h3 class="txt">상권분석, 시장 모니터링</h3>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span>스마트한</span>
+            <h2>광고서비스</h2>
+            <p class="imgani"></p>
+            <h3 class="txt">최적의 고객 타겟팅</h3>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span>탁월한</span>
+            <h2>API서비스</h2>
+            <p class="imgani"></p>
+            <h3 class="txt">Data 실시간 활용</h3>
+          </a>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>

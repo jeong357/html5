@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p:first-child {
+        mask-image: url(./images/w3logo.png);
+        mask-repeat: no-repeat;
+        /* mask-size: cover; */
+        mask-position: center;
+      }
+      p:nth-child(2) {
+        width: 960px;
+        mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+        mask-position: center;
+      }
+      .bg1 {
+        height: 500px;
+        background: url(./images/photo1.jpg);
+      }
+      .bg1 h1 {
+        font-size: 100px;
+        font-weight: bold;
+        text-align: center;
+        background: #fff;
+        line-height: 500px;
+        mix-blend-mode: screen;
+      }
+      .bg2 {
+        background: url(./images/photo1.jpg);
+        font-size: 100px;
+        font-weight: bold;
+        text-align: center;
+        color: transparent;
+        background-clip: text;
+      }
+    </style>
+  </head>
+  <body>
+    <p><img src="./images/photo1.jpg" alt="" /></p>
+    <p><img src="./images/photo1.jpg" alt="" /></p>
+    <div class="bg1">
+      <h1>mix-blend-mode</h1>
+      <div class="bg2">mix-blend-mode</div>
+    </div>
+  </body>
+</html>
