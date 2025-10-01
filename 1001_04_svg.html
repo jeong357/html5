@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        position: relative;
+        width: 1905px;
+        height: 2100px;
+        margin: 50px auto;
+        justify-content: center;
+      }
+      div p {
+        clip-path: url(#path1);
+        width: 25%;
+        height: 23%;
+        background-size: cover;
+        animation: bg 2s infinite alternate;
+        object-fit: cover;
+      }
+      .thum {
+        display: flex;
+        gap: 200px;
+      }
+      .thum h1 {
+        padding-top: 110px;
+        font-size: 40px;
+      }
+      ul {
+        list-style: none;
+      }
+      .thum ul li:nth-child(2),
+      .thum ul li:last-child {
+        padding-top: 30px;
+        font-weight: bold;
+      }
+      a img:hover {
+        cursor: pointer;
+      }
+      svg polygon {
+        transform: scale(1);
+      }
+      svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+      }
+      @keyframes bg {
+        0% {
+          background-image: url(https://www.otoki.com/images/common/clip1.jpg);
+        }
+        100% {
+          background-image: url(https://www.otoki.com/images/common/clip1_1.jpg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="thum">
+        <p></p>
+        <ul>
+          <li>
+            <h1>보다 좋은 품질의<br />제품을</h1>
+          </li>
+          <li>
+            <span>
+              자동화된 생산라인과 첨단설비, 위생적인 환경을 구축하여<br />
+              오뚜기의 1등 제품을 우수한 품질로 제공합니다.
+            </span>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://www.otoki.com/images/common/btn_more_pc.svg"
+                alt=""
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <svg>
+        <clipPath id="path1" clipPathUnits="objectBoundingBox">
+          <path
+            d="M0.6,1H0.4C0.2,1,0,0.8,0,0.6V0.4C0,0.2,0.2,0,0.4,0l0.2,0C0.8,0,1,0.2,1,0.4v0.2C1,0.8,0.8,1,0.6,1z"
+          />
+        </clipPath>
+      </svg>
+    </div>
+  </body>
+</html>

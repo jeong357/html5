@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        position: relative;
+        width: 300px;
+        height: 300px;
+      }
+      div p {
+        clip-path: url(#path1);
+        width: 100%;
+        height: 100%;
+      }
+      div p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      svg polygon {
+        transform: scale(1);
+      }
+      svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p><img src="./images/photo1.jpg" alt="" /></p>
+      <svg>
+        <clipPath id="path1" clipPathUnits="objectBoundingBox">
+          <path
+            d="M0,0.4c0-0.1,0-0.1,0.1-0.1L0.4,0c0,0,0.1,0,0.2,0l0.3,0.2C1,0.2,1,0.3,1,0.3l0,0.3c0,0.1,0,0.1-0.1,0.1L0.6,1
+		c0,0-0.1,0-0.2,0L0.1,0.8C0,0.8,0,0.7,0,0.7L0,0.4z"
+          />
+        </clipPath>
+      </svg>
+    </div>
+  </body>
+</html>
