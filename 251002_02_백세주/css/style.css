@@ -1,0 +1,102 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+section#maintop {
+  height: 50vh;
+  position: sticky;
+  top: 0;
+}
+main {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  font-size: 0;
+}
+main section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+main section div {
+  position: relative;
+}
+main section .txt a {
+  display: block;
+  aspect-ratio: 1/1.34;
+  background-size: cover;
+}
+main section .txt a h3 {
+  font-size: 30px;
+}
+main section .txt a h4 {
+  font-size: 17px;
+}
+main section .txt a h5 {
+  font-size: 14px;
+}
+main section:first-child .txt a {
+  background-image: url(https://www.bekseju.com/images/main-story-bg.png);
+}
+main section:nth-child(2) .txt a {
+  background-image: url(https://www.bekseju.com/images/main-craft-bg.png);
+}
+main section:last-child .txt a {
+  background-image: url(https://www.bekseju.com/images/main-taste-bg.png);
+}
+main section > div {
+}
+main section > div.photo {
+  aspect-ratio: 1/1.34;
+}
+main section:nth-child(2) > div.medi {
+  height: 100%;
+}
+main section > div.medi p {
+  height: 100%;
+}
+main section:first-child > div.photo p,
+main section:last-child > div.photo p {
+  width: 100%;
+}
+main section img,
+main section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main section .bek img {
+  transform: scale(94%);
+}
+main section div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 8px;
+  height: 100%;
+  background-image: url(https://www.bekseju.com/images/p.png);
+  z-index: 2;
+}
+main section:first-child div::before {
+  right: -4px;
+}
+main section:last-child div::before {
+  left: -4px;
+}
+main section div::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-image: url(https://www.bekseju.com/images/ph.png);
+  z-index: 2;
+}
