@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        background: pink;
+      }
+      header:hover {
+        background: #fff;
+      }
+      .top {
+        display: flex;
+        justify-content: space-between;
+      }
+      .menu > ul {
+        width: 600px;
+        margin-right: 20px;
+        display: flex;
+        height: 50px;
+      }
+      .menu > ul > li {
+        position: relative;
+        flex: 1;
+        text-align: center;
+      }
+      .menu > ul > li > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height: 50px;
+        border: 1px solid #333;
+        border-left: none;
+        box-sizing: border-box;
+      }
+      .menu > ul > li:first-child > a {
+        border-left: 1px solid #333;
+      }
+      .menu > ul > li .sub {
+        position: absolute;
+        left: 0;
+        top: 50px;
+        width: 100%;
+        background: #fff;
+        border-bottom: 1px solid #333;
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        border-left: 1px solid #333;
+        border-right: 1px solid #333;
+        box-sizing: border-box;
+        z-index: 1;
+      }
+      .menu > ul > li .sub li a {
+        line-height: 30px;
+        display: block;
+        width: 100%;
+        color: #000;
+      }
+      .menu > ul:hover > li .sub {
+        height: 120px;
+      }
+      .menu > ul > li:hover > a {
+        color: red;
+      }
+      .menu > ul > li .sub li a:hover {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+      .menu .bg {
+        position: absolute;
+        width: 100%;
+        height: 120px;
+        background: #000;
+        left: 0;
+        top: 50px;
+        transition: 0.5s;
+      }
+      .menu > ul:hover ~ .bg {
+        height: 120px;
+      }
+      .grid-container .slide {
+        grid-area: slide;
+        background: #ccc;
+      }
+      .grid-container .c1 {
+        grid-area: c1;
+        background: #ddd;
+      }
+      .grid-container .c3 {
+        grid-area: c3;
+        background: #eee;
+      }
+      .grid-container .c4 {
+        grid-area: c4;
+        background: #aaa;
+      }
+      .grid-container .flogo {
+        grid-area: flogo;
+        background: #bbb;
+      }
+      .grid-container .copyright {
+        grid-area: copyright;
+        background: #ccc;
+      }
+      .grid-container .sns {
+        grid-area: sns;
+        background: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="top">
+        <div class="hlgo">로고</div>
+        <div class="menu">메뉴</div>
+      </div>
+    </header>
+  </body>
+</html>

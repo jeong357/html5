@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #f0f0f0;
+      }
+      .edu {
+        width: 1680px;
+        height: 780px;
+        margin: 100px auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 24px;
+        grid-template-areas: "item1 item2 item3 item3" "item1 item4 item5 item6";
+      }
+      .edu .item:nth-child(1) {
+        grid-area: item1;
+      }
+      .edu .item:nth-child(2),
+      .edu .item:nth-child(6) {
+        background: #fff;
+        grid-area: item2, item6;
+        border-radius: 20px;
+      }
+      .edu .item:nth-child(3) {
+        grid-area: item3;
+      }
+      .edu .item:nth-child(4) {
+        grid-area: item4;
+      }
+      .edu .item:nth-child(5) {
+        grid-area: item5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="edu">
+      <div class="item">
+        <img
+          src="https://www.doosanrobotics.com/images/services/robot-training-img01.png"
+          alt=""
+        />
+      </div>
+      <div class="item">
+        <h2>
+          현장에서 바로 적용 가능한<br />
+          최고의 실습 교육
+        </h2>
+        <p>
+          두산로보틱스에서 개발한 검증된 실무형 교육 <br />
+          커리큘럼으로, 실제 현장에서 바로 적용하며<br />
+          시시각각 발생하는 다양한 문제를 해결할 수<br />
+          있도록 설계되었습니다.
+        </p>
+      </div>
+      <div class="item">
+        <img
+          src="https://www.doosanrobotics.com/images/services/robot-training-img02.png"
+          alt=""
+        />
+      </div>
+      <div class="item">
+        <img
+          src="https://www.doosanrobotics.com/images/services/robot-training-img04.png"
+          alt=""
+        />
+      </div>
+      <div class="item">
+        <img
+          src="https://www.doosanrobotics.com/images/services/robot-training-img03.png"
+          alt=""
+        />
+      </div>
+      <div class="item">
+        <h2>
+          초보자부터 전문가까지<br />
+          수준별 교육 제공
+        </h2>
+        <p>
+          초보자부터 현업 엔지니어 및 교수까지 수준별로<br />
+          들을 수 있는 맞춤형 교육이 마련돼 있습니다.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
