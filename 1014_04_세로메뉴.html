@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .menu {
+        width: 200px;
+        border: 1px solid;
+      }
+      .menu > ul {
+        width: 90%;
+        margin: 0 auto;
+      }
+      .menu > ul > li a {
+        display: block;
+        width: 100%;
+      }
+      .menu > ul > li {
+        position: relative;
+        line-height: 50px;
+        border: 1px solid #333;
+        text-align: center;
+        border-bottom: none;
+      }
+      .menu > ul > li:last-child {
+        border-bottom: 1px solid #333;
+      }
+      .menu > ul > li .sub {
+        position: absolute;
+        width: 100%;
+        left: 180px;
+        top: 0;
+        height: 0;
+        overflow: hidden;
+        background: #000;
+      }
+      .menu > ul > li .sub li {
+        line-height: 30px;
+      }
+      .menu > ul > li .sub li a {
+        color: #fff;
+      }
+      .menu > ul > li:hover .sub {
+        height: 120px;
+      }
+      .menu > ul > li:hover a {
+        display: block;
+        background: #000;
+        color: #fff;
+      }
+      .menu > ul > li .sub li a:hover {
+        background: #fff;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="#">탑</a>
+          <ul class="sub">
+            <li><a href="#">블라우스</a></li>
+            <li><a href="#">티</a></li>
+            <li><a href="#">셔츠</a></li>
+            <li><a href="#">니트</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">아우터</a>
+          <ul class="sub">
+            <li><a href="#">자켓</a></li>
+            <li><a href="#">코트</a></li>
+            <li><a href="#">가디건</a></li>
+            <li><a href="#">머플러</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">팬츠</a>
+          <ul class="sub">
+            <li><a href="#">청바지</a></li>
+            <li><a href="#">짧은바지</a></li>
+            <li><a href="#">긴바지</a></li>
+            <li><a href="#">레깅스</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">악세서리</a>
+          <ul class="sub">
+            <li><a href="#">귀고리</a></li>
+            <li><a href="#">목걸이</a></li>
+            <li><a href="#">반지</a></li>
+            <li><a href="#">팔찌</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
