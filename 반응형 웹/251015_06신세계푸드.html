@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      section {
+        width: 100%;
+        max-width: 940px;
+        margin: 0 auto;
+      }
+      section ul {
+        width: 100%;
+        height: 45vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3px;
+        margin-top: 20vh;
+      }
+      section ul li {
+        overflow: hidden;
+      }
+      section ul li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      section ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .txt {
+        position: relative;
+        z-index: 0;
+        color: #fff;
+        width: 100%;
+        height: 432px;
+        text-align: center;
+        overflow: hidden;
+        padding-top: 350px;
+      }
+
+      section ul li:nth-child(1) {
+        background-image: url(https://www.shinsegaefood.com/images/management/bg_info_1.jpg);
+      }
+      section ul li:nth-child(2) {
+        background-image: url(https://www.shinsegaefood.com/images/management/bg_info_2.jpg);
+      }
+      section ul li:nth-child(3) {
+        background-image: url(https://www.shinsegaefood.com/images/management/bg_info_3.jpg);
+      }
+      .txt::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+      .txt:hover::before {
+        background: rgba(0, 0, 0, 0.6);
+      }
+      .txt ul li:hover h3 {
+        color: #f29b76;
+      }
+      @media screen and (max-width: 940px) {
+        section ul li {
+          overflow: hidden;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <ul>
+        <li>
+          <a href="#"></a>
+          <div class="txt">
+            <h3>경영정보</h3>
+            <p>
+              주주 및 이사회 구성을 <br />
+              안내해 드립니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="#"></a>
+          <div class="txt">
+            <h3>재무정보</h3>
+            <p>
+              영업현황 및 재무제표를 <br />
+              안내해 드립니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="#"></a>
+          <div class="txt">
+            <h3>주식정보</h3>
+            <p>
+              주가정보를 <br />
+              안내해 드립니다.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

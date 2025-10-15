@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .grid-container {
+        background: pink;
+        display: grid;
+        grid-template-columns: 100px 200px auto;
+        grid-template-rows: repeat(3, minmax(100px, auto));
+        gap: 20px;
+      }
+      .grid-item {
+        background: #ddd;
+      }
+      .grid-item:first-child {
+        grid-row: 1 / span 3;
+      }
+      ul {
+        display: grid;
+        background: pink;
+        grid-template-columns: repeat(auto-fill, minmax(10%, auto));
+        gap: 10px;
+        margin-top: 50px;
+      }
+      ul li {
+        background: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+      <div class="grid-item">7</div>
+      <div class="grid-item">8</div>
+      <div class="grid-item">9</div>
+    </div>
+    <ul>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+    </ul>
+  </body>
+</html>

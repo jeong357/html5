@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .B2B {
+        padding: 30px;
+      }
+      .B2B .maintit1 {
+        text-align: center;
+      }
+      .B2B .txt p {
+        padding: 40px;
+        margin-left: 220px;
+      }
+      .grid-container {
+        width: 1348px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+      }
+      .grid-item {
+        position: relative;
+      }
+      .grid-item img {
+        width: 100%;
+        height: 270px;
+        object-fit: cover;
+      }
+      .grid-item:nth-child(3) {
+        grid-column: 3 / 5;
+      }
+      .grid-item:nth-child(4) {
+        grid-column: 1 / 3;
+      }
+      .ftlogo {
+        width: 1348px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .center h2 {
+        position: relative;
+        left: 275px;
+        padding-top: 150px;
+      }
+      .center .b2b-logo1,
+      .center .b2b-logo2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 15vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="B2B">
+      <div class="maintit1">
+        <h2>
+          쿠첸 B2B 사업은 고객사와 개인의 필요에 맞는 맞춤 제품 및 서비스 제공을
+          통해<br />
+          최상의 만족도를 제공해 드립니다.
+        </h2>
+      </div>
+      <div class="txt">
+        <p>
+          쿠첸은 2013년부터 현재까지 약 10년 이상의 전기레인지 자체 개발을
+          바탕으로 혁신적인 기술력과 신뢰성을 보유하고 있습니다.<br />
+          국내 최초 하이브리드 기술의 전기레인지 개발을 시작으로 국내 최초
+          분리형 하방 배기 후드의 제조 및 생산, 국내 최다 27종 안정장치 기능
+          등<br />
+          탄탄한 안정성을 기반으로 깐깐한 B2B 건설 시장을 리딩하고 있습니다.<br />
+          최초 쿠첸을 경험하신 고객사는 검증된 기술, 우수한 디자인, 브랜드
+          신뢰를 바탕으로 꾸준히 쿠첸을 찾고 있습니다.<br />쿠첸 B2B 비즈니스는
+          고객사 및 개인 소비자분들의 최상의 만족도를 달성하기 위해 언제나
+          최선을 다하겠습니다.
+        </p>
+      </div>
+    </div>
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="https://www.cuchen.com/img/b2b_info_01.jpg" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="https://www.cuchen.com/img/b2b_info_02.jpg" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="https://www.cuchen.com/img/b2b_info_03.jpg" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="https://www.cuchen.com/img/b2b_info_04.jpg" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="https://www.cuchen.com/img/b2b_info_05.jpg" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="https://www.cuchen.com/img/b2b_info_06.jpg" alt="" />
+      </div>
+    </div>
+    <section class="center">
+      <h2>이미 많은 유수의 기업들이 쿠첸을 선택하고 있습니다.</h2>
+      <div class="ftlogo">
+        <div class="b2b-logo1">
+          <p>
+            <img src="https://www.cuchen.com/img/b2b_logo_01.svg" alt="" />
+          </p>
+          <p>
+            <img src="https://www.cuchen.com/img/b2b_logo_02.svg" alt="" />
+          </p>
+          <p>
+            <img src="https://www.cuchen.com/img/b2b_logo_03.svg" alt="" />
+          </p>
+          <p>
+            <img src="https://www.cuchen.com/img/b2b_logo_04.svg" alt="" />
+          </p>
+          <p>
+            <img src="https://www.cuchen.com/img/b2b_logo_05.svg" alt="" />
+          </p>
+          <p>
+            <img src="https://www.cuchen.com/img/b2b_logo_11.svg" alt="" />
+          </p>
+        </div>
+        <div class="b2b-logo2">
+          <p>
+            <img src="https://www.cuchen.com/img/b2b_logo_07.svg" alt="" />
+          </p>
+          <p>
+            <img src="https://www.cuchen.com/img/b2b_logo_08.svg" alt="" />
+          </p>
+          <p>
+            <img src="https://www.cuchen.com/img/b2b_logo_09.svg" alt="" />
+          </p>
+          <p>
+            <img src="https://www.cuchen.com/img/b2b_logo_10.svg" alt="" />
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
