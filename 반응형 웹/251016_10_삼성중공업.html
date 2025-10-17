@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        width: 95%;
+        max-width: 1720px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-auto-rows: 458px;
+        gap: 20px;
+      }
+      ul li {
+        border-radius: 15px;
+        overflow: hidden;
+        padding-top: 150px;
+        padding-left: 40px;
+        color: #fff;
+        position: relative;
+        border-radius: 20px;
+      }
+      ul li::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 20px;
+        background-size: cover;
+        background-position: center;
+        transition: 0.5s;
+      }
+      ul li:hover::before {
+        transform: scale(1.1);
+      }
+      ul li:first-child::before {
+        background-image: url(https://www.samsungshi.com/images/main/mRecruit_bg_01.jpg);
+      }
+      ul li:nth-child(2)::before {
+        background-image: url(https://www.samsungshi.com/images/main/mRecruit_bg_02.jpg);
+      }
+      ul li:last-child::before {
+        background-image: url(https://www.samsungshi.com/images/main/mRecruit_bg_03.jpg);
+      }
+      ul li .txt {
+        z-index: 1;
+        position: relative;
+      }
+      @media screen and (max-width: 1280px) {
+        ul {
+          grid-template-columns: 1fr 1fr;
+        }
+        ul li:first-child {
+          grid-column: 1 / span 2;
+        }
+      }
+      @media screen and (max-width: 640px) {
+        ul {
+          grid-template-columns: 1fr;
+        }
+        ul li:first-child {
+          grid-column: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div class="txt">
+          <h2>채용절차</h2>
+          <p>
+            글로벌 전문가 양성을 위한<br />
+            신입사원부터 경력사원까지
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="txt">
+          <h2>채용공고</h2>
+          <p>
+            삼성인이 지향하는 열정과<br />
+            도전정신을 갖춘 인재를 찾습니다.
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="txt">
+          <h2>회사생활</h2>
+          <p>
+            보다 질 높은 삶을 추구할 수 있도록<br />
+            적극적으로 지원합니다.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>

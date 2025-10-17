@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mostly Fluid</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      #wrap {
+        width: 100%;
+        /* max-width: 1280px; */
+        display: grid;
+        grid-template-columns: 3fr 4fr 3fr;
+        grid-auto-rows: 400px;
+        margin: 0 auto;
+      }
+
+      #wrap > div {
+        flex: 1;
+      }
+      #wrap > div:first-child {
+        background: #aaa;
+      }
+
+      #wrap > div:nth-child(2) {
+        background: #bbb;
+      }
+
+      #wrap > div:last-child {
+        background: #ccc;
+      }
+
+      @media screen and (max-width: 1024px) {
+        #wrap > div:nth-child(2) {
+          grid-column: 2 / span 2;
+        }
+
+        #wrap > div:last-child {
+          grid-column: 1 / span 3;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        #wrap > div:first-child {
+          grid-column: 1 / span 3;
+        }
+
+        #wrap > div:nth-child(2) {
+          grid-column: 1 / span 3;
+        }
+        #wrap > div:last-child {
+          order: 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <div><h1>1</h1></div>
+
+      <div><h1>2</h1></div>
+
+      <div><h1>3</h1></div>
+    </div>
+  </body>
+</html>
