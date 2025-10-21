@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ul {
+        list-style: none;
+      }
+      body {
+        font-family: "Pretendard", sans-serif;
+        color: #111;
+      }
+
+      section {
+        width: 100%;
+        max-width: 1400px;
+        margin: 50px auto;
+        padding: 0 20px;
+      }
+
+      /* 제목 */
+      section .title h1 {
+        width: 100%;
+        font-size: 3vw;
+        font-weight: 800;
+        text-align: center;
+        color: #111;
+      }
+      section .title .date {
+        width: 100%;
+        font-size: 1rem;
+        text-align: right;
+        color: #666;
+        padding-top: 30px;
+      }
+
+      /* 첫 번째 줄 */
+      section .intro1,
+      section .intro2 {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 60px;
+        font-size: 1.1rem;
+        padding-top: 70px;
+      }
+
+      section .intro1 ul,
+      section .intro2 ul {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+        border-bottom: 2px solid #111;
+        padding-bottom: 15px;
+        min-width: 250px;
+      }
+
+      section h4 {
+        font-weight: 600;
+      }
+
+      /* 화면 크기에 따른 반응형 처리 */
+      @media screen and (max-width: 1024px) {
+        section .title h1 {
+          font-size: 4vw;
+        }
+        section .intro1,
+        section .intro2 {
+          gap: 40px;
+        }
+        section .intro1 ul,
+        section .intro2 ul {
+          gap: 50px;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        section {
+          margin: 30px auto;
+        }
+        section .title h1 {
+          font-size: 5vw;
+        }
+        section .title .date {
+          font-size: 0.9rem;
+        }
+        section .intro1,
+        section .intro2 {
+          flex-direction: column;
+          align-items: center;
+          gap: 30px;
+          padding-top: 40px;
+        }
+        section .intro1 ul,
+        section .intro2 ul {
+          width: 50%;
+          justify-content: space-between;
+          gap: 20px;
+          font-size: 1rem;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        section .title h1 {
+          font-size: 6vw;
+        }
+        section .intro1 ul,
+        section .intro2 ul {
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          border-bottom: 1px solid #aaa;
+        }
+        section h4 {
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="title">
+        <h1>삼성중공업 주식회사</h1>
+        <ul class="date">
+          <li>
+            <p>[기준일 2024.12.31]</p>
+          </li>
+        </ul>
+      </div>
+        <div class="intro1">
+          <ul class="txt1">
+            <li><h4>대표이사</h4></li>
+            <li>
+              <h4>최성안</h4>
+            </li>
+          </ul>
+          <ul class="txt2">
+            <li><h4>창립일</h4></li>
+            <li>
+              <h4>1974년 8월 5일</h4>
+            </li>
+          </ul>
+          <ul class="txt3">
+            <li><h4>종업원수</h4></li>
+            <li><h4>10,112명</h4></li>
+          </ul>
+        </div>
+        <div class="intro2">
+          <ul class="txt1">
+            <li><h4>자본금</h4></li>
+            <li>
+              <h4>8,801억원</h4>
+            </li>
+          </ul>
+            <ul class="txt2">
+              <li><h4>매출액</h4></li>
+              <li>
+                <h4>99,031억원</h4>
+              </li>
+            </ul>
+            <ul class="txt3">
+              <li><h4>총자산</h4></li>
+              <li>
+                <h4>169,979억원</h4>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
