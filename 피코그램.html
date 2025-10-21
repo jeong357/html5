@@ -15,6 +15,10 @@
         margin: 0;
         padding: 0;
       }
+      html {
+        scroll-behavior: smooth;
+      }
+      html,
       body {
         height: 100%;
         scroll-behavior: smooth;
@@ -27,8 +31,10 @@
         width: 100%;
         max-width: 1920px;
         height: 100%;
+        display: flex;
         font-family: "Pretendard", sans-serif;
         font-weight: regular;
+        scroll-snap-align: start;
       }
       section video {
         position: absolute;
