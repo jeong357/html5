@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 95%;
+        max-width: 1920px;
+        text-align: center;
+        margin: 0 auto;
+      }
+      h1 {
+        width: 100%;
+        padding: 50px 0 50px 0;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      div.com {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #e5e5e5;
+        border-radius: 15px;
+        margin: 0 auto;
+        padding: 50px;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .com {
+        position: relative;
+        overflow: hidden;
+      }
+      .com a:nth-child(2) {
+        align-self: flex-end;
+        width: 60px;
+        height: auto;
+      }
+      .com a:nth-child(3) {
+        color: #616161;
+      }
+      .com a:nth-child(3)::after {
+        position: absolute;
+        content: "→";
+        right: 65%;
+        top: 70%;
+      }
+      @media (max-width: 1024px) {
+        .grid-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 640px) {
+        .grid-container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>고객마당</h1>
+    <div class="grid-container">
+      <div class="com">
+        <a href="#"><h3>열요금정보</h3></a>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.gspower.co.kr/pub/images/icon_customer_yard01.svg"
+              alt=""
+            /></p
+        ></a>
+        <a href="#"><p>VIEW MORE</p></a>
+      </div>
+      <div class="com">
+        <a href="#"><h3>설비정보</h3></a
+        ><a href="#"
+          ><p>
+            <img
+              src="https://www.gspower.co.kr/pub/images/icon_customer_yard02.svg"
+              alt=""
+            /></p
+        ></a>
+        <a href="#"><p>VIEW MORE</p></a>
+      </div>
+      <div class="com">
+        <a href="#"><h3>교육정보</h3></a
+        ><a href="#"
+          ><p>
+            <img
+              src="https://www.gspower.co.kr/pub/images/icon_customer_yard03.svg"
+              alt=""
+            /></p
+        ></a>
+        <a href="#"><p>VIEW MORE</p></a>
+      </div>
+      <div class="com">
+        <a href="#"><h3>세대정보</h3></a
+        ><a href="#"
+          ><p>
+            <img
+              src="https://www.gspower.co.kr/pub/images/icon_customer_yard04.svg"
+              alt=""
+            /></p
+        ></a>
+        <a href="#"><p>VIEW MORE</p></a>
+      </div>
+      <div class="com">
+        <a href="#"><h3>자료실</h3></a
+        ><a href="#"
+          ><p>
+            <img
+              src="https://www.gspower.co.kr/pub/images/icon_customer_yard05.svg"
+              alt=""
+            /></p
+        ></a>
+        <a href="#"><p>VIEW MORE</p></a>
+      </div>
+      <div class="com">
+        <a href="#"><h3>공지사항</h3></a
+        ><a href="#"
+          ><p>
+            <img
+              src="https://www.gspower.co.kr/pub/images/icon_customer_yard06.svg"
+              alt=""
+            /></p
+        ></a>
+        <a href="#"><p>VIEW MORE</p></a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      h1 {
+        font-size: 5vw;
+      }
+      ul.company {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        padding: 0 80px;
+      }
+      ul.company li {
+        position: relative;
+        border: 1px solid #e5e5e5;
+        border-radius: 10px;
+        padding: 25px 22px;
+        box-sizing: border-box;
+      }
+      ul.company li::after {
+        content: "→"; /*ㅁ선택후 한자*/
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        border: 1px solid #e5e5e5;
+        text-align: center;
+        line-height: 26px;
+        color: #616161;
+      }
+      ul.company li:hover::after {
+        background: #f37321;
+        color: #fff;
+        border: none;
+      }
+      ul.company li a {
+        display: block;
+      }
+      ul.company li a img {
+        width: 100%;
+        object-fit: cover;
+      }
+      @media screen and (max-width: 1024px) {
+        ul.company li {
+          padding: 12px 18px;
+        }
+        ul.company li:hover::after {
+          background: none;
+          border: 1px solid #e5e5e5;
+          color: #616161;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        ul.company {
+          padding: 0 30px;
+          grid-template-columns: repeat(2, 1fr);
+        }
+        ul.company li {
+          padding: 12px 16px;
+        }
+      }
+      @media screen and (max-width: 670px) {
+        ul.company {
+          grid-template-columns: 1fr;
+        }
+        ul.company li {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Our Brand Values</h1>
+    <ul class="company">
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240422/1713775631479.jpg"
+              alt="company"
+            />
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713869856042.jpg"
+              alt="company"
+            />
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713874192354.jpg"
+              alt="company"
+            />
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713874567467.jpg"
+              alt="company"
+            />
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713874779700.jpg"
+              alt="company"
+            />
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713874951317.jpg"
+              alt="company"
+            />
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713871679059.jpg"
+              alt="company"
+            />
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713875088485.jpg"
+              alt="company"
+            />
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713875259067.jpg"
+              alt="company"
+            />
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713875384846.jpg"
+              alt="company"
+            />
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240521/1716268151833.jpg"
+              alt="company"
+            />
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713875509763.jpg"
+              alt="company"
+            />
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713875629246.jpg"
+              alt="company"
+            />
+          </p>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>
