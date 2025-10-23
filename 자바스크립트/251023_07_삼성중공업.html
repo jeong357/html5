@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .skill {
+        width: 600px;
+        margin: 50px auto;
+      }
+      .skill .btn {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+      }
+      .skill .btn li {
+        flex: 1;
+        text-align: center;
+      }
+      .skill .con {
+        position: relative;
+        height: 300px;
+      }
+      .skill .con li {
+        width: 100%;
+        height: 100%;
+        background: #ccc;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+      }
+      .on {
+        background: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="skill">
+      <ul class="btn">
+        <li>조선</li>
+        <li>해양</li>
+        <li>엔지니어링</li>
+      </ul>
+      <ul class="con">
+        <li>조선하단내용</li>
+        <li>해양하단내용</li>
+        <li>엔지니어링하단내용</li>
+      </ul>
+    </div>
+    <script>
+      document.querySelectorAll(".btn li")[0].classList.add("on");
+      document.querySelectorAll(".con li")[0].style.display = "block";
+
+      function myfnc() {
+        document.querySelectorAll(".btn li").forEach(function (v) {
+          v.classList.remove("on");
+        });
+        document.querySelectorAll(".con li").forEach(function (v) {
+          v.style.display = "none";
+        });
+      }
+
+      document.querySelectorAll(".btn li").forEach(function (v, i) {
+        v.onclick = function () {
+          document.querySelectorAll(".con li").forEach(function (v) {
+            v.style.display = "none";
+          });
+
+          document.querySelectorAll(".con li")[i].style.display = "block";
+        };
+      });
+    </script>
+  </body>
+</html>

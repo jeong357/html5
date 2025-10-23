@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트 시작</title>
+    <style>
+      .on {
+        color: red;
+      }
+    </style>
+    <script>
+      document.title = "연습";
+    </script>
+  </head>
+  <body>
+    <p class="a1 b1 c1" id="demo">classlist속성</p>
+    <h1></h1>
+    <button>toggle</button>
+    <button>클래스리스트</button>
+
+    <script>
+      // document.querySelector("p").classList.add("on");
+      // document.querySelector("p").classList.remove("on");
+      document.querySelector("button").onclick = function () {
+        //버튼에 클릭하는 함수
+        document.querySelector("p").classList.toggle("on");
+      };
+      // document.querySelector("p").classList.replace("on", "active");
+      console.log(document.querySelector("p").classList.length); //클래스리스트 길이
+      console.log(document.querySelector("p").classList.contains("a2")); //포함
+      // document.getElementsByTagName("button")[1];
+      let list = document.getElementById("demo").classList;
+      let text = "";
+      for (let x of list.keys()) {
+        text += x + "<br>";
+      }
+      document.getElementById("h1").innerHTML = text;
+      console.log(list.value);
+      console.log(list.item(0));
+    </script>
+  </body>
+</html>
