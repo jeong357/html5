@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .list {
+        height: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+      }
+      .list ul {
+        width: 1400px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .list ul li {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background: #fff;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        border: 12px solid transparent;
+      }
+      .list ul li.on {
+        border: 12px solid #da2128;
+      }
+      .list ul li p:nth-child(2) {
+        height: 58px;
+        line-height: 1.1;
+        display: flex;
+        align-items: center;
+      }
+      .list ul li img {
+        width: 100%;
+        object-fit: cover;
+        filter: grayscale(1);
+      }
+      .bg1 {
+        background-image: url(https://www.shinsegaefood.com/images/business/business_bg_food.jpg);
+      }
+      .bg2 {
+        background-image: url(https://www.shinsegaefood.com/images/business/business_bg_bakery.jpg);
+      }
+      .bg3 {
+        background-image: url(https://www.shinsegaefood.com/images/business/business_bg_franchise.jpg);
+      }
+      .bg4 {
+        background-image: url(https://www.shinsegaefood.com/images/business/business_bg_premiumService.jpg);
+      }
+      .bg5 {
+        background-image: url(https://www.shinsegaefood.com/images/business/business_bg_foodService.jpg);
+      }
+      .bg6 {
+        background-image: url(https://www.shinsegaefood.com/images/business/business_bg_subsidiary.jpg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="list">
+      <ul>
+        <li>
+          <p>
+            <img
+              src="	https://www.shinsegaefood.com/images/business/bg_business_tab01_on.png"
+              alt=""
+            />
+          </p>
+          <p>식품제조/<br />유통</p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="	https://www.shinsegaefood.com/images/business/bg_business_tab02_on.png"
+              alt=""
+            />
+          </p>
+          <p>베이커리</p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="	https://www.shinsegaefood.com/images/business/bg_business_tab03_on.png"
+              alt=""
+            />
+          </p>
+          <p>프랜차이즈</p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="	https://www.shinsegaefood.com/images/business/bg_business_tab04_on.png"
+              alt=""
+            />
+          </p>
+          <p>프리미엄<br />다이닝</p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="	https://www.shinsegaefood.com/images/business/bg_business_tab05_on.png"
+              alt=""
+            />
+          </p>
+          <p>푸드서비스</p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="	https://www.shinsegaefood.com/images/business/bg_business_tab06_on.png"
+              alt=""
+            />
+          </p>
+          <p>자회사</p>
+        </li>
+      </ul>
+    </div>
+    <script>
+      document.querySelector(".list").classList.add("bg1");
+      document.querySelectorAll(".list ul li")[0].classList.add("on");
+      document
+        .querySelectorAll(".list ul li")[0]
+        .querySelector("p img").style.filter = "grayscale(0)";
+      document.querySelectorAll(".list ul li").forEach(function (v, k, ar) {
+        v.onclick = function () {
+          console.log(k);
+          ar.forEach(function (v) {
+            v.classList.remove("on");
+            v.querySelector("p img").style.filter = "grayscale(1)";
+          });
+          /* document
+            .querySelector(".list")
+            .classList.remove("bg1", "bg2", "bg3", "bg4", "bg5", "bg6");*/
+          let secondclass = document.querySelector(".list").classList[1];
+          document.querySelector(".list").classList.remove(secondclass);
+          document.querySelector(".list").classList.add("bg" + (k + 1));
+          v.classList.add("on");
+          v.querySelector("p img").style.filter = "grayscale(0)";
+        };
+      });
+    </script>
+  </body>
+</html>
