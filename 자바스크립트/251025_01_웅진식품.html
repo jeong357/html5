@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul.list {
+        width: 1480px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 50px auto;
+        gap: 70px;
+      }
+      ul.list li {
+        font-size: 15px;
+        cursor: pointer;
+        color: #2e2e2e;
+      }
+      ul.list li:hover {
+        color: #71b200;
+        border-bottom: 2px solid #71b200;
+      }
+      .PD1 {
+        width: 85%;
+        height: 218px;
+        position: relative;
+      }
+      .PD1 > li {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .PD1 > ul {
+        width: 100%;
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="list">
+      <li><p>주스</p></li>
+      <li><p>차</p></li>
+      <li><p>곡물</p></li>
+      <li><p>어린이</p></li>
+      <li><p>생수/탄산/이온</p></li>
+      <li><p>홍삼/건강/드링크</p></li>
+      <li><p>제과</p></li>
+      <li><p>해외수입제품</p></li>
+    </ul>
+    <ul class="PD1">
+      <li>
+        <p>
+          <img
+            src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+            alt=""
+          />
+        </p>
+      </li>
+      <li>
+        <p>
+          <img
+            src="https://www.wjfood.co.kr/uploads/brand/dad9b103-f115-42a0-b0a5-cfd25561c3be.png"
+            alt=""
+          />
+        </p>
+      </li>
+      <li>
+        <p>
+          <img
+            src="https://www.wjfood.co.kr/uploads/brand/ab012b6f-ce24-4d5b-ac20-76541c911f0f.png"
+            alt=""
+          />
+        </p>
+      </li>
+      <li>
+        <p>
+          <img
+            src="https://www.wjfood.co.kr/uploads/brand/a3d59de4-4bcd-4a12-ac0d-1a5608544137.png"
+            alt=""
+          />
+        </p>
+      </li>
+      <li>
+        <p>
+          <img
+            src="https://www.wjfood.co.kr/uploads/brand/a5699127-9db4-4568-9d60-305e0f20009c.png"
+            alt=""
+          />
+        </p>
+      </li>
+    </ul>
+  </body>
+</html>

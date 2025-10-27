@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .con {
+        position: relative;
+      }
+      .con li {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+      }
+      .con li.on {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="btn">
+      <li><a href="#">photo1</a></li>
+      <li><a href="#">photo2</a></li>
+      <li><a href="#">photo3</a></li>
+      <li><a href="#">photo4</a></li>
+    </ul>
+    <ul class="con">
+      <li>
+        <p><img src="../images/photo1.jpg" alt="" /></p>
+      </li>
+      <li>
+        <p><img src="../images/photo2.jpg" alt="" /></p>
+      </li>
+      <li>
+        <p><img src="../images/photo3.jpg" alt="" /></p>
+      </li>
+      <li>
+        <p><img src="../images/photo4.jpg" alt="" /></p>
+      </li>
+    </ul>
+    <script>
+      let btn = document.querySelectorAll(".btn li");
+      let con = document.querySelectorAll(".con > li");
+      btn[0].classList.add("on");
+      con[0].classList.add("on");
+      btn.forEach(function (v, k, ar) {
+        v.onclick = function (e) {
+          e.preventDefault(); //a태그가 href 경로로 가는 것을 막는 것
+          ar.forEach(function (v) {
+            v.classList.remove("on");
+          });
+          this.classList.add("on");
+          con.forEach(function (v) {
+            v.classList.remove("on");
+          });
+          con[k].classList.add("on");
+        };
+      });
+    </script>
+  </body>
+</html>

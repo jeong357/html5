@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .con li {
+        display: none;
+      }
+      .con li.on {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="btn">
+      <li><a href="#">photo1</a></li>
+      <li><a href="#">photo2</a></li>
+      <li><a href="#">photo3</a></li>
+      <li><a href="#">photo4</a></li>
+    </ul>
+    <ul class="con">
+      <li class="on">
+        <p><img src="../images/photo1.jpg" alt="" /></p>
+      </li>
+    </ul>
+    <script>
+      let btn = document.querySelectorAll(".btn li");
+      let imgSrc = document.querySelector(".con img").src;
+      btn.forEach(function (v, k, ar) {
+        v.onclick = function (e) {
+          e.preventDefault(); //a태그가 href 경로로 가는 것을 막는 것
+          let num = imgSrc.replace((-5, -4), k + 1);
+          console.log(imgnew);
+        };
+      });
+    </script>
+  </body>
+</html>

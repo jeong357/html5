@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str1 = "nice to meet you E";
+      let str2 = new String("How are you today?");
+      document.write(str1.search("m") + "<br>");
+      document.write(str2.search("h") + "<br>");
+      document.write(str2.search("H") + "<br>");
+      document.write(str2.search(/h/i) + "<br>");
+      document.write(str2.search("a") + "<br>");
+      document.write(str1.replace("nice", "good") + "<br>");
+      console.log(str1);
+      document.write(str1.replace("Nice", "good") + "<br>");
+      document.write(str1.replace(/N/i, "N") + "<br>");
+      document.write(str1.replace(/e/i, "a") + "<br>");
+      document.write(str1.replace(/e/g, "a") + "<br>");
+      document.write(str1.replace(/e/gi, "a") + "<br>");
+      document.write(str1.replaceAll("e", "a") + "<br>");
+      document.write(str1.indexOf("E") + "<br>");
+      document.write(str1.indexOf("x") + "<br>");
+      document.write(str1.lastIndexOf("e") + "<br>");
+      document.write(str1.match("nice") + "<br>");
+      document.write(str1.match("x") + "<br>");
+      document.write(str1.charAt(0) + "<br>");
+      document.write(str1.slice(1, 3) + "<br>");
+      document.write(str1.slice(-5, -1) + "<br>");
+      document.write(str1.slice(3) + "<br>");
+      let str3 = "123456-1234567";
+      document.write(str3.replace(str3.slice(8), "******" + "<br>"));
+      document.write(str3.replace(str3.slice(8), "*".repeat(6) + "<br>"));
+      document.write(str3.substring(3) + "<br>"); //
+      document.write(str3.substring(-1) + "<br>");
+      document.write(str3.substr(0, 5) + "<br>"); //문자열에서 괄호 안에 정해진 개수를 가져올 때
+      document.write(str3.substr(-1, 5) + "<br>");
+      document.write(str3.replace(str3.substr(-6), "******") + "<br>");
+      document.write(str3.length + "<br>");
+      document.write(str1.split(" ")[2] + "<br>");
+    </script>
+  </body>
+</html>

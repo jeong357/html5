@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        background: #000;
+      }
+      .lidar {
+        width: 1600px;
+        margin: 50px auto;
+      }
+      .lidar .btn {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 50px;
+      }
+      .lidar .btn > li {
+        width: 158px;
+        height: 58px;
+      }
+      .lidar .btn > li a {
+        color: #fff;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 60px;
+        border: 1px solid #fff;
+        text-align: center;
+        line-height: 58px;
+      }
+      .lidar .btn > li a.on {
+        border: 1px solid #23bef7;
+        background: #23bef7;
+      }
+      .lidar .con {
+        display: flex;
+        border-radius: 44px;
+        height: 490px;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(0, 214, 246, 1) 50%,
+          rgba(0, 132, 249, 1) 100%
+        );
+        position: relative;
+      }
+      .lidar .con > li {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .lidar .con > li.on {
+        display: block;
+      }
+      .lidar .con > li > ul {
+        display: flex;
+        height: 100%;
+      }
+      .lidar .con > li > ul > li {
+        flex: 1;
+      }
+      .lidar .con > li > ul > li:first-child {
+        background: #fff;
+        border-radius: 44px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .lidar .con > li > ul > li:last-child {
+        color: #fff;
+      }
+      .lidar .con > li > ul > li .txt {
+        padding: 0 90px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+      }
+      .lidar .con > li > ul > li .txt .detail {
+        /* list-style: disc; */
+      }
+      .lidar .con > li > ul > li .txt .detail li {
+        position: relative;
+        padding-left: 12px;
+      }
+      .lidar .con > li > ul > li .txt .detail li::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lidar">
+      <ul class="btn">
+        <li><a href="#">ML_Series</a></li>
+        <li><a href="#">GL Series</a></li>
+        <li><a href="#">Data Solution</a></li>
+      </ul>
+      <ul class="con">
+        <li>
+          <ul>
+            <li>
+              <p>
+                <img
+                  src="https://soslab.co/images/main/sec4_product_img1_new.png"
+                  alt=""
+                />
+              </p>
+            </li>
+            <li>
+              <div class="txt">
+                <h1>ML (Mobility LiDAR)</h1>
+                <h4>차세대 3D 고정형 라이다</h4>
+                <p>
+                  기계식 부품이 없는 구조로 양산에 최적화되어 제조원가가
+                  절감되는 강점이 있고, 동작 온도 및 진동 등에 내구성이
+                  강하면서도 소형화 및 경량화한 덕분에 다양한 위치에 설치가
+                  용이합니다.
+                </p>
+                <a href="#">VIEW MORE</a>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li>
+              <p>
+                <img
+                  src="https://soslab.co/images/main/sec4_product_img3.jpg"
+                  alt=""
+                />
+              </p>
+            </li>
+            <li>
+              <div class="txt">
+                <h1>GL (General LiDAR)</h1>
+                <h4>180, 270도 스캐닝 2D 라이다</h4>
+                <ul class="detail">
+                  <li>영역 감지: 0.18°의 높은 분해능 기반 정확한 거리 측정</li>
+                  <li>
+                    장애물 회피: 40Hz의 빠른 스캐닝 속도로 돌발 상황에서 유연한
+                    대응
+                  </li>
+                  <li>
+                    슬램 (SLAM): 고속 이동중에도 뛰어난 실시간 맵 제작 및 위치
+                    추적
+                  </li>
+                </ul>
+                <a href="#">VIEW MORE</a>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li>
+              <p>
+                <img
+                  src="https://soslab.co/images/main/sec4_product_img3.png"
+                  alt=""
+                />
+              </p>
+            </li>
+            <li>
+              <div class="txt">
+                <h1>Data Solution</h1>
+                <h4>LiDAR 인식 솔루션</h4>
+                <ul class="detail">
+                  <li>고정형 LiDAR ML-X</li>
+                  <li>On-Device 인식 솔루션</li>
+                  <li>응용 시스템</li>
+                </ul>
+                <a href="#">VIEW MORE</a>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      let btn = document.querySelectorAll(".btn li");
+      let con = document.querySelectorAll(".con>li");
+      btn[0].classList.add("on");
+      con[0].classList.add("on");
+      btn.forEach(function (v, k, ar) {
+        v.onclick = function (e) {
+          e.preventDefault(); //a태그가 href 경로로 가는걸 방지
+          ar.forEach(function (v) {
+            v.classList.remove("on");
+          });
+          this.classList.add("on");
+          con.forEach(function (v) {
+            v.classList.remove("on");
+          });
+          con[k].classList.add("on");
+        };
+      });
+    </script>
+  </body>
+</html>
