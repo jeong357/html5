@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>red</p>
+    <p>blue</p>
+    <p>gray</p>
+    <p>green</p>
+    <p>#8ac007</p>
+    <p>#ccc</p>
+    <p>#ddd</p>
+    <script>
+      let color = document.querySelectorAll("p");
+      color.forEach(function (a, b) {
+        a.style.backgroundColor = a.innerText;
+      });
+    </script>
+  </body>
+</html>

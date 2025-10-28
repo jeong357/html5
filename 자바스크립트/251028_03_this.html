@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="menu">
+      <li><a href="#">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
+      <li><a href="#">메뉴4</a></li>
+    </ul>
+    <script>
+      let menu = document.querySelectorAll("ul.menu li");
+      menu.forEach(function (v, k, ar) {
+        v.onclick = function (e) {
+          e.preventDefault();
+          ar.forEach(function (v) {
+            v.querySelector("a").style.color = "#000";
+          });
+
+          this.querySelector("a").style.color = "red";
+        };
+      });
+    </script>
+  </body>
+</html>

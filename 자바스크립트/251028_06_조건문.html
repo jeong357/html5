@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>img보이기</p>
+    <p id="demo"></p>
+    <script>
+      let imgShow = true;
+      document.querySelector("p").onclick = function () {
+        if (imgShow) {
+          document.getElementById("demo").innerHTML =
+            '<img src="../images/photo1.jpg" alt="photo1" />';
+          this.innerText = "이미지 숨기기";
+        } else {
+          document.getElementById("demo").innerHTML = " ";
+          this.innerText = "이미지 보이기";
+        }
+        imgShow = !imgShow;
+      };
+    </script>
+  </body>
+</html>

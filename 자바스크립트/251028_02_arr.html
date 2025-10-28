@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const cars = ["Saab", "Volvo", "BMW"];
+      cars[0] = "Saab";
+      cars[1] = "Volvo";
+      cars[2] = "BMW";
+      const cars2 = new Array("Saab", "Volvo", "BMW");
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.write(fruits.join(" ") + "<br>");
+      fruits.pop();
+      document.write(fruits.join(" ") + "<br>");
+      fruits.push(kiwi);
+      document.write(fruits.join(" ") + "<br>");
+      fruits.shift();
+      document.write(fruits.join(" ") + "<br>");
+      fruits.unshift(Lemon);
+      document.write(fruits.join(" ") + "<br>");
+      const myGirls = ["Cecilie", "Lone"];
+      const myBoys = ["Emil", "Tobias", "Linus"];
+      const myChildren = myGirls.concat(myBoys);
+      document.write(myChildren + "<br>");
+      myChildren.splice(2, 1, "홍길동");
+      document.write(myChildren + "<br>");
+      myChildren.sort();
+      document.write(myChildren + "<br>");
+      myChildren.reverse();
+      document.write(myChildren + "<br>");
+      cars2.sort().reverse();
+      document.write(car2 + "<br>");
+      const arr1 = ["아반떼", "소나타", "그랜저", "제네시스", "SM5"];
+      const obj1 = { color: "파랑", size: "20px", width: "300px" };
+      document.write(Object.keys(arr1) + "<br>");
+      document.write(Object.keys(obj1) + "<br>");
+      document.write(typeof arr1 + "<br>");
+      document.write(typeof obj1 + "<br>");
+      document.write(
+        (arr1 instanceof Array) +
+          "<br>" +
+          (arr1 instanceof Object) +
+          "<br>" +
+          (arr1 instanceof String) +
+          "<br>" +
+          (arr1 instanceof Number + "<br>" + "<br>")
+      );
+      document.write(
+        (obj1 instanceof Array) +
+          "<br>" +
+          (obj1 instanceof Object) +
+          "<br>" +
+          (obj1 instanceof String) +
+          "<br>" +
+          (obj1 instanceof Number)
+      );
+    </script>
+  </body>
+</html>
