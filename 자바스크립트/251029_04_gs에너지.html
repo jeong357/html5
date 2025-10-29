@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul.list {
+        width: 95%;
+        max-width: 1520px;
+        margin: 50px auto;
+      }
+      ul.list .title {
+        height: 95px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+      }
+      ul.list .title span {
+        position: relative;
+        width: 23px;
+        display: block;
+      }
+      ul.list .title span::before,
+      ul.list .title span::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        background: #000;
+        border-radius: 2px;
+        transition: 0.2s linear;
+      }
+      ul.list .title span::before {
+        width: 23px;
+        height: 3px;
+        margin: -1px 0 0 -11px;
+      }
+      ul.list .title span::after {
+        width: 3px;
+        height: 23px;
+        margin: -11px 0 0 -1px;
+      }
+      ul.list .title span.on::after {
+        transform: rotate(90deg);
+        opacity: 0;
+      }
+      ul.list .contents {
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      ul.list .contents .con p.conImg img {
+        width: 100%;
+        object-fit: cover;
+      }
+      ul.list .contents .con .txt {
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="list">
+      <li>
+        <div class="title">
+          <h2>인천파워</h2>
+          <span></span>
+        </div>
+        <div class="contents">
+          <div class="con">
+            <p class="conImg">
+              <img
+                src="https://www.gsenergy.co.kr/pub/images/img_collective_a01.jpg"
+                alt="collective"
+              />
+            </p>
+            <div class="txt">
+              GS파워는 한국전력공사의 발전부문 매각과 한국지역난방공사 공기업
+              민영화 작업의 일환으로 정부가 시행한 안양/부천 열병합 발전 및
+              <br />지역난방설비에 대한 공개경쟁입찰에서 인수자로 최종 결정되어,
+              2000년 6월 22일 자산양수도 계약을 체결하고, 그 해 9 월 1일
+              본격적인 운영을 시작하였습니다.
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="title">
+          <h2>인천종합에너지</h2>
+          <span></span>
+        </div>
+        <div class="contents">
+          <div class="con">
+            <p class="conImg">
+              <img
+                src="	https://www.gsenergy.co.kr/pub/images/img_collective_b01.jpg"
+                alt="collective"
+              />
+            </p>
+            <div class="txt">
+              인천종합에너지는 2004년 6월, 송도국제도시를 중심으로 인천지역의
+              원활한 지역 냉 난방 공급과 <br />국가에너지절약에 기여하기 위해
+              설립되었습니다. 당사는 편리하고 안전하게 지역 냉 난방을 공급하고
+              열공급원가를 절감하기 위해 지속적으로 노력해오고 있습니다.
+            </div>
+
+            <p>
+              또한, 송도국제도시 뿐만 아니라 인천 원도심지역까지 공급지역을
+              확대함으로써 보다 많은 시민에게 고품질의 에너지 서비스를
+              제공하고자 노력하고 있습니다.<br />
+              이 밖에도 적극적인 사회 공헌활동의 실천, 협력회사와의 동반성장 등
+              기업의 사회적 책임을 다하여 모든 이해관계자와 함께하는 행복한
+              에너지 세상을 만들어 나갈 것입니다.
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <script>
+      let btn = document.querySelectorAll(".list li");
+      function myGs() {
+        let showCon =
+          this.querySelector(".title span").classList.contains("on");
+        console.log(showCon);
+        btn.forEach(function (v) {
+          v.querySelector(".title span").classList.remove("on");
+          v.querySelector(".contents").style.height = 0;
+        });
+
+        if (!showCon) {
+          this.querySelector(".title span").classList.add("on");
+          let ht = this.querySelector(".con").clientHeight;
+          this.querySelector(".contents").style.height = ht + "px";
+        }
+      }
+      btn.forEach(function (v) {
+        v.onclick = myGs;
+      });
+    </script>
+  </body>
+</html>

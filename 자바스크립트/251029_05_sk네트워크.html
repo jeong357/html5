@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul.list {
+        width: 1200px;
+        margin: 50px auto;
+      }
+      ul.list .list_head {
+        padding: 40px 0;
+      }
+      ul.list .list_head > p {
+        font-size: 24px;
+        color: #5d0ca4;
+      }
+      ul.list .list_head .txt {
+        position: relative;
+        padding-top: 24px;
+      }
+      ul.list .list_head .txt .btn {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      ul.list .list_head .txt .btn .arrow svg {
+        transition: 0.5s;
+      }
+      ul.list .list_inner {
+        display: flex;
+        justify-content: space-between;
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      ul.list .list_inner.on {
+        height: 100px;
+      }
+      ul.list .list_inner > div {
+        background-color: #f6f6f7;
+        width: calc((100% - 20px) / 2);
+        height: 100%;
+        padding: 24px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="list">
+      <li>
+        <div class="list_head">
+          <p>
+            ICT 마케팅<a href="#"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="14"
+                viewBox="0 0 15 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.28033 0.217717C7.98744 -0.0751764 7.51256 -0.0751764 7.21967 0.217717C6.92678 0.51061 6.92678 0.985484 7.21967 1.27838L11.9393 5.99805L0.75 5.99805C0.335786 5.99805 0 6.33383 0 6.74805C0 7.16226 0.335786 7.49805 0.75 7.49805L11.9393 7.49805L7.21967 12.2177C6.92678 12.5106 6.92678 12.9855 7.21967 13.2784C7.51256 13.5713 7.98744 13.5713 8.28033 13.2784L14.8107 6.74805L8.28033 0.217717Z"
+                  fill="rgb(0,0,0)"
+                /></svg
+            ></a>
+          </p>
+          <div class="txt">
+            <p>통신 단말기 중심의 ICT유통 및 물류 사업을 수행하고 있습니다.</p>
+            <a href="#" class="btn"
+              ><span class="view">자세히보기</span>
+              <span class="arrow"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="9"
+                  viewBox="0 0 14 9"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M13.6348 0.365166C13.9863 0.716638 13.9863 1.28649 13.6348 1.63796L6.99844 8.27435L0.362041 1.63796C0.0105695 1.28649 0.0105695 0.716638 0.362041 0.365166C0.713513 0.0136939 1.28336 0.013694 1.63483 0.365166L6.99844 5.72877L12.362 0.365166C12.7135 0.0136945 13.2834 0.0136945 13.6348 0.365166Z"
+                    fill="rgb(0,0,0)"
+                  /></svg></span
+            ></a>
+          </div>
+        </div>
+        <div class="list_inner">
+          <div>
+            <strong>사업 영역</strong>
+            <p>
+              휴대폰 단말기 도매, 물류 서비스, ICT Device/Accessory B2B 유통
+            </p>
+          </div>
+          <div>
+            <strong>FY2024 매출액</strong>
+            <p>4조 2,759억 원</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="list_head">
+          <p>
+            ICT 마케팅<a href="#"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="14"
+                viewBox="0 0 15 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.28033 0.217717C7.98744 -0.0751764 7.51256 -0.0751764 7.21967 0.217717C6.92678 0.51061 6.92678 0.985484 7.21967 1.27838L11.9393 5.99805L0.75 5.99805C0.335786 5.99805 0 6.33383 0 6.74805C0 7.16226 0.335786 7.49805 0.75 7.49805L11.9393 7.49805L7.21967 12.2177C6.92678 12.5106 6.92678 12.9855 7.21967 13.2784C7.51256 13.5713 7.98744 13.5713 8.28033 13.2784L14.8107 6.74805L8.28033 0.217717Z"
+                  fill="rgb(0,0,0)"
+                /></svg
+            ></a>
+          </p>
+          <div class="txt">
+            <p>통신 단말기 중심의 ICT유통 및 물류 사업을 수행하고 있습니다.</p>
+            <a href="#" class="btn"
+              ><span class="view">자세히보기</span>
+              <span class="arrow"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="9"
+                  viewBox="0 0 14 9"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M13.6348 0.365166C13.9863 0.716638 13.9863 1.28649 13.6348 1.63796L6.99844 8.27435L0.362041 1.63796C0.0105695 1.28649 0.0105695 0.716638 0.362041 0.365166C0.713513 0.0136939 1.28336 0.013694 1.63483 0.365166L6.99844 5.72877L12.362 0.365166C12.7135 0.0136945 13.2834 0.0136945 13.6348 0.365166Z"
+                    fill="rgb(0,0,0)"
+                  /></svg></span
+            ></a>
+          </div>
+        </div>
+        <div class="list_inner">
+          <div>
+            <strong>사업 영역</strong>
+            <p>
+              휴대폰 단말기 도매, 물류 서비스, ICT Device/Accessory B2B 유통
+            </p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="list_head">
+          <p>
+            ICT 마케팅<a href="#"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="14"
+                viewBox="0 0 15 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.28033 0.217717C7.98744 -0.0751764 7.51256 -0.0751764 7.21967 0.217717C6.92678 0.51061 6.92678 0.985484 7.21967 1.27838L11.9393 5.99805L0.75 5.99805C0.335786 5.99805 0 6.33383 0 6.74805C0 7.16226 0.335786 7.49805 0.75 7.49805L11.9393 7.49805L7.21967 12.2177C6.92678 12.5106 6.92678 12.9855 7.21967 13.2784C7.51256 13.5713 7.98744 13.5713 8.28033 13.2784L14.8107 6.74805L8.28033 0.217717Z"
+                  fill="rgb(0,0,0)"
+                /></svg
+            ></a>
+          </p>
+          <div class="txt">
+            <p>통신 단말기 중심의 ICT유통 및 물류 사업을 수행하고 있습니다.</p>
+            <a href="#" class="btn"
+              ><span class="view">자세히보기</span>
+              <span class="arrow"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="9"
+                  viewBox="0 0 14 9"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M13.6348 0.365166C13.9863 0.716638 13.9863 1.28649 13.6348 1.63796L6.99844 8.27435L0.362041 1.63796C0.0105695 1.28649 0.0105695 0.716638 0.362041 0.365166C0.713513 0.0136939 1.28336 0.013694 1.63483 0.365166L6.99844 5.72877L12.362 0.365166C12.7135 0.0136945 13.2834 0.0136945 13.6348 0.365166Z"
+                    fill="rgb(0,0,0)"
+                  /></svg></span
+            ></a>
+          </div>
+        </div>
+        <div class="list_inner">
+          <div>
+            <strong>사업 영역</strong>
+            <p>
+              휴대폰 단말기 도매, 물류 서비스, ICT Device/Accessory B2B 유통
+            </p>
+          </div>
+          <div>
+            <strong>FY2024 매출액</strong>
+            <p>4조 2,759억 원</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <script>
+      let btn = document.querySelectorAll(".btn");
+      btn.forEach(function (v) {
+        v.onclick = function () {
+          let parent = this.parentElement.parentElement.parentElement;
+          let showCon = parent
+            .querySelector(".list_inner")
+            .classList.contains("on");
+
+          if (showCon) {
+            parent.querySelector(".list_inner").classList.remove("on");
+          } else {
+            parent.querySelector(".list_inner").classList.add("on");
+          }
+        };
+      });
+    </script>
+  </body>
+</html>

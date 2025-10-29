@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul.list {
+        width: 1210px;
+        margin: 50px auto;
+        font-size: 24px;
+      }
+      ul.list span {
+        display: inline-block;
+        transition: 0.5s;
+      }
+      ul.list span.on {
+        transform: rotate(45deg);
+      }
+      ul.list li p:last-child {
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      ul.list li p:last-child.on {
+        /* height: 400px; */
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="list">
+      <li>
+        <p><span>+</span> AMERICAN</p>
+        <p>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-AMERICAN-pc.jpg"
+            alt=""
+            height="500"
+          />
+        </p>
+      </li>
+      <li>
+        <p><span>+</span> CHEDDAR</p>
+        <p>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-AMERICAN-pc.jpg"
+            alt=""
+          />
+        </p>
+      </li>
+      <li>
+        <p><span>+</span> PROVOLONE</p>
+        <p>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-AMERICAN-pc.jpg"
+            alt=""
+          />
+        </p>
+      </li>
+      <li>
+        <p><span>+</span> PEPPER JACK</p>
+        <p>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-AMERICAN-pc.jpg"
+            alt=""
+          />
+        </p>
+      </li>
+      <li>
+        <p><span>+</span> american</p>
+        <p>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-AMERICAN-pc.jpg"
+            alt=""
+          />
+        </p>
+      </li>
+    </ul>
+    <script>
+      let btn = document.querySelectorAll(".list li");
+      let plus = document.querySelectorAll("p span");
+      let detail = document.querySelectorAll("ul.list li p:nth-child(2)");
+      btn.forEach(function (v, k, ar) {
+        v.onclick = function () {
+          /*ar.forEach(function (v) {
+            v.querySelector("span").classList.remove("on");
+            v.getElementsByTagName("p")[1].classList.remove("on");
+          });
+          v.querySelector("span").classList.add("on");
+          v.getElementsByTagName("p")[1].classList.add("on");
+          */
+          let ht =
+            this.getElementsByTagName("p")[1].querySelector("img").clientHeight;
+          console.log("ht : " + ht);
+          let showCon = this.querySelector("span").classList.contains("on");
+          console.log(showCon);
+          if (showCon) {
+            this.querySelector("span").classList.remove("on");
+            //this.getElementsByTagName("p")[1].classList.remove("on");
+            this.getElementsByTagName("p")[1].style.height = 0;
+          } else {
+            plus.forEach(function (v) {
+              v.classList.remove("on");
+            });
+            detail.forEach(function (v) {
+              //v.classList.remove("on");
+              v.style.height = 0;
+            });
+            this.querySelector("span").classList.add("on");
+            //this.getElementsByTagName("p")[1].classList.add("on");
+            this.getElementsByTagName("p")[1].style.height = ht + "px";
+          }
+        };
+      });
+    </script>
+  </body>
+</html>

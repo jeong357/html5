@@ -32,12 +32,13 @@
         font-family: "Pretendard", sans-serif;
         font-weight: regular;
         scroll-snap-align: start;
+        scroll-timeline: 1.5s;
       }
       section video {
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 80%;
         object-fit: cover;
       }
       section .menu {
@@ -189,10 +190,57 @@
           display: none;
         }
       }
-      section.nature {
+      .sustainability {
+        width: 1440px;
+        height: 950px;
+        margin: 150px 230px;
+        font-family: "Pretendard", sans-serif;
+      }
+
+      .sustainability h2 {
+        position: absolute;
+        font-size: 46px;
+        font-weight: 700;
+        margin-bottom: 50px;
+        line-height: 1.4;
+      }
+
+      .sustainability ul.content {
         width: 100%;
-        height: 100vh;
-        background: #fff;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        padding-top: 180px;
+      }
+
+      .sustainability ul.content li {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .sustainability ul.content li img {
+        width: 100%;
+        border-radius: 4px;
+        transition: transform 0.5s ease;
+        background-size: cover;
+      }
+      .sustainability ul.content li img:hover {
+        transform: scaleX(1.05) scaleY(1.01);
+      }
+
+      .sustainability ul.content li h3 {
+        text-align: center;
+        font-size: 27px;
+        font-weight: 700;
+        margin: 20px 0 10px;
+      }
+
+      .sustainability ul.content li p {
+        text-align: center;
+        font-size: 17px;
+        font-weight: 600;
+        color: #555;
+        line-height: 1.6;
       }
     </style>
   </head>
@@ -262,18 +310,47 @@
           </p>
         </div>
       </section>
-      <section class="nature">
+      <section class="sustainability">
         <h2>
           친환경 혁신을 통한<br />
           피코그램의 지속 가능한 미래
         </h2>
-        <ul>
+        <ul class="content">
           <li>
             <a href="#"
               ><img
                 src="	http://picogram.co.kr/upload/maindata8/maindata892631_0.jpg"
                 alt=""
             /></a>
+            <h3>생활환경가전</h3>
+            <p>
+              원천기술 개발과 차별화된 소재 기술을 통한 혁신적인 제품으로<br />
+              생활 환경가전 전문기업이 되도록 노력하겠습니다.
+            </p>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="http://picogram.co.kr/upload/maindata8/maindata889376_0.jpg"
+                alt=""
+            /></a>
+            <h3>첨단소재 &amp; 부품</h3>
+            <p>
+              첨단소재 &amp; 부품 등 다양한 분야의 솔루션을 제안하고,<br />
+              새로운 글로벌 친환경 시대를 이끌어가는 기업이 되고자 합니다.
+            </p>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="	http://picogram.co.kr/upload/maindata8/maindata892605_0.jpg"
+                alt=""
+            /></a>
+            <h3>바이오 &amp; 헬스케어</h3>
+            <p>
+              인류의 건강을 증진시키고 풍요로운 삶을 누릴 수 있도록<br />
+              차별화된 차세대 바이오 제품과 솔루션을 제공하고자 합니다.
+            </p>
           </li>
         </ul>
       </section>
@@ -317,7 +394,7 @@
 
         // 1️⃣ 로고 위치
         logo.style.position = "fixed";
-        logo.style.top = "34px";
+        logo.style.top = 0;
         logo.style.left = "34px";
         logo.style.width = "140px";
 
