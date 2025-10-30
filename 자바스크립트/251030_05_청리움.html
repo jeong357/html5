@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .space {
+        padding: 48px 96px;
+        box-sizing: border-box;
+      }
+      .space .top {
+        padding: 23px 0 73px;
+        box-sizing: border-box;
+        height: 210px;
+      }
+      .space .top .title {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 28px;
+        box-sizing: border-box;
+      }
+      .space .top ul {
+        display: flex;
+      }
+      .space .top ul li a {
+        display: block;
+        padding: 0 15px;
+        color: #b2b2b2;
+      }
+      .space .top ul li a.on {
+        border-radius: 8px;
+        font-size: 18px;
+        color: #000;
+      }
+      .space .con {
+        height: calc(100vh - 210px);
+      }
+      .space .con p {
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .space img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="space">
+      <div class="top">
+        <div class="title">
+          <h1>공간안내</h1>
+          <ul>
+            <li><a href="#"> 강당동</a></li>
+            <li><a href="#"> 연수동</a></li>
+            <li><a href="#"> 카페테리아</a></li>
+            <li><a href="#"> 잔디마당</a></li>
+            <li><a href="#"> 오하산방</a></li>
+            <li><a href="#"> 약초원</a></li>
+            <li><a href="#"> 명당 기도터</a></li>
+            <li><a href="#"> 녹차 · 포도밭</a></li>
+          </ul>
+        </div>
+        <p>
+          고즈넉한 자연 속 사계절의 아름다운 정취가 있는 청리움의 공간을
+          안내합니다.
+        </p>
+      </div>
+      <div class="con">
+        <p>
+          <img
+            src="
+https://www.cheongrium.com/static/images/spaceinfo/main_space_1.jpg"
+            alt=""
+          />
+        </p>
+      </div>
+    </div>
+    <script>
+      let menu = document.querySelectorAll(".title ul li");
+      btn[0].querySelector("a").classList.add("on");
+      menu.forEach = function (v, k, ar) {
+        v.onclick = function (e) {
+          e.preventDefault();
+          ar.forEach(function (v) {
+            v.querySelector("a").classList.remove("on");
+          });
+          this.querySelector("a").classList.add("on");
+          let imgSrc = document.querySelector(".con p img").getAttribute("src");
+          document
+            .querySelector(".con p img")
+            .setAttribute("src", imgSrc.replace(imgSrc.slice(-5, -4), k + 1));
+        };
+      };
+    </script>
+  </body>
+</html>

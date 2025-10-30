@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .space {
+        padding: 48px 96px;
+        box-sizing: border-box;
+      }
+      .space .top {
+        padding: 23px 0 73px;
+        box-sizing: border-box;
+        height: 210px;
+      }
+      .space .top .title {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 28px;
+        box-sizing: border-box;
+      }
+      .space .top ul {
+        display: flex;
+      }
+      .space .top ul li a {
+        display: block;
+        padding: 0 15px;
+        height: 41px;
+        line-height: 41px;
+        color: #b2b2b2;
+      }
+      .space .top ul li a.on {
+        border-radius: 8px;
+        font-size: 18px;
+        color: #000;
+        border: 1px solid #000;
+      }
+      .space .contents {
+        position: relative;
+        height: calc(100vh - 210px);
+        border: 1px solid;
+      }
+      .space .contents .con {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        /* display: none; */
+        opacity: 0;
+        color: #fff;
+      }
+      .space .contents .con.on {
+        /* display: block; */
+        opacity: 1;
+      }
+      .space .con p {
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="space">
+      <div class="top">
+        <div class="title">
+          <h1>공간안내</h1>
+          <ul>
+            <li><a href="#"> 강당동</a></li>
+            <li><a href="#"> 연수동</a></li>
+            <li><a href="#"> 카페테리아</a></li>
+            <li><a href="#"> 잔디마당</a></li>
+            <li><a href="#"> 오하산방</a></li>
+            <li><a href="#"> 약초원</a></li>
+            <li><a href="#"> 명당 기도터</a></li>
+            <li><a href="#"> 녹차 · 포도밭</a></li>
+          </ul>
+        </div>
+        <p>
+          고즈넉한 자연 속 사계절의 아름다운 정취가 있는 청리움의 공간을
+          안내합니다.
+        </p>
+      </div>
+      <div class="contents">
+        <div class="con">
+          <div class="txt">
+            <h1>강당동 (컨퍼런스홀 | 세미나 A·B)</h1>
+            <p>
+              천혜의 자연 속 프라이빗한 단독 공간으로<br />
+              교육, 세미나, 연수, 행사 등 다채로운 이벤트를 지원합니다.
+            </p>
+          </div>
+        </div>
+        <div class="con">
+          <div class="txt">
+            <h1>연수동</h1>
+            <p>
+              자연과 조화를 이루는 아늑한 보금자리로<br />
+              쾌적한 환경의 휴식공간을 제공합니다.
+            </p>
+          </div>
+        </div>
+        <div class="con">
+          <div class="txt">
+            <h1>카페테리아</h1>
+            <p>
+              천혜의 자연 속 프라이빗한 단독 공간으로<br />
+              교육, 세미나, 연수, 행사 등 다채로운 이벤트를 지원합니다.
+            </p>
+          </div>
+        </div>
+        <div class="con">
+          <div class="txt">
+            <h1>잔디마당</h1>
+            <p>
+              천혜의 자연 속 프라이빗한 단독 공간으로<br />
+              교육, 세미나, 연수, 행사 등 다채로운 이벤트를 지원합니다.
+            </p>
+          </div>
+        </div>
+        <div class="con">
+          <div class="txt">
+            <h1>오하산방</h1>
+            <p>
+              천혜의 자연 속 프라이빗한 단독 공간으로<br />
+              교육, 세미나, 연수, 행사 등 다채로운 이벤트를 지원합니다.
+            </p>
+          </div>
+        </div>
+        <div class="con">
+          <div class="txt">
+            <h1>약초원</h1>
+            <p>
+              천혜의 자연 속 프라이빗한 단독 공간으로<br />
+              교육, 세미나, 연수, 행사 등 다채로운 이벤트를 지원합니다.
+            </p>
+          </div>
+        </div>
+        <div class="con">
+          <div class="txt">
+            <h1>명당 기도터</h1>
+            <p>
+              천혜의 자연 속 프라이빗한 단독 공간으로<br />
+              교육, 세미나, 연수, 행사 등 다채로운 이벤트를 지원합니다.
+            </p>
+          </div>
+        </div>
+        <div class="con">
+          <div class="txt">
+            <h1>녹차 · 포도밭</h1>
+            <p>
+              천혜의 자연 속 프라이빗한 단독 공간으로<br />
+              교육, 세미나, 연수, 행사 등 다채로운 이벤트를 지원합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let btn = document.querySelectorAll(".title ul li");
+      let con = document.querySelectorAll(".con");
+      btn[0].querySelector("a").classList.add("on");
+      con[0].classList.add("on");
+      con.forEach(function (v, k) {
+        v.style.backgroundImage = `url(https://www.cheongrium.com/static/images/spaceinfo/main_space_${
+          k + 1
+        }.jpg)`;
+        if (k == 5) {
+          v.style.backgroundImage = `url(https://www.cheongrium.com/static/images/spaceinfo/main_space_8{
+          k + 1
+        }.jpg)`;
+        }
+      });
+      btn.forEach(function (v, k, ar) {
+        v.onclick = function (e) {
+          e.preventDefault();
+          ar.forEach(function (v) {
+            v.querySelector("a").classList.remove("on");
+          });
+          con.forEach(function (v) {
+            v.classList.remove("on");
+          });
+          this.querySelector("a").classList.add("on");
+          con[k].classList.add("on");
+        };
+      });
+    </script>
+  </body>
+</html>

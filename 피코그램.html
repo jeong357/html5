@@ -40,6 +40,11 @@
         width: 100%;
         height: 80%;
         object-fit: cover;
+        object-fit: cover;
+        transition: opacity 0.8s ease;
+      }
+      .fade-out {
+        opacity: 0;
       }
       section .menu {
         top: 40px;
@@ -127,10 +132,10 @@
       .text-wrap .title img {
         top: 38%;
         left: 37%;
+        padding-bottom: 30px;
       }
       .text-wrap span {
         color: #fff;
-        top: 55%;
         left: 36%;
         text-align: center;
         font-size: 20px;
@@ -157,6 +162,7 @@
       @media screen and (max-width: 1680px) {
         section .menu ul li a {
           margin: 20px;
+          transition: 0.5s;
         }
       }
       @media screen and (max-width: 1300px) {
@@ -165,20 +171,12 @@
         }
         .logo p img {
           width: 120px;
-          margin-left: 70px;
+          margin-left: 40px;
+          margin-top: 25px;
         }
         .mall1,
         .mall2 {
-          border: none;
-        }
-        .mall1 p:first-child img {
-          margin-left: 100px;
-        }
-        .mall2 p:first-child img {
-          margin-right: 110px;
-        }
-        .lang {
-          right: 125px;
+          display: none;
         }
         .mall1 span,
         .mall2 span {
@@ -189,6 +187,24 @@
         .mall2 .arrow {
           display: none;
         }
+        .lang {
+          display: none;
+        }
+        .text-wrap span {
+          font-size: 18px;
+          transition: 0.5s;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        .text-wrap .title img {
+          width: 80%;
+        }
+        .text-wrap span {
+          text-align: center;
+          font-size: 16px;
+        }
+      }
+      @media screen and (max-width: 500px) {
       }
       .sustainability {
         width: 1440px;
@@ -221,11 +237,7 @@
       .sustainability ul.content li img {
         width: 100%;
         border-radius: 4px;
-        transition: transform 0.5s ease;
         background-size: cover;
-      }
-      .sustainability ul.content li img:hover {
-        transform: scaleX(1.05) scaleY(1.01);
       }
 
       .sustainability ul.content li h3 {
@@ -242,12 +254,24 @@
         color: #555;
         line-height: 1.6;
       }
+      .pureal {
+        width: 100%;
+        height: 50%;
+        max-width: 1920px;
+      }
+      .pureal .third .bgimg p {
+        position: absolute;
+        background-image: url(http://picogram.co.kr/images/main/section02_background.jpg);
+      }
+      .icon_box img {
+        display: flex;
+      }
     </style>
   </head>
   <body>
     <div>
       <section class="video-wrapper">
-        <video muted autoplay loop>
+        <video id="player" muted autoplay>
           <source
             src="http://picogram.co.kr/upload/maindata6/maindata695711_0.mp4"
           />
@@ -354,9 +378,78 @@
           </li>
         </ul>
       </section>
+      <section class="pureal">
+        <div class="third">
+          <p class="bgimg"></p>
+          <p class="prtit">Pure & Real Life</p>
+          <img
+            src="http://picogram.co.kr/upload/maindata7/maindata755705_0.svg"
+            alt=""
+          />
+          <p class="ptxt">
+            퓨리얼은 환경 보호의 시각에서 인간의 더 나은 삶을 연구합니다.<br />
+            소비자의 다양한 라이프스타일을 만족시킬 수 있는 혁신적인 제품들로
+            지속 가능한 환경과<br />
+            풍요로운 미래를 만들어 나아가고 있습니다.
+          </p>
+        </div>
+        <div class="icon_box">
+          <img
+            src="http://picogram.co.kr/upload/maindata7/maindata755828_0.png"
+            alt=""
+          />
+          <img
+            src="http://picogram.co.kr/upload/maindata7/maindata755828_1.png"
+            alt=""
+          />
+          <img
+            src="http://picogram.co.kr/upload/maindata7/maindata755828_2.png"
+            alt=""
+          />
+          <img
+            src="http://picogram.co.kr/upload/maindata7/maindata755828_3.png"
+            alt=""
+          />
+          <img
+            src="http://picogram.co.kr/upload/maindata7/maindata755828_4.png"
+            alt=""
+          />
+        </div>
+      </section>
     </div>
     <script>
-      const sections = document.querySelectorAll("section");
+      /* 🎬 비디오 자동 전환 기능 */
+      let video = document.getElementById("player");
+      let playlist = [
+        "http://picogram.co.kr/upload/maindata6/maindata695711_0.mp4",
+        "http://picogram.co.kr/upload/maindata6/maindata695698_0.mp4",
+      ];
+      let current = 0;
+
+      function playVideo(index) {
+        video.classList.add("fade-out");
+        setTimeout(() => {
+          video.src = playlist[index];
+          video.load();
+          video.play();
+          video.classList.remove("fade-out");
+        }, 500);
+      }
+
+      // 첫 영상 시작
+      playVideo(current);
+
+      // 영상 끝나면 다음으로 넘어가기
+      video.addEventListener("ended", () => {
+        current++;
+        if (current < playlist.length) {
+          playVideo(current);
+        } else {
+          current = 0; // 마지막 후 다시 처음으로
+          playVideo(current);
+        }
+      });
+      let sections = document.querySelectorAll("section");
       let currentIndex = 0;
       let isScrolling = false;
 
@@ -365,32 +458,27 @@
         isScrolling = true;
 
         if (event.deltaY > 0) {
-          // 아래로 스크롤
           currentIndex = Math.min(currentIndex + 1, sections.length - 1);
         } else {
-          // 위로 스크롤
           currentIndex = Math.max(currentIndex - 1, 0);
         }
 
         sections[currentIndex].scrollIntoView({ behavior: "smooth" });
 
-        // 부드럽게 전환되도록 약간의 딜레이를 줌
         setTimeout(() => {
           isScrolling = false;
         }, 1000);
       });
       window.addEventListener("load", () => {
-        const logo = document.querySelector(".logo p img");
-        const menu = document.querySelector(".menu");
-        const mall1 = document.querySelector(".mall1");
-        const mall2 = document.querySelector(".mall2");
-        const lang = document.querySelector(".lang");
-        const textWrap = document.querySelector(".text-wrap");
-        const scrollDown = document.querySelector(".scroll-down");
+        let logo = document.querySelector(".logo p img");
+        let menu = document.querySelector(".menu");
+        let mall1 = document.querySelector(".mall1");
+        let mall2 = document.querySelector(".mall2");
+        let lang = document.querySelector(".lang");
+        let textWrap = document.querySelector(".text-wrap");
+        let scrollDown = document.querySelector(".scroll-down");
 
-        // 화면 크기
-        const w = window.innerWidth;
-        const h = window.innerHeight;
+        let w = window.innerWidth;
 
         // 1️⃣ 로고 위치
         logo.style.position = "fixed";
