@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .tit {
+        text-align: center;
+        padding: 100px 0 80px;
+      }
+      .tit h1 {
+        font-size: 46px;
+      }
+      .con {
+        width: 100%;
+        height: 300px;
+      }
+      .con ul {
+        position: relative;
+      }
+      .con ul li {
+        position: absolute;
+        width: 1904px;
+        height: 300px;
+        background-position: center;
+        opacity: 0;
+        transition: 1s;
+      }
+      .con ul li.on {
+        opacity: 1;
+      }
+      /* .con ul li:nth-child(1) {
+        background-image: url(./images/business_daelim2.png),
+          url(./images/business01.png);
+      }
+      .con ul li:nth-child(2) {
+        background-image: url(./images/business_daelim2.png),
+          url(./images/business02.png);
+      }
+      .con ul li:nth-child(3) {
+        background-image: url(./images/business_daelim2.png),
+          url(./images/business03.png);
+      }
+      .con ul li:nth-child(4) {
+        background-image: url(./images/business_daelim2.png),
+          url(./images/business04.png);
+      }
+      .con ul li:nth-child(5) {
+        background-image: url(./images/business_daelim2.png),
+          url(./images/business05.png);
+      }
+      .con ul li:nth-child(6) {
+        background-image: url(./images/business_daelim2.png),
+          url(./images/business06.png);
+      }
+      .con ul li:nth-child(7) {
+        background-image: url(./images/business_daelim2.png),
+          url(./images/business07.png);
+      } */
+      .con ul li img {
+        position: absolute;
+        left: 1002px;
+        top: -194px;
+      }
+      .menu {
+        margin-top: 100px;
+      }
+      .menu ul {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        position: relative;
+      }
+      .menu ul li > a {
+        display: block;
+        width: 180px;
+        height: 54px;
+        line-height: 54px;
+        color: #222;
+        text-align: center;
+        border: 1px solid #b5b5b5;
+        /* border: 1px solid #1b2e59;
+        background: #1b2e59;
+        color: #fff; */
+      }
+      .menu ul li > a.on {
+        border: 1px solid #1b2e59;
+        background: #1b2e59;
+        color: #fff;
+      }
+      .menu ul li .txt {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100px;
+        display: none;
+        text-align: center;
+      }
+      .menu ul li .txt.on {
+        display: block;
+      }
+      .menu ul li .txt p {
+        white-space: nowrap;
+      }
+      .menu ul li .txt a {
+        display: inline-block;
+        padding: 10px 50px;
+        border: 2px solid #1b2e59;
+        color: #000;
+        margin-top: 50px;
+      }
+      .menu ul li .txt a:hover {
+        border: 2px solid #1b2e59;
+        background: #1b2e59;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="businessArea">
+      <div class="tit">
+        <h1>Business Area</h1>
+        <p>(주)대림은 지속적인 성장과 차별화된 고객가치를 실천하고 있습니다.</p>
+      </div>
+      <div class="con">
+        <ul>
+          <li><img src="./images/business_img01.png" alt="" /></li>
+          <li><img src="./images/business_img02.png" alt="" /></li>
+          <li><img src="./images/business_img03.png" alt="" /></li>
+          <li><img src="./images/business_img04.png" alt="" /></li>
+          <li><img src="./images/business_img05.png" alt="" /></li>
+          <li><img src="./images/business_img06.png" alt="" /></li>
+          <li><img src="./images/business_img07.png" alt="" /></li>
+        </ul>
+      </div>
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="#">트레이딩</a>
+            <div class="txt">
+              <p>
+                기초 유화(Naphtha)에서 폴리머 제품까지 전방위로 Trading
+                Business를 확장하고 있으며,<br />
+                국내 및 해외 100여개 국가에 판매하고 있습니다. 당사는 석유화학
+                트레이딩 전문 기업으로 고객 가치 및 성과를 창출하고 있습니다.
+              </p>
+              <a href="#">VIEW</a>
+            </div>
+          </li>
+          <li>
+            <a href="#">PI</a>
+            <div class="txt">
+              <p>
+                ㈜대림의 독자적인 기술로 만든 폴리이미드 제품을<br />
+                반도체, 디스플레이, 우주/항공, 방산, 자동차 등 여러 산업 내
+                공급하고 있습니다.
+              </p>
+              <a href="#">VIEW</a>
+            </div>
+          </li>
+          <li>
+            <a href="#">물류</a>
+            <div class="txt">
+              <p>
+                전세계를 연결하는 글로벌 네트워크 바탕으로 차별화 된 대림만의
+                물류 서비스가<br />
+                경쟁력 있는 운임과 다양한 운송 방법으로 고객에게 서비스를
+                실현하고 있습니다.
+              </p>
+              <a href="#">VIEW</a>
+            </div>
+          </li>
+          <li>
+            <a href="#">탱크컨테이너</a>
+            <div class="txt">
+              <p>
+                국내 M/S 1위, Fleet 보유 대수 1위의 전문 탱크컨테이너
+                Operator로서<br />
+                업계 최고의 Know-how와 글로벌 네트워크를 바탕으로 경쟁력 있는
+                운송 운임과 고객 맞춤형 서비스를 제공합니다.
+              </p>
+              <a href="#">VIEW</a>
+            </div>
+          </li>
+          <li>
+            <a href="#">건설정보화</a>
+            <div class="txt">
+              <p>
+                건설 자체의 부가가치 상승과 주택, 터널, 항만, 철도, 교량 등<br />
+                건축물에 대한 기획부터 설계, 시공, A/S로 이어지는 Total
+                Service를 제공합니다.
+              </p>
+              <a href="#">VIEW</a>
+            </div>
+          </li>
+          <li>
+            <a href="#">IT서비스</a>
+            <div class="txt">
+              <p>
+                (주)대림은 IT 시스템 통합, 유지보수 및 대내외 SI사업으로
+                지속성장 해왔습니다.
+              </p>
+              <a href="#">VIEW</a>
+            </div>
+          </li>
+          <li>
+            <a href="#">투자</a>
+            <div class="txt">
+              <p>
+                자체 주거 상품 및 브랜드 개발, 투자, 운용, 관리까지<br />
+                부동산 디벨로퍼 전 영역의 사업을 진행하고 있습니다.
+              </p>
+              <a href="#">VIEW</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      let con = document.querySelectorAll(".con ul li");
+      let btn = document.querySelectorAll(".menu ul li");
+      con[0].classList.add("on");
+      btn[0].querySelector("a").classList.add("on");
+      btn[0].querySelector(".txt").classList.add("on");
+      con.forEach(function (v, k) {
+        v.style.backgroundImage = `url(./images/business_daelim2.png),
+          url(./images/business0${k + 1}.png)`;
+      });
+      btn.forEach(function (v, k, ar) {
+        v.onclick = function (e) {
+          e.preventDefault();
+          console.log("sda");
+          con.forEach(function (v) {
+            v.classList.remove("on");
+          });
+          ar.forEach(function (v) {
+            v.querySelector("a").classList.remove("on");
+            v.querySelector(".txt").classList.remove("on");
+          });
+          this.querySelector("a").classList.add("on");
+          this.querySelector(".txt").classList.add("on");
+          con[k].classList.add("on");
+        };
+      });
+    </script>
+  </body>
+</html>

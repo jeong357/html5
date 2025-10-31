@@ -255,16 +255,69 @@
         line-height: 1.6;
       }
       .pureal {
+        position: relative;
         width: 100%;
-        height: 50%;
+        height: 85%;
         max-width: 1920px;
-      }
-      .pureal .third .bgimg p {
-        position: absolute;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
         background-image: url(http://picogram.co.kr/images/main/section02_background.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
       }
-      .icon_box img {
+      .pureal .third {
+        position: absolute;
+        top: 125px;
+        text-align: center;
+      }
+      .pureal .third .prtit {
+        font-size: 24px;
+        color: #fff;
+        padding-bottom: 20px;
+      }
+      .pureal .third img {
+        width: 50%;
+        padding-bottom: 30px;
+      }
+      .pureal .third .ptxt {
+        font-size: 18px;
+        color: #fff;
+      }
+      .pureal .icon_box {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        padding-top: 300px;
+      }
+      .pureal .icon_box p {
+        position: relative;
+        text-align: center;
+        width: 150px;
+        height: 150px;
+      }
+      .pureal .icon_box p::before {
+        content: "";
+        top: -60%;
+        left: -40%;
+        width: 288px;
+        height: 288px;
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+      }
+      .pureal .icon_box p img {
+        width: 65px;
+        height: 65px;
+        margin-bottom: 10px;
+      }
+      .pureal .icon_box span {
+        display: flex;
+        color: #fff;
+        font-size: 20px;
+        line-height: 5vh;
+        margin-left: 30px;
       }
     </style>
   </head>
@@ -272,9 +325,7 @@
     <div>
       <section class="video-wrapper">
         <video id="player" muted autoplay>
-          <source
-            src="http://picogram.co.kr/upload/maindata6/maindata695711_0.mp4"
-          />
+          <source src="" />
         </video>
         <div class="logo">
           <p>
@@ -378,45 +429,70 @@
           </li>
         </ul>
       </section>
-      <section class="pureal">
-        <div class="third">
-          <p class="bgimg"></p>
-          <p class="prtit">Pure & Real Life</p>
-          <img
-            src="http://picogram.co.kr/upload/maindata7/maindata755705_0.svg"
-            alt=""
-          />
-          <p class="ptxt">
-            퓨리얼은 환경 보호의 시각에서 인간의 더 나은 삶을 연구합니다.<br />
-            소비자의 다양한 라이프스타일을 만족시킬 수 있는 혁신적인 제품들로
-            지속 가능한 환경과<br />
-            풍요로운 미래를 만들어 나아가고 있습니다.
-          </p>
-        </div>
-        <div class="icon_box">
-          <img
-            src="http://picogram.co.kr/upload/maindata7/maindata755828_0.png"
-            alt=""
-          />
-          <img
-            src="http://picogram.co.kr/upload/maindata7/maindata755828_1.png"
-            alt=""
-          />
-          <img
-            src="http://picogram.co.kr/upload/maindata7/maindata755828_2.png"
-            alt=""
-          />
-          <img
-            src="http://picogram.co.kr/upload/maindata7/maindata755828_3.png"
-            alt=""
-          />
-          <img
-            src="http://picogram.co.kr/upload/maindata7/maindata755828_4.png"
-            alt=""
-          />
-        </div>
-      </section>
     </div>
+    <section class="pureal">
+      <div class="third">
+        <p class="prtit">Pure & Real Life</p>
+        <img
+          src="http://picogram.co.kr/upload/maindata7/maindata755705_0.svg"
+          alt=""
+        />
+        <p class="ptxt">
+          퓨리얼은 환경 보호의 시각에서 인간의 더 나은 삶을 연구합니다.<br />
+          소비자의 다양한 라이프스타일을 만족시킬 수 있는 혁신적인 제품들로 지속
+          가능한 환경과<br />
+          풍요로운 미래를 만들어 나아가고 있습니다.
+        </p>
+      </div>
+      <div class="icon_box">
+        <a href="#">
+          <p>
+            <img
+              src="http://picogram.co.kr/upload/maindata7/maindata755828_0.png"
+              alt=""
+            />
+            <span>Innovate</span>
+          </p>
+        </a>
+        <a href="#">
+          <p>
+            <img
+              src="http://picogram.co.kr/upload/maindata7/maindata755828_1.png"
+              alt=""
+            />
+            <span>Advanced</span>
+          </p>
+        </a>
+        <a href="#">
+          <p>
+            <img
+              src="http://picogram.co.kr/upload/maindata7/maindata755828_2.png"
+              alt=""
+            />
+            <span>Reasonable</span>
+          </p>
+        </a>
+        <a href="#">
+          <p>
+            <img
+              src="http://picogram.co.kr/upload/maindata7/maindata755828_3.png"
+              alt=""
+            />
+            <span>Eco-Friendly</span>
+          </p>
+        </a>
+        <a href="#">
+          <p>
+            <img
+              src="http://picogram.co.kr/upload/maindata7/maindata755828_4.png"
+              alt=""
+            />
+            <span>Qualified</span>
+          </p>
+        </a>
+      </div>
+    </section>
+
     <script>
       /* 🎬 비디오 자동 전환 기능 */
       let video = document.getElementById("player");
@@ -512,7 +588,7 @@
         textWrap.style.left = "50%";
         textWrap.style.transform = "translate(-50%, -50%)";
         textWrap.style.textAlign = "center";
-        textWrap.style.color = "#fff";
+        textWrap.style.color = "fff";
 
         // 6️⃣ 스크롤 아이콘
         scrollDown.style.position = "absolute";

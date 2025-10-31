@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      .menuCon {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+      }
+      .menuCon > div {
+        flex: 1;
+        height: 100%;
+        position: relative;
+      }
+      .menuCon > div:first-child > ul {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      .menuCon > div:first-child > ul > li {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .menuCon > div:first-child > ul > li:nth-child(1) {
+        background-image: url(https://www.selecto.co.kr/assets/images/menu/new-c-signature-bg-1.jpg);
+      }
+      .menuCon > div:first-child > ul > li:nth-child(2) {
+        background-image: url(https://www.selecto.co.kr/assets/images/menu/c-beverage-bg-1.jpg);
+      }
+      .menuCon > div:first-child > ul > li:nth-child(3) {
+        background-image: url(https://www.selecto.co.kr/assets/images/menu/c-coffee-bg.png);
+      }
+      .menuCon > div:first-child > ul > li:nth-child(4) {
+        background-image: url(https://www.selecto.co.kr/assets/images/menu/new-c-crogle-bg.jpg);
+      }
+      .menuCon > div:first-child nav {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+      }
+      .menuCon > p {
+        position: absolute;
+        width: 30vw;
+        max-width: 440px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+      }
+      .menuCon > p img {
+        width: 100%;
+      }
+      .menuCon > div:first-child > ul > li.on {
+        animation: 1s widthIn cubic-bezier(0.76, 0, 0.24, 1);
+        animation-fill-mode: forwards;
+      }
+      @keyframes widthIn {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      .menuCon > div:nth-child(2) ul {
+        position: relative;
+        height: 100%;
+      }
+      .menuCon > div:nth-child(2) ul li {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: #fff;
+        display: none;
+      }
+      .menuCon > div:nth-child(2) ul li.on {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menuCon">
+      <div>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <nav>
+          <h1>selecto menu</h1>
+          <ul>
+            <li><a href="#">signature</a></li>
+            <li><a href="#">beverage</a></li>
+            <li><a href="#">coffee</a></li>
+            <li><a href="#">crogle</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <ul>
+          <li>
+            <div class="inner">
+              <h1>signature</h1>
+            </div>
+          </li>
+          <li>
+            <div class="inner">
+              <h1>beverage</h1>
+            </div>
+          </li>
+          <li>
+            <div class="inner">
+              <h1>coffee</h1>
+            </div>
+          </li>
+          <li>
+            <div class="inner">
+              <h1>crogle</h1>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <p>
+        <img
+          src="https://www.selecto.co.kr/assets/images/menu/new-c-signature-item-00-1.png"
+          alt=""
+        />
+      </p>
+    </div>
+    <script>
+      // https://www.selecto.co.kr/assets/images/menu/new-c-signature-item-00-1.png
+      //https://www.selecto.co.kr/assets/images/menu/c-beverage-item-00.png
+      //https://www.selecto.co.kr/assets/images/menu/c-coffee-item-00.png
+      // //https://www.selecto.co.kr/assets/images/menu/new_c-cookie-item-00.png
+      let centerImg = [
+        "https://www.selecto.co.kr/assets/images/menu/new-c-signature-item-00-1.png",
+        "https://www.selecto.co.kr/assets/images/menu/c-beverage-item-00.png",
+        "https://www.selecto.co.kr/assets/images/menu/c-coffee-item-00.png",
+        "https://www.selecto.co.kr/assets/images/menu/new_c-cookie-item-00.png",
+      ];
+      let menuLeft = document.querySelectorAll(
+        ".menuCon > div:first-child > ul > li"
+      );
+      let menuRight = document.querySelectorAll(
+        ".menuCon > div:nth-child(2) > ul > li"
+      );
+      menuLeft[0].style.zIndex = "2";
+      menuRight[0].classList.add("on");
+      let menu = document.querySelectorAll("nav ul li");
+      menu.forEach(function (v, k) {
+        v.onclick = function (e) {
+          e.preventDefault();
+          menuLeft.forEach(function (v) {
+            v.classList.remove("on");
+            v.style.zIndex = "0";
+          });
+          menuRight.forEach(function (v) {
+            v.classList.remove("on");
+          });
+          let prev = menuLeft[k].previousElementSibling;
+          if (prev) {
+            prev.style.zIndex = "1";
+          }
+          menuLeft[k].style.zIndex = "2";
+          menuLeft[k].classList.add("on");
+          menuRight[k].classList.add("on");
+          let menuImg = document.querySelector(".menuCon > p img");
+          let menuImgSrc = menuImg.getAttribute("src");
+          menuImg.setAttribute("src", centerImg[k]);
+        };
+      });
+    </script>
+  </body>
+</html>
