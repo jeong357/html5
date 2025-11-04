@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #bar {
+        background: #0bd;
+        position: fixed;
+        height: 10px;
+        left: 0;
+        top: 0;
+      }
+      section {
+        height: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bar"></div>
+    <section></section>
+    <script>
+      function myscroll() {
+        let scrolled = window.scrollY;
+        // console.log(scrolled);
+        let ht = document.documentElement.scrollHeight;
+        let viewht = document.documentElement.clientHeight;
+        console.log(ht);
+        console.log(viewht);
+        let wd = (scrolled / (ht - viewht)) * 100;
+        console.log(wd);
+        document.querySelector("#bar").style.width = `${wd}%`;
+      }
+      window.onscroll = function () {
+        myscroll();
+      };
+    </script>
+  </body>
+</html>

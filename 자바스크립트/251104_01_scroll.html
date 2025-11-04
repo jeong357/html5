@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #myDIV {
+        width: 500px;
+        height: 500px;
+        overflow: auto;
+      }
+      #myDIV #content {
+        width: 1000px;
+        height: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myDIV" onscroll="myfnc()">
+      <div id="content">Scroll me!</div>
+    </div>
+    <p id="demo"></p>
+    <script>
+      function myfnc() {
+        const element = document.getElementById("myDIV");
+        let x = element.scrollLeft;
+        let y = element.scrollTop;
+        document.getElementById("demo").innerHTML =
+          "Horizontally: " + x.toFixed() + "<br>Vertically: " + y.toFixed();
+      }
+      element.onscroll = function () {
+        myfnc();
+      };
+    </script>
+  </body>
+</html>

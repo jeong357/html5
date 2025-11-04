@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #loading {
+        background: #0bd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #fff;
+        transition: 3s;
+        position: fixed;
+        width: 100%;
+      }
+      .on {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading">
+      <h1>잠시만 기다려주세요</h1>
+      <p>3초 후 메인페이지로 이동</p>
+    </div>
+    <div id="content">
+      <h1>메인페이지</h1>
+    </div>
+    <script>
+      let loading = document.querySelector("#loading");
+      window.onload = function () {
+        loading.classList.add("on");
+      };
+    </script>
+  </body>
+</html>

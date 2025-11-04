@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        cursor: pointer;
+      }
+      .customPointer {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        background-image: url(https://cdn.imweb.me/upload/S20240112577c82953a84f/a28527ef71348.png);
+        background-repeat: no-repeat;
+        background-size: 45px 60px;
+        background-position: right bottom;
+        z-index: 999;
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="customPointer"></div>
+    <script>
+      let cursor = document.querySelector(".customPointer");
+      document.onmousemove = function (e) {
+        cursor.style.top = e.clientY + "px";
+        cursor.style.left = e.clientX + "px";
+      };
+    </script>
+  </body>
+</html>
