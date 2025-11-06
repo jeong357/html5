@@ -26,7 +26,7 @@
       }
       section {
         width: 100%;
-        max-width: 1920px;
+        max-width: 1905px;
         height: 100%;
         display: flex;
         font-family: "Pretendard", sans-serif;
@@ -209,7 +209,7 @@
       .sustainability {
         width: 1440px;
         height: 950px;
-        margin: 150px 230px;
+        margin: 120px 230px;
         font-family: "Pretendard", sans-serif;
       }
 
@@ -222,33 +222,74 @@
       }
 
       .sustainability ul.content {
+        position: relative;
         width: 100%;
         display: flex;
         justify-content: space-between;
         gap: 30px;
         padding-top: 180px;
       }
-
       .sustainability ul.content li {
-        width: 100%;
+        width: 456px;
+        height: 510px;
         overflow: hidden;
       }
-
       .sustainability ul.content li img {
         width: 100%;
+        height: 100%;
         border-radius: 4px;
-        background-size: cover;
+        transition: 0.7s;
       }
-
-      .sustainability ul.content li h3 {
-        text-align: center;
+      .sustainability ul.content li img:hover {
+        transform: scale(1.2);
+      }
+      .sustainability ul.content li:nth-child(1) h3 {
+        position: absolute;
+        left: 11%;
+        font-size: 27px;
+        font-weight: 700;
+        margin: 20px 0 10px;
+      }
+      .sustainability ul.content li:nth-child(2) h3 {
+        position: absolute;
+        left: 43%;
+        font-size: 27px;
+        font-weight: 700;
+        margin: 20px 0 10px;
+      }
+      .sustainability ul.content li:nth-child(3) h3 {
+        position: absolute;
+        right: 9%;
         font-size: 27px;
         font-weight: 700;
         margin: 20px 0 10px;
       }
 
-      .sustainability ul.content li p {
+      .sustainability ul.content li:nth-child(1) p {
+        position: absolute;
         text-align: center;
+        left: 1.5%;
+        bottom: -18%;
+        font-size: 17px;
+        font-weight: 600;
+        color: #555;
+        line-height: 1.6;
+      }
+      .sustainability ul.content li:nth-child(2) p {
+        position: absolute;
+        text-align: center;
+        left: 35%;
+        bottom: -18%;
+        font-size: 17px;
+        font-weight: 600;
+        color: #555;
+        line-height: 1.6;
+      }
+      .sustainability ul.content li:nth-child(3) p {
+        position: absolute;
+        text-align: center;
+        right: 1.5%;
+        bottom: -18%;
         font-size: 17px;
         font-weight: 600;
         color: #555;
@@ -322,6 +363,117 @@
         line-height: 5vh;
         margin-left: 30px;
       }
+      .tech {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 70px;
+      }
+      .tech_info {
+        display: block;
+        margin-right: 100px;
+        margin-top: -150px;
+      }
+      .tech_info > .tech_tit h3 {
+        display: block;
+        color: #9d1e34;
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: normal;
+        padding-bottom: 15px;
+      }
+      .tech_info > .tech_tit h1 {
+        display: block;
+        color: #111;
+        font-size: 57px;
+        letter-spacing: -0.03em;
+        padding-bottom: 20px;
+      }
+      .tech_info > .tech_txt p {
+        display: block;
+        color: #666666;
+        font-size: 17px;
+        letter-spacing: -0.03em;
+        padding-bottom: 55px;
+      }
+      .tech_info span {
+        display: block;
+        width: 30%;
+        color: #111;
+        font-size: 17px;
+        letter-spacing: -0.03em;
+        padding: 14px 54px;
+        border: 1px solid #666666;
+        border-radius: 30px;
+        transition: 0.3s ease-in-out;
+      }
+      .tech_info span:hover {
+        background-color: #9d1e34;
+        color: #fff;
+      }
+      .tech_info span::after {
+        content: "→";
+        font-size: 21px;
+        margin-left: 10px;
+      }
+      .tech_img {
+        width: 702px;
+        height: 740px;
+        overflow: hidden;
+      }
+      .tech_img p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 1s;
+      }
+      .tech_img p:hover img {
+        transform: scale(1.1);
+      }
+      .media {
+        width: 100%;
+        height: 1070px;
+        background: #fbfbfb;
+      }
+      .media > .media_tit {
+        width: 75%;
+        height: 70%;
+        margin: 140px 210px;
+        letter-spacing: -0.05em;
+      }
+      .media > .media_tit h1 {
+        display: block;
+        color: #111;
+        font-size: 57px;
+        padding-bottom: 20px;
+      }
+      .media > .media_tit > .msub_tit {
+        display: flex;
+        font-size: 17px;
+        padding-bottom: 50px;
+      }
+      .media > .media_tit > .msub_tit p {
+        color: #666;
+        flex: 1;
+      }
+      .media > .media_tit > .msub_tit span {
+        display: block;
+        color: #111;
+        padding: 14px 50px;
+        border: 1px solid #666;
+        border-radius: 30px;
+        transition: 0.3s ease-in-out;
+      }
+      .media > .media_tit > .msub_tit span:hover {
+        background-color: #9d1e34;
+        color: #fff;
+      }
+      .media > .media_tit > .msub_tit span::after {
+        content: "→";
+        font-size: 21px;
+        margin-left: 10px;
+      }
+      
     </style>
   </head>
   <body>
@@ -389,48 +541,53 @@
         </div>
       </section>
       <section class="sustainability">
-        <h2>
-          친환경 혁신을 통한<br />
-          피코그램의 지속 가능한 미래
-        </h2>
-        <ul class="content">
-          <li>
-            <a href="#"
-              ><img
-                src="	http://picogram.co.kr/upload/maindata8/maindata892631_0.jpg"
-                alt=""
-            /></a>
-            <h3>생활환경가전</h3>
-            <p>
-              원천기술 개발과 차별화된 소재 기술을 통한 혁신적인 제품으로<br />
-              생활 환경가전 전문기업이 되도록 노력하겠습니다.
-            </p>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="http://picogram.co.kr/upload/maindata8/maindata889376_0.jpg"
-                alt=""
-            /></a>
-            <h3>첨단소재 &amp; 부품</h3>
-            <p>
-              첨단소재 &amp; 부품 등 다양한 분야의 솔루션을 제안하고,<br />
-              새로운 글로벌 친환경 시대를 이끌어가는 기업이 되고자 합니다.
-            </p>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="	http://picogram.co.kr/upload/maindata8/maindata892605_0.jpg"
-                alt=""
-            /></a>
-            <h3>바이오 &amp; 헬스케어</h3>
-            <p>
-              인류의 건강을 증진시키고 풍요로운 삶을 누릴 수 있도록<br />
-              차별화된 차세대 바이오 제품과 솔루션을 제공하고자 합니다.
-            </p>
-          </li>
-        </ul>
+        <div class="second">
+          <h2>
+            친환경 혁신을 통한<br />
+            피코그램의 지속 가능한 미래
+          </h2>
+          <ul class="content">
+            <li>
+              <a href="#"
+                ><img
+                  src="	http://picogram.co.kr/upload/maindata8/maindata892631_0.jpg"
+                  alt=""
+              /></a>
+              <div class="etxt">
+                <h3>생활환경가전</h3>
+                <p>
+                  원천기술 개발과 차별화된 소재 기술을 통한 혁신적인 제품으로<br />
+                  생활 환경가전 전문기업이 되도록 노력하겠습니다.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <a href="#"
+                ><img
+                  src="http://picogram.co.kr/upload/maindata8/maindata889376_0.jpg"
+                  alt=""
+              /></a>
+              <h3>첨단소재 &amp; 부품</h3>
+              <p>
+                첨단소재 &amp; 부품 등 다양한 분야의 솔루션을 제안하고,<br />
+                새로운 글로벌 친환경 시대를 이끌어가는 기업이 되고자 합니다.
+              </p>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="	http://picogram.co.kr/upload/maindata8/maindata892605_0.jpg"
+                  alt=""
+              /></a>
+              <h3>바이오 &amp; 헬스케어</h3>
+              <p>
+                인류의 건강을 증진시키고 풍요로운 삶을 누릴 수 있도록<br />
+                차별화된 차세대 바이오 제품과 솔루션을 제공하고자 합니다.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
     </div>
     <section class="pureal">
@@ -495,7 +652,84 @@
         </a>
       </div>
     </section>
-
+    <section class="tech">
+      <div class="tech_info">
+        <div class="tech_tit">
+          <h3>세계 최고의 기술력</h3>
+          <h1>
+            Invisible world,<br />
+            Picogram technology!
+          </h1>
+        </div>
+        <div class="tech_txt">
+          <p>
+            피코그램은 최고의 연구 인력과 첨단 연구시설을 기반으로 20여년
+            동안<br />
+            필터 및 신소재 기술 개발에 매진해 왔습니다. 최고의 기술력으로<br />
+            생활환경가전 · 첨단소재 & 부품 · 바이오 & 헬스케어 분야를 선도해
+            나아가겠습니다.
+          </p>
+        </div>
+        <ul>
+          <li>
+            <a href="#"><span>연구소 소개 바로가기</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="tech_img">
+        <p>
+          <img
+            src="http://picogram.co.kr/upload/maindata9/maindata957600_0.jpg"
+            alt=""
+          />
+        </p>
+      </div>
+    </section>
+    <section class="media">
+      <div class="media_tit" data-aos="fade-up">
+        <h1>Media</h1>
+        <div class="msub_tit">
+          <p>생활환경가전 전문 기업, 피코그램의 최신 소식을 만나보세요.</p>
+          <a href=""><span>피코그램 소식 바로가기</span></a>
+        </div>
+        <a
+          href="http://picogram.co.kr/bbs/index.php?so_table=news&mode=VIEW&num=216&&PHPSESSID=33980071fd8f50a7d589259258955775">
+              <div class="mcon1">
+                <p>
+                  <img
+                    src="http://picogram.co.kr/bbs/data/news/edf2349e_USPatents_m.jpg"
+                    alt=""
+                  />
+                </p>
+                <h4>News</h4>
+                <h2>피코그램,'무전원 유...</h2>
+                <p>
+                  미국 현지 판매법인 설립 적극 검토… 온라인·구독형<br />
+                  정수기 시장 공략 박차
+                </p>
+                <span>VIEW MORE</span>
+              </div>
+                    </a>
+                    <a
+            href="http://picogram.co.kr/bbs/index.php?so_table=news&mode=VIEW&num=215&&PHPSESSID=33980071fd8f50a7d589259258955775"
+                    >
+              <p>
+                <img
+                  src="http://picogram.co.kr/bbs/data/news/de2d0a2f_CELLINstem_m.jpg"
+                  alt=""
+                />
+              </p>
+              <h4>News</h4>
+              <h2>피코그램 뷰티 브랜드...</h2>
+              <p>
+                피코그램(대표이사 최석림)의 엑소좀 기반 바이오 뷰티 <br />브랜드
+                '셀린스템(CELLINstem)
+              </p>
+              <span>VIEW MORE</span>
+          </div>
+        </a>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       /* 🎬 비디오 자동 전환 기능 */
       let video = document.getElementById("player");

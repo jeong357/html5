@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul.list {
+        width: 1260px;
+        margin: 50px auto;
+      }
+      .list h2 {
+        font-size: 42px;
+        color: #d1a050;
+        padding-bottom: 20px;
+      }
+      ul.list span {
+        display: inline-block;
+        transition: 0.5s;
+      }
+      ul.list span.on {
+        transform: rotate(45deg);
+      }
+
+      .list li p:first-child {
+        padding-top: 20px;
+        font-size: 24px;
+        color: #d1a050;
+        border-top: 1px solid #d1a050;
+      }
+      ul.list li p:last-child {
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="list">
+      <h2>Slices - Oat Base</h2>
+      <li>
+        <p><span>+</span>AMERICAN</p>
+        <p>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-AMERICAN-pc.jpg"
+            alt=""
+          />
+        </p>
+      </li>
+      <li>
+        <p><span>+</span>CHEDDAR</p>
+        <p>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-CHEDDAR-pc.jpg"
+            alt=""
+          />
+        </p>
+      </li>
+      <li>
+        <p><span>+</span>PROVOLONE</p>
+        <p>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-PROVOLONE-pc.jpg"
+            alt=""
+          />
+        </p>
+      </li>
+      <li>
+        <p><span>+</span>PEPPER JACK</p>
+        <p>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-PEPPERJACK-pc.jpg"
+            alt=""
+          />
+        </p>
+      </li>
+    </ul>
+    <script>
+      let btn = document.querySelectorAll(".list li");
+      let plus = document.querySelectorAll("p span");
+      let detail = document.querySelectorAll("ul.list li p:nth-child(2)");
+      btn.forEach(function (v, k, ar) {
+        v.onclick = function () {
+          let ht =
+            this.getElementsByTagName("p")[1].querySelector("img").clientHeight;
+          console.log("ht : " + ht);
+          let showCon = this.querySelector("span").classList.contains("on");
+          console.log(showCon);
+          this.querySelector("span").classList.add("on");
+          this.getElementsByTagName("p")[1].style.height = ht + "px";
+        };
+      });
+    </script>
+  </body>
+</html>

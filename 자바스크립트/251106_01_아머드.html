@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smooth Scroll Video Transition</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: black;
+      }
+      video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.6s ease;
+      }
+      video.active {
+        opacity: 1;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <video
+      id="video1"
+      src="https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_1_intro.mp4"
+      preload="auto"
+    ></video>
+    <video
+      id="video2"
+      src="https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_2_loop.mp4"
+      preload="auto"
+      loop
+    ></video>
+    <video
+      id="video3"
+      src="https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_3.mp4"
+      preload="auto"
+    ></video>
+    <video
+      id="video4"
+      src="https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_4_loop.mp4"
+      preload="auto"
+      loop
+    ></video>
+    <video
+      id="video5"
+      src="https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_5.mp4"
+      preload="auto"
+    ></video>
+    <video
+      id="video6"
+      src="https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_6_loop.mp4"
+      preload="auto"
+      loop
+    ></video>
+
+    <!-- Reverse -->
+    <video
+      id="videoR3"
+      src="https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_R_3.mp4"
+      preload="auto"
+    ></video>
+    <video
+      id="videoR2"
+      src="https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_R_2.mp4"
+      preload="auto"
+    ></video>
+
+    <script>
+      const sequence = [
+        ["video1", "video2"], // 처음 로딩
+        ["video3", "video4"], // 스크롤 ↓ 1
+        ["video5", "video6"], // 스크롤 ↓ 2
+      ];
+      const reverseSequence = [
+        ["videoR3", "video4"], // 스크롤 ↑ 1
+        ["videoR2", "video2"], // 스크롤 ↑ 2
+      ];
+
+      let currentStep = 0;
+      let isPlaying = false;
+      let direction = "down"; // scroll 방향 기억
+
+      const videos = {};
+      document.querySelectorAll("video").forEach((v) => (videos[v.id] = v));
+
+      function playSequence(list) {
+        if (isPlaying) return;
+        isPlaying = true;
+
+        const [introId, loopId] = list;
+        const intro = videos[introId];
+        const loop = videos[loopId];
+
+        // 기존 재생 중인 비디오 정지
+        Object.values(videos).forEach((v) => {
+          v.pause();
+          v.classList.remove("active");
+        });
+
+        // intro 재생 후 loop로 전환
+        intro.currentTime = 0;
+        intro.classList.add("active");
+        intro.play();
+
+        intro.onended = () => {
+          intro.classList.remove("active");
+          loop.currentTime = 0;
+          loop.classList.add("active");
+          loop.play();
+          isPlaying = false;
+        };
+      }
+
+      // 초기 재생
+      window.addEventListener("load", () => {
+        playSequence(sequence[0]);
+      });
+
+      // 휠 이벤트로 전환
+      window.addEventListener("wheel", (e) => {
+        if (isPlaying) return;
+        if (e.deltaY > 0) {
+          // 아래로 스크롤
+          direction = "down";
+          if (currentStep < sequence.length - 1) {
+            currentStep++;
+            playSequence(sequence[currentStep]);
+          }
+        } else {
+          // 위로 스크롤
+          direction = "up";
+          if (currentStep > 0) {
+            playSequence(reverseSequence[currentStep - 1]);
+            currentStep--;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
