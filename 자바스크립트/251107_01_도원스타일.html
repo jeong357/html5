@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>도원스타일</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .visual {
+        position: relative;
+        height: 100vh;
+      }
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #444;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.5);
+        transition: 8s ease-in-out;
+      }
+      .swiper-slide img.on {
+        transform: scale(1);
+      }
+      #controls {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 500px;
+        height: 50px;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #fff;
+        z-index: 20;
+      }
+      #controls #arrow {
+        width: 20%;
+        height: 100%;
+        position: relative;
+      }
+      #controls #arrow .swiper-button-prev:after,
+      #controls #arrow .swiper-button-next:after {
+        font-size: 16px;
+        color: #fff;
+      }
+      #controls span {
+        display: inline-block;
+        border: 1px solid #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="visual">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="https://www.t-won.com/data/banner/61c84320e0877.jpg"
+              alt="01"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://www.t-won.com/data/banner/61c8439fe973b.jpg"
+              alt="01"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://www.t-won.com/data/banner/61c843b3246c5.jpg"
+              alt="01"
+            />
+          </div>
+        </div>
+        <div class="txt">
+          <div>
+            <h1>
+              전통이 살아있는 맛 <br />
+              <strong>중식의 낙원, 도원스타일</strong>
+            </h1>
+          </div>
+          <div>
+            <h1>
+              호텔 중식의 재구성 <br />
+              <strong>프리미엄 다이닝</strong>
+            </h1>
+          </div>
+          <div>
+            <h1>
+              약식동원의 음식 철학 <br />
+              <strong>건강한 광둥식</strong>
+            </h1>
+          </div>
+        </div>
+
+        <div id="controls">
+          <div id="arrow">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <div id="page">
+            <span class="start"></span>
+            <span> / </span>
+            <span class="end"></span>
+          </div>
+          <div id="playStop">
+            <span class="stop">정지</span>
+            <span class="play">시작</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      let slide = document.querySelectorAll(".swiper-slide");
+      document.querySelector(".start").innerHTML = "1";
+      document.querySelector(".end").innerHTML = slide.length;
+      //slide[0] slide[1] slide[2]
+      function slideimg() {
+        slide.forEach(function (v) {
+          v.querySelector("img").classList.remove("on");
+        });
+      }
+      var swiper = new Swiper(".mySwiper", {
+        //spaceBetween: 30,
+        //centeredSlides: true,
+        speed: 1000,
+        effect: "fade",
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        on: {
+          slideChange: function () {
+            console.log(this.realIndex);
+            slideimg();
+            slide[this.realIndex].querySelector("img").classList.add("on");
+            document.querySelector(".start").innerHTML = this.realIndex + 1;
+          },
+        },
+      });
+
+      document.querySelector(".stop").onclick = function () {
+        swiper.autoplay.stop();
+      };
+      document.querySelector(".play").onclick = function () {
+        swiper.autoplay.start();
+      };
+    </script>
+  </body>
+</html>
