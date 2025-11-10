@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      /*$(document).ready(function(){
+
+      })*/
+      $(function () {
+        // $("ul li a").css("color", "#000").css("text-decoration", "none");
+        /*$("ul li a").css({ color: "000", "text-decoration": "none" });
+        $("ul li a").click(function (e) {
+          e.preventDefault();
+          $("ul li a").css({ color: "#000" });
+          ;
+        });*/
+        /*$("ul li a").mouseenter(function () {
+          $(this).css({ color: "#f00" });
+        });
+        $("ul li a").mouseleave(function () {
+          $("ul li a").css({ color: "#000" });
+        });*/
+        $("ul li a").hover(
+          function () {
+            //마우스 올렸을 때 이벤트
+            $(this).css({ color: "#f00" });
+          },
+          function () {
+            //마우스 나갔을 때 이벤트
+            $("ul li a").css({ color: "#000" });
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#">하나</a></li>
+      <li><a href="#">둘</a></li>
+      <li><a href="#">셋</a></li>
+      <li><a href="#">넷</a></li>
+      <li><a href="#">다섯</a></li>
+    </ul>
+    <script>
+      /*let menu = document.querySelectorAll("ul li");
+      menu.forEach(function (v) {
+        v.querySelector("a").style.color = "#000";
+        v.querySelector("a").style.textDecoration = "none";
+      });
+      menu.onclick(function (v, k, ar) {
+        v.onclick = function (e) {
+          e.preventDefault();
+          ar.forEach(function (v) {
+            v.querySelector("a").style.color;
+          });
+        };
+      });*/
+    </script>
+  </body>
+</html>

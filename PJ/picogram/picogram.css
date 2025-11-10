@@ -12,6 +12,8 @@
 html,
 body {
   height: 100%;
+  font-family: "Pretendard", sans-serif;
+  font-weight: regular;
   scroll-behavior: smooth;
   /* overflow: hidden; */
 }
@@ -23,8 +25,6 @@ section {
   max-width: 1905px;
   height: 100%;
   display: flex;
-  font-family: "Pretendard", sans-serif;
-  font-weight: regular;
   scroll-snap-align: start;
   scroll-timeline: 1.5s;
 }
@@ -430,13 +430,14 @@ section .menu ul li a {
 }
 .media {
   width: 100%;
-  height: 1070px;
+  height: 970px;
   background: #fbfbfb;
+  border-bottom: 1px solid #e5e5e5;
 }
 .media > .media_tit {
   width: 75%;
   height: 70%;
-  margin: 140px 210px;
+  margin: 140px 250px;
   letter-spacing: -0.05em;
 }
 .media > .media_tit h1 {
@@ -480,31 +481,56 @@ section .menu ul li a {
   color: #111;
   z-index: 1;
 }
-.mcon {
+.mcontent {
+  display: flex;
+  gap: 100px;
+}
+.mcon1,
+.mcon2 {
   display: flex;
   gap: 30px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
-.mcon > .mtxt h4 {
+.mcon1 img,
+.mcon2 img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.mcon1:hover img,
+.mcon2:hover img {
+  transform: scale(1.1);
+}
+.mcon1:hover > .mtxt span,
+.mcon2:hover > .mtxt span {
+  color: #9d1e34;
+}
+.mcon1:hover > .mtxt span::after,
+.mcon2:hover > .mtxt span::after {
+  background: #9d1e34 url(http://picogram.co.kr/images/icon/go_small.png)
+    no-repeat top 8px right 7px / auto 6px;
+}
+.mtxt h4 {
   color: #9d1e34;
   padding-top: 50px;
   padding-bottom: 40px;
 }
-.mcon > .mtxt h2 {
+.mtxt h2 {
   color: #111;
   padding-bottom: 40px;
 }
-.mcon1 > .mtxt1 span,
-.mcon2 > .mtxt2 span {
+.mtxt span {
   color: #111;
   padding-bottom: 40px;
 }
-.mcon1 > .mtxt1 p,
-.mcon2 > .mtxt2 p {
+.mtxt p {
   color: #666;
   padding-bottom: 40px;
 }
-.mcon1 > .mtxt1 span::after,
-.mcon2 > .mtxt2 span::after {
+.mcon1 > .mtxt span::after,
+.mcon2 > .mtxt span::after {
   position: absolute;
   margin-left: 15px;
   margin-top: -3px;
@@ -515,4 +541,88 @@ section .menu ul li a {
     top 8px right 7px / auto 6px;
   border-radius: 50%;
   color: #fff;
+}
+footer {
+  width: 100%;
+}
+footer .frow_site {
+  display: flex;
+  padding: 60px 250px;
+  gap: 150px;
+  border-bottom: 1px solid #e5e5e5;
+  line-height: 30px;
+}
+.frow_site > .site_wrap {
+  position: relative;
+}
+.frow_site > .site_wrap::after {
+  content: "";
+  position: absolute;
+  top: -34%;
+  right: 0;
+  width: 1px;
+  height: 167%;
+  background-color: #e5e5e5;
+  transform: translateX(110px);
+}
+.frow_site > .site_wrap:last-child::after {
+  display: none;
+}
+.frow_site > .site_wrap li {
+  font-size: 18px;
+  color: #111;
+  font-weight: 600;
+}
+.frow_site > .site_wrap li:nth-child(2) a {
+  font-size: 15px;
+  color: #666;
+  font-weight: 300;
+}
+.frow_site > .site_wrap li:nth-child(3) a {
+  font-size: 15px;
+  color: #666;
+  font-weight: 300;
+}
+.frow_site > .site_wrap li:nth-child(4) a {
+  font-size: 15px;
+  color: #666;
+  font-weight: 300;
+}
+.frow_site > .site_wrap li:nth-child(5) a {
+  font-size: 15px;
+  color: #666;
+  font-weight: 300;
+}
+.frow_site > .site_wrap li:last-child a {
+  font-size: 15px;
+  color: #666;
+  font-weight: 300;
+}
+.fmid {
+  width: 100%;
+}
+.fmid ul {
+  display: flex;
+  gap: 70px;
+  width: 1440px;
+  align-items: center;
+  margin: 25px 250px;
+}
+.fmid ul li:first-child p {
+  background: url(http://picogram.co.kr/images/footer_ico01.png) no-repeat;
+}
+.fmid ul li:nth-child(2) p {
+}
+.fmid ul li:nth-child(3) p,
+.fmid ul li:last-child p {
+}
+.fmid ul li:first-child a {
+  color: #0971ce;
+}
+.fmid ul li:nth-child(2) a {
+  color: #845ab4;
+}
+.fmid ul li:nth-child(3) a,
+.fmid ul li:last-child a {
+  color: #111;
 }
