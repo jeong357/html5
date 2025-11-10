@@ -80,3 +80,12 @@ window.addEventListener("load", () => {
   scrollDown.style.bottom = "40px";
   scrollDown.style.transform = "translateX(-50%)";
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const family = document.querySelector(".family_site p");
+  const familyBox = document.querySelector(".family_site");
+
+  family.addEventListener("click", () => {
+    familyBox.classList.toggle("active");
+  });
+});
