@@ -85,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const family = document.querySelector(".family_site p");
   const familyBox = document.querySelector(".family_site");
 
+<<<<<<< HEAD:PJ/picogram/picogram_main/picogram.js
   family.addEventListener("click", (e) => {
     e.stopPropagation();
     familyBox.classList.toggle("active");
@@ -94,4 +95,9 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", () => {
     familyBox.classList.remove("active");
   });
+=======
+  family.addEventListener("click", () => {
+    familyBox.classList.toggle("active");
+  });
+>>>>>>> db596e161b9992364ad9441a067d7858985f513d:PJ/picogram/picogram.js
 });
