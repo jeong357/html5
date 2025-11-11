@@ -543,7 +543,7 @@ section .menu ul li a {
   color: #fff;
 }
 footer {
-  width: 100%;
+  width: 1905px;
 }
 footer .frow_site {
   display: flex;
@@ -558,10 +558,10 @@ footer .frow_site {
 .frow_site > .site_wrap::after {
   content: "";
   position: absolute;
-  top: -34%;
+  top: -32%;
   right: 0;
   width: 1px;
-  height: 167%;
+  height: 164%;
   background-color: #e5e5e5;
   transform: translateX(110px);
 }
@@ -599,22 +599,17 @@ footer .frow_site {
   font-weight: 300;
 }
 .fmid {
-  width: 100%;
+  width: 1905px;
+  font-size: 15px;
+  letter-spacing: -0.03em;
+  font-weight: 500;
 }
 .fmid ul {
   display: flex;
-  gap: 70px;
+  gap: 60px;
   width: 1440px;
   align-items: center;
-  margin: 25px 250px;
-}
-.fmid ul li:first-child p {
-  background: url(http://picogram.co.kr/images/footer_ico01.png) no-repeat;
-}
-.fmid ul li:nth-child(2) p {
-}
-.fmid ul li:nth-child(3) p,
-.fmid ul li:last-child p {
+  margin: 25px 245px;
 }
 .fmid ul li:first-child a {
   color: #0971ce;
@@ -625,4 +620,106 @@ footer .frow_site {
 .fmid ul li:nth-child(3) a,
 .fmid ul li:last-child a {
   color: #111;
+}
+.fmid ul li:first-child a img {
+  width: 12px;
+  height: 13px;
+  margin-left: 10px;
+}
+.fmid ul li:nth-child(2) a img {
+  width: 12px;
+  height: 13px;
+  margin-left: 10px;
+}
+.fmid ul li:nth-child(3) a img {
+  width: 13px;
+  height: 13px;
+  margin-left: 10px;
+}
+.finfo {
+  background: #111;
+  color: #fff;
+  font-size: 16px;
+  padding: 60px 13%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.finfo > .finfo_wrap {
+  display: flex;
+  gap: 40px;
+}
+.finfo_wrap > .finfo_detail p {
+  line-height: 30px;
+}
+.finfo_wrap > .finfo_detail .finfo_CR {
+  padding-top: 40px;
+}
+.f_right {
+  position: relative;
+  display: inline-block;
+}
+
+.family_site p {
+  position: relative;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 10px 40px 10px 20px;
+  border-bottom: 1px solid #fff;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.family_site p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  width: 8px;
+  height: 8px;
+  background: url("http://www.picogram.co.kr/images/footer_dropdown.png")
+    no-repeat center / contain;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.family_site ul {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background: #fff;
+  color: #555;
+  text-align: left;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  border: 1px solid #ddd;
+  width: 200px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.family_site ul li a {
+  display: block;
+  padding: 8px 16px;
+  color: #555;
+  font-size: 14px;
+}
+
+.family_site ul li a:hover {
+  background: #f0f0f0;
+}
+
+.family_site.active ul {
+  display: block;
+}
+
+.family_site.active ul {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.family_site.active p::after {
+  transform: translateY(-50%) rotate(180deg);
 }

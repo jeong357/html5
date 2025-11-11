@@ -80,3 +80,18 @@ window.addEventListener("load", () => {
   scrollDown.style.bottom = "40px";
   scrollDown.style.transform = "translateX(-50%)";
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const family = document.querySelector(".family_site p");
+  const familyBox = document.querySelector(".family_site");
+
+  family.addEventListener("click", (e) => {
+    e.stopPropagation();
+    familyBox.classList.toggle("active");
+  });
+
+  // 바깥 클릭 시 닫기
+  document.addEventListener("click", () => {
+    familyBox.classList.remove("active");
+  });
+});
