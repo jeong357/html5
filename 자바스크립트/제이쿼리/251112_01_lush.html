@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 720px;
+        background-size: cover;
+      }
+      div ul.list {
+        width: 894px;
+        height: 454px;
+        display: flex;
+        gap: 94px 177px;
+        flex-wrap: wrap;
+      }
+      div ul.list li {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .bg {
+        background-color: #222;
+      }
+      .bg1 {
+        background-image: url(https://weare.lush.co.kr/images/main_value01.jpg);
+      }
+      .bg2 {
+        background-image: url(https://weare.lush.co.kr/images/main_value02.jpg);
+      }
+      .bg3 {
+        background-image: url(https://weare.lush.co.kr/images/main_value03.jpg);
+      }
+      .bg4 {
+        background-image: url(https://weare.lush.co.kr/images/main_value04.jpg);
+      }
+      .bg5 {
+        background-image: url(https://weare.lush.co.kr/images/main_value06.jpg);
+      }
+      .bg6 {
+        background-image: url(https://weare.lush.co.kr/images/main_value05.jpg);
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <div>
+      <ul class="list">
+        <li>
+          <p>
+            <img
+              src="https://weare.lush.co.kr/images/ico_main_value01.svg"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://weare.lush.co.kr/images/ico_main_value02.svg"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://weare.lush.co.kr/images/ico_main_value03.svg"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://weare.lush.co.kr/images/ico_main_value04.svg"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://weare.lush.co.kr/images/ico_main_value05.svg"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://weare.lush.co.kr/images/ico_main_value06.svg"
+              alt=""
+            />
+          </p>
+        </li>
+      </ul>
+    </div>
+    <script>
+      //https://weare.lush.co.kr/images/main_value01.jpg
+      /*document.querySelectorAll(".list li").forEach(function (v, k, ar) {
+        v.classList.add("bg");
+        v.onclick = function () {
+          ar.forEach(function (v) {
+            v.classList.remove("bg");
+          });
+          v.classList.add("bg");
+          document
+            .querySelector("div")
+            .classList.remove("bg1", "bg2", "bg3", "bg4", "bg5", "bg6");
+          document.querySelector("div").classList.add("bg" + (k + 1));
+        };
+      });*/
+      $(".list li").addClass("bg");
+      $(".list li").hover(
+        function () {
+          let i = $(this).index();
+          console.log(i);
+          $(".list li").removeClass("bg");
+          $(this).addClass("bg");
+          $("div").removeClass();
+          $("div").addClass("bg" + (i + 1));
+        },
+        function () {
+          $(".list li").addClass("bg");
+        }
+      );
+      $("div").hover(
+        function () {},
+        function () {
+          $("div").removeClass();
+        }
+      );
+    </script>
+  </body>
+</html>

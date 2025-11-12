@@ -304,14 +304,15 @@ section .menu ul li a {
 }
 .pureal .third {
   position: absolute;
-  top: 125px;
+  left: 34%;
+  top: 100px;
   text-align: center;
-
   overflow: hidden;
 }
 .pureal .third .prtit {
   font-size: 24px;
   color: #fff;
+  text-align: center;
   padding-bottom: 20px;
 }
 .pureal .third img {
