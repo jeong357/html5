@@ -550,6 +550,7 @@ footer .frow_site {
   padding: 60px 250px;
   gap: 150px;
   border-bottom: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
   line-height: 30px;
 }
 .frow_site > .site_wrap {
@@ -654,7 +655,7 @@ footer .frow_site {
 .finfo_wrap > .finfo_detail .finfo_CR {
   padding-top: 40px;
 }
-.css .f_right {
+.f_right {
   position: relative;
   display: inline-block;
 }

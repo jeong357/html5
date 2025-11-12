@@ -90,11 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     familyBox.classList.toggle("active");
   });
 
-  // 바깥 클릭 시 닫기
   document.addEventListener("click", () => {
     familyBox.classList.remove("active");
-  });
-  family.addEventListener("click", () => {
-    familyBox.classList.toggle("active");
   });
 });
