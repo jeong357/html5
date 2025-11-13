@@ -25,10 +25,10 @@ section {
   max-width: 1905px;
   height: 100%;
   display: flex;
-  scroll-snap-align: start;
   scroll-timeline: 1.5s;
 }
 section video {
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -41,6 +41,7 @@ section video {
   opacity: 0;
 }
 section .menu {
+  position: absolute;
   top: 40px;
   left: 45%;
   transform: translateX(-50%);
@@ -649,6 +650,16 @@ footer .frow_site {
 .finfo > .finfo_wrap {
   display: flex;
   gap: 40px;
+}
+.finfo > .finfo_wrap > .top {
+  width: 100px;
+  height: 50px;
+  padding-top: 30px;
+  text-align: center;
+  background: #333;
+}
+.finfo > .finfo_wrap > .top p a {
+  color: #fff;
 }
 .finfo_wrap > .finfo_detail p {
   line-height: 30px;

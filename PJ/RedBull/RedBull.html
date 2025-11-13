@@ -5,66 +5,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="RedBull.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
   <body>
     <header class="h_page">
-        <div class="header_contents">
-          <input type="checkbox" name="menu" id="menu">
-            <div id="allmenu">
-              <ul>
-                <li><a href="#">홈</a></li>
-                <li><a href="#">에너지 드링크</a></li>
-                <li><a href="#">이벤트</a></li>
-                <li><a href="#">선수</a></li>
-                <li><a href="#">Red Bull TV</a></li>
-                <li><a href="#">채용</a></li>
-                <li><a href="#">Company</a></li>
-              </ul>
-          </div>
-          <p class="hambuger">
-            <label for="menu">
-              <span class="bar1"></span>
-              <span class="bar2"></span>
-              <span class="bar3"></span>
-            </label>
-          </p>
+      <div class="header_contents">
+        <p class="hamburger">
+          <label for="menu">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+          </label>
+        </p>
+        <div class="header_img">
+          <img
+            src="./redbull_images/max-verstappen-austrian-grand-prix-2018.avif"
+            alt=""
+          />
         </div>
         <div class="header_logo">
-          <nav>
-            <p><a href="#"><img src="	https://www.redbull.com/v3/resources/images/client/header/redbullcom-logo_double-with-text.svg" alt=""></a></p>
-            <div class="main">
-              <ul class="menu">
-                <li><a href="#">에너지 드링크</a>
-                <ul>
-                  <li><a href="#">전체 레드불 에너지 드링크</a>
-                  <ul>
-                    <li><a href="#">레드불 에너지 드링크</a></li>
-                    <li><a href="#">Red Bull Sugarfree</a></li>
-                    <li><a href="#">레드불 에디션</a></li>
-                  </ul>
-                </li>
-                </ul>
-                </li>
-                <li><a href="#">이벤트</a></li>
-                <li><a href="#">선수</a></li>
-                <li><a href="#">Red Bull TV</a></li>
-              </ul>
-            </div>
-            <div class="main_right">
-              <p class="user">
-                <a href="#">
-                  <img src="./redbull_images/person_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="">
-                </a>
-              </p>
-              <p class="search">
-                <a href="#">
-                  <img src="./redbull_images/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="">
-                </a>
-              </p>
-            </div>
-          </nav>
+          <p>
+            <a href="RedBull.html"
+              ><img
+                src="	https://www.redbull.com/v3/resources/images/client/header/redbullcom-logo_double-with-text.svg"
+                alt=""
+            /></a>
+          </p>
         </div>
+        <div class="main">
+          <ul class="menu">
+            <li>
+              <a href="#"
+                >에너지 드링크<img
+                  src="./redbull_images/keyboard_arrow_down_16dp_000F1E_FILL0_wght400_GRAD0_opsz20.png"
+                  alt=""
+              /></a>
+              <div class="sub">
+                <ul class="down_menu">
+                  <li>
+                    <a href="#">전체 레드불 에너지 드링크</a>
+                  </li>
+                  <li><a href="#">레드불 에너지 드링크</a></li>
+                  <li><a href="#">Red Bull Sugarfree</a></li>
+                  <li><a href="#">레드불 에디션</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a
+                href="https://www.redbull.com/kr-ko/events?filter.toggle.date=upcoming&filter.toggle.live=all"
+                >이벤트</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.redbull.com/kr-ko/athletes?filter.countryCode=KR"
+                >선수</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Red Bull TV
+                <img
+                  src="./redbull_images/keyboard_arrow_down_16dp_000F1E_FILL0_wght400_GRAD0_opsz20.png"
+                  alt=""
+                />
+              </a>
+              <div class="sub">
+                <ul class="down_menu">
+                  <li>
+                    <a href="https://www.redbull.com/int-en/discover">
+                      <span>
+                        <img
+                          src="./redbull_images/explore_16dp_000F1E_FILL0_wght400_GRAD0_opsz20.png"
+                          alt=""
+                        /> </span
+                      >Discover</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.redbull.com/kr-ko/live-events"
+                      ><span>
+                        <img
+                          src="./redbull_images/live_tv_16dp_000F1E_FILL0_wght400_GRAD0_opsz20.png"
+                          alt=""
+                        /> </span
+                      >Live</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.redbull.com/kr-ko/collections/films"
+                      ><span>
+                        <img
+                          src="./redbull_images/theaters_16dp_000F1E_FILL0_wght400_GRAD0_opsz20.png"
+                          alt=""
+                        /> </span
+                      >영화</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.redbull.com/kr-ko/collections/shows"
+                      ><span>
+                        <img
+                          src="./redbull_images/local_activity_16dp_000F1E_FILL0_wght400_GRAD0_opsz20.png"
+                          alt=""
+                        /> </span
+                      >공연</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.redbull.com/kr-ko/collections/clips"
+                      ><span>
+                        <img
+                          src="./redbull_images/smart_display_16dp_000F1E_FILL0_wght400_GRAD0_opsz20.png"
+                          alt=""
+                        /> </span
+                      >영상</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="main_right">
+          <p class="user">
+            <a href="#">
+              <img
+                src="./redbull_images/person_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png"
+                alt=""
+              />
+            </a>
+          </p>
+          <p class="search">
+            <a href="#">
+              <img
+                src="./redbull_images/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png"
+                alt=""
+              />
+            </a>
+          </p>
+        </div>
+      </div>
     </header>
+    <div class="main_pj">
+      <div class="Project_img">
+        <p>
+          <img src="./redbull_images/red-bull-quiz-stop-header.jpg" alt="" />
+        </p>
+      </div>
+      <span>프로젝트 보기</span>
+      <p>F1</p>
     </div>
     <script src="RedBull.js"></script>
   </body>
