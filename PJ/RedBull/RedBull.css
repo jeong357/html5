@@ -13,8 +13,12 @@ a {
 html {
   scroll-behavior: smooth;
 }
+.header_main {
+  width: 100%;
+  height: 1100px;
+  padding-bottom: 100px;
+}
 .h_page {
-  position: fixed;
   width: 95%;
   max-width: 1905px;
 }
@@ -22,6 +26,12 @@ html {
   position: relative;
   justify-content: center;
   align-items: center;
+  height: 450px;
+}
+.header_simg {
+  position: absolute;
+  background-repeat: no-repeat;
+  filter: brightness(50%);
 }
 .header_contents > .header_img > img {
   filter: brightness(50%);
@@ -29,9 +39,10 @@ html {
 .h_page > .header_contents > .hamburger label {
   position: absolute;
   top: 4%;
-  left: 2%;
+  left: 3%;
   border: 1px solid #fff;
   border-radius: 50%;
+  transform: translateX(5%);
   width: 35px;
   height: 35px;
   z-index: 10;
@@ -46,7 +57,8 @@ html {
 .h_page > .header_contents > .header_logo {
   position: absolute;
   top: 5%;
-  left: 5%;
+  left: 3%;
+  transform: translate(30%);
   width: 179px;
 }
 .header_contents .menu {
@@ -55,6 +67,7 @@ html {
   top: 4%;
   left: 40%;
   gap: 40px;
+  transform: translateX(3%);
   font-size: 17px;
   background: rgba(0, 0, 0, 0.4);
   padding: 8px 23px;
@@ -104,7 +117,7 @@ html {
   display: flex;
   gap: 20px;
   top: 5%;
-  right: -70px;
+  right: 0;
 }
 .main_right img {
   filter: brightness() invert(1);
@@ -114,21 +127,153 @@ html {
   background: rgba(255, 255, 255, 0.5);
   border-radius: 30px;
 }
-.main_pj {
-  width: 100%;
-  height: 100%;
+.Project_img {
+  position: relative;
+  width: 80%;
+  max-width: 1200px;
+  margin-top: -180px;
+  border-radius: 18px;
   margin: 0 auto;
   overflow: hidden;
+  left: 3%;
 }
-.Project_img p img {
-  width: 70%;
-  height: 80%;
-  position: absolute;
-  border-radius: 10px;
+
+.Project_img .Project_bg {
+  width: 100%;
+  height: 125px;
+  padding-top: 50%; /* 16:9 화면비 유지 */
+  background-image: url("./redbull_images/red-bull-quiz-stop-header.jpg");
+  background-size: cover;
+  background-position: center;
   filter: brightness(70%);
-  transition: 0.5s;
-  object-fit: cover;
+  transition: 1s ease;
 }
-.Project > p:hover img {
+.Project_img .Project_bg:hover {
+  transform: scale(1.1);
+}
+.Project_img .P_txt {
+  position: absolute;
+  left: 50%; /* ← 반응형 위치 */
+  bottom: 10%; /* ← 반응형 위치 */
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  font-size: 16px;
+}
+.Project_img .P_txt span {
+  background: #db0a40;
+  border-radius: 30px;
+  padding: 13px;
+  color: #fff;
+  transform: 1s;
+}
+.Project_img .P_txt span:hover {
+  background: #c21f4b;
+}
+.Project_img .P_txt p {
+  color: rgb(255, 255, 255);
+}
+
+.R_news {
+  width: 100%;
+  height: 700px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 180px;
+  overflow: hidden;
+  align-items: center;
+}
+.R_news .news_images {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.R_news .news_images img {
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 1s;
+}
+.R_news .news_images:hover img {
   transform: scale(1.2);
+}
+.news_con {
+  width: 65%;
+}
+.con_txt > .con_recent {
+  display: flex;
+  gap: 30px;
+}
+.news_con h4 {
+  position: relative;
+  left: 15px;
+  padding-top: 60px;
+}
+.news_con h4::before {
+  position: absolute;
+  left: -10px;
+  display: block;
+  content: "";
+  width: 3px;
+  height: 15px;
+  background: #db0a40;
+}
+.news_con .con_txt h1 {
+  padding-top: 80px;
+  padding-bottom: 20px;
+  letter-spacing: -0.12em;
+  font-size: 40px;
+  font-weight: bolder;
+}
+.news_con .con_txt p {
+  padding-bottom: 70px;
+}
+@media screen and (max-width: 1280px) {
+  .header_simg img {
+    display: none;
+  }
+  .header_img img {
+    position: absolute;
+    width: 1580px;
+    height: 415px;
+    left: -300px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .h_page > .header_contents {
+    height: 450px;
+  }
+  .header_contents .menu {
+    display: none;
+  }
+  .P_txt span {
+    font-size: 13px;
+  }
+  .P_txt p {
+    font-size: 14px;
+  }
+  .header_img img {
+    position: absolute;
+    width: 1300px;
+    height: 415px;
+    left: -300px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .h_page > .header_contents {
+    height: 350px;
+  }
+  .header_simg img {
+    display: block;
+  }
+  .header_img img {
+    display: none;
+  }
 }
