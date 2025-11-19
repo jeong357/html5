@@ -1,0 +1,24 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "BrickSans";
+  src: url(./webfonts/NTBrickSans.woff) format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+.header {
+  width: 1920px;
+  height: 1080px;
+  margin: 0 auto;
+}
+.header .h_tit {
+  text-align: center;
+}

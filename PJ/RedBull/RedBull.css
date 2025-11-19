@@ -7,6 +7,10 @@
   font-family: "NanumGothic";
   src: url(./webfonts/NanumGothic-Regular.woff) format("woff");
 }
+* {
+  margin: 0;
+  padding: 0;
+}
 ul {
   list-style: none;
 }
