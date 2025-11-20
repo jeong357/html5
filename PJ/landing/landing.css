@@ -36,7 +36,7 @@ a {
 body {
   width: 100%;
   max-width: 1920px;
-  height: 1200px;
+  height: 1080px;
   margin: 0 auto;
 }
 .header {
@@ -44,19 +44,23 @@ body {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  text-align: center;
-  justify-content: center;
   align-items: center;
   min-height: 70vh;
-  padding: 6vh 20px;
+  padding: 6vh 100px;
   box-sizing: border-box;
-  background: linear-gradient(45deg, #9358f7, #6197ee 30%, #10d7e2 80%);
+  color: #fff;
+  background: url(./images/bg.png) no-repeat center/cover;
+}
+.header .top_img img {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .header .h_tit > .tit_top > h1 {
   font-size: 95px;
 }
 .header .h_tit > .tit_top > h1:first-of-type {
-  line-height: 7vh;
+  line-height: 15vh;
 }
 .header .h_tit > .tit_top > h1:last-child {
   padding-bottom: 50px;
@@ -66,16 +70,44 @@ body {
 }
 .intro {
   width: 100%;
-  height: 90%;
+  height: 100%;
   display: flex;
-  flex-wrap: wrap;
-  text-align: center;
   justify-content: center;
-  align-items: center;
+  background: #d4edf4;
   opacity: 0;
   transform: translateY(50px);
   transition: transform 2s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 1s ease;
   will-change: transform, opacity;
+}
+.intro .i_tit {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 130px;
+}
+.intro .i_tit > .i_main > .i_sns {
+  padding-top: 20px;
+  width: 75px;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+.intro .i_tit > .i_main span {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0;
+  border: 1px solid #000;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+.intro .i_tit > .i_main:hover span {
+  background: #15181b;
+  color: #fff;
 }
 .intro.is-visible {
   opacity: 1;
@@ -83,7 +115,6 @@ body {
 }
 .intro .i_tit .intro_top h1 {
   font-size: 70px;
-  padding-bottom: 80px;
 }
 .intro .i_tit .intro_top p {
   line-height: 15vh;
@@ -92,6 +123,7 @@ body {
   width: 100%;
   height: 90%;
   display: flex;
+  flex-wrap: wrap;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -99,6 +131,7 @@ body {
 .edu .e_tit {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 200px;
 }
 .edu .e_tit .e_left h1 {
@@ -111,13 +144,36 @@ body {
 @media screen and (max-width: 1600px) {
   .header {
     flex-wrap: wrap;
-    min-height: 65vh;
     padding: 6vh 24px;
+  }
+  .header .h_tit {
+    text-align: left;
+  }
+  .header .h_tit > .tit_top > h1 {
+    font-size: clamp(36px, 6.5vw, 85px);
+  }
+  .header .h_tit > .tit_top > p {
+    font-size: clamp(14px, 3.5vw, 28px);
+  }
+  .header .h_tit > .tit_bottom > p {
+    font-size: clamp(14px, 3.5vw, 28px);
+  }
+  .header .h_tit .top_img {
+    position: relative;
+  }
+  .header .top_img img {
+    position: absolute;
+    top: 34%;
+    height: auto;
+    max-width: 70%;
   }
   .intro {
     flex-wrap: wrap;
     min-height: 65vh;
     padding: 6vh 24px;
+  }
+  .header .h_tit > .tit_bottom > p {
+    font-size: clamp(14px, 3.5vw, 27px);
   }
 }
 @media screen and (max-width: 1280px) {
@@ -127,12 +183,35 @@ body {
     min-height: 60vh;
     padding: 5vh 20px;
   }
+  .header .h_tit {
+    position: absolute;
+    top: 5%;
+    text-align: left;
+  }
   .header .h_tit > .tit_top > h1 {
     font-size: clamp(36px, 6.5vw, 80px);
+  }
+  .header .h_tit > .tit_top > p {
+    font-size: clamp(14px, 3.5vw, 26px);
+  }
+  .header .h_tit > .tit_bottom > p {
+    font-size: clamp(14px, 3.5vw, 26px);
+  }
+  .header .h_tit .top_img {
+    position: relative;
+  }
+  .header .top_img img {
+    position: absolute;
+    top: 51%;
+    height: auto;
+    max-width: 70%;
   }
   .intro .i_tit .intro_top h1,
   .e_tit .e_left h1 {
     font-size: clamp(36px, 6.5vw, 60px);
+  }
+  .e_tit .e_right span {
+    font-size: clamp(12px, 4.5vw, 25px);
   }
 }
 @media screen and (max-width: 768px) {
@@ -140,6 +219,11 @@ body {
     min-height: 55vh;
     padding: 5vh 16px;
     align-items: center;
+  }
+  .header .h_tit {
+    position: absolute;
+    top: 10%;
+    text-align: left;
   }
   .header .h_tit > .tit_top > h1 {
     font-size: clamp(28px, 8.5vw, 56px);
@@ -150,6 +234,16 @@ body {
   .header .h_tit > .tit_bottom > p {
     font-size: clamp(14px, 3.5vw, 23px);
   }
+  .header .h_tit .top_img {
+    position: relative;
+    height: 100%;
+  }
+  .header .top_img img {
+    position: absolute;
+    top: 555px;
+    height: auto;
+    max-width: 100%;
+  }
   .intro {
     min-height: 55vh;
     padding: 5vh 16px;
@@ -159,34 +253,48 @@ body {
     font-size: clamp(28px, 8.5vw, 56px);
   }
   .intro .i_tit .intro_top p {
-    font-size: clamp(14px, 3.5vw, 23px);
+    font-size: clamp(14px, 3.5vw, 25px);
   }
-  .intro .i_tit > .intro_bottom > span {
-    font-size: clamp(14px, 3.5vw, 23px);
+  .intro .i_tit > .intro_top > span {
+    font-size: clamp(14px, 3.5vw, 19px);
   }
 }
 @media screen and (max-width: 500px) {
   .header {
     height: 70%;
     min-height: auto;
-    padding: 4vh 12px;
+    flex-wrap: wrap;
+  }
+  .header .h_tit {
+    position: absolute;
+    top: 0;
+    text-align: left;
   }
   .header .h_tit > .tit_top > h1 {
     font-size: clamp(22px, 10vw, 45px);
     line-height: 1.1;
   }
   .header .h_tit > .tit_top > p {
-    font-size: clamp(12px, 4.5vw, 18px);
+    font-size: clamp(12px, 4.5vw, 17px);
+  }
+  .header .top_img img {
+    position: absolute;
+    top: 46%;
+    height: auto;
+    max-width: 100%;
   }
   .intro {
-    height: 70%;
+    height: 100%;
     min-height: auto;
     padding: 4vh 12px;
   }
   .intro .i_tit > .intro_top > h1 {
     font-size: clamp(22px, 10vw, 45px);
   }
-  .intro .i_tit > .intro_bottom > span {
+  .intro .i_tit > .intro_top > p {
+    font-size: clamp(12px, 4.5vw, 18px);
+  }
+  .intro .i_tit > .intro_top > span {
     font-size: clamp(12px, 4.5vw, 13px);
   }
   .edu {
