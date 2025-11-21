@@ -116,7 +116,7 @@ section .menu ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(http://picogram.co.kr/images/icon/lan_white.png);
+  background-image: url(./image&video/lang_white.png);
   background-repeat: no-repeat;
   color: #fff;
 }
@@ -298,7 +298,7 @@ section .menu ul li a {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background-image: url(http://picogram.co.kr/images/main/section02_background.jpg);
+  background-image: url(./image&video/section03_BG.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -410,7 +410,7 @@ section .menu ul li a {
   content: " ";
   width: 21px;
   height: 11px;
-  background: url(http://picogram.co.kr/images/icon/go_black.png);
+  background: url(./image&video/arrow_black.png);
   position: relative;
   display: inline-block;
   margin-left: 10px;
@@ -473,7 +473,7 @@ section .menu ul li a {
   content: "";
   width: 15px;
   height: 11px;
-  background: url(http://picogram.co.kr/images/icon/go_small.png);
+  background: url(./image&video/arrow_small.png);
   background-repeat: no-repeat;
   background-position: right center;
   position: relative;
@@ -510,8 +510,8 @@ section .menu ul li a {
 }
 .mcon1:hover > .mtxt span::after,
 .mcon2:hover > .mtxt span::after {
-  background: #9d1e34 url(http://picogram.co.kr/images/icon/go_small.png)
-    no-repeat top 8px right 7px / auto 6px;
+  background: #9d1e34 url(./image&video/arrow_small.png) no-repeat top 8px right
+    7px / auto 6px;
 }
 .mtxt h4 {
   color: #9d1e34;
@@ -538,8 +538,8 @@ section .menu ul li a {
   content: "";
   width: 26px;
   height: 26px;
-  background: #111 url(http://picogram.co.kr/images/icon/go_small.png) no-repeat
-    top 8px right 7px / auto 6px;
+  background: #111 url(./image&video/arrow_small.png) no-repeat top 8px right
+    7px / auto 6px;
   border-radius: 50%;
   color: #fff;
 }
@@ -689,8 +689,8 @@ footer .frow_site {
   right: 15px;
   width: 8px;
   height: 8px;
-  background: url("http://www.picogram.co.kr/images/footer_dropdown.png")
-    no-repeat center / contain;
+  background: url("./image&video/footer_dropdown.png") no-repeat center /
+    contain;
   transform: translateY(-50%) rotate(0deg);
   transition: transform 0.3s ease;
 }
