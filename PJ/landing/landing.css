@@ -73,7 +73,7 @@ body {
   height: 100%;
   display: flex;
   justify-content: center;
-  background: #d4edf4;
+  background: #eef9ff;
   opacity: 0;
   transform: translateY(50px);
   transition: transform 2s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 1s ease;
@@ -86,7 +86,7 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  gap: 130px;
+  gap: 100px;
 }
 .intro .i_tit > .i_main > .i_sns {
   padding-top: 20px;
@@ -101,6 +101,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 25px 0;
+  letter-spacing: -0.05em;
   border: 1px solid #000;
   border-radius: 30px;
   transition: 0.5s;
@@ -109,15 +110,34 @@ body {
   background: #15181b;
   color: #fff;
 }
+
 .intro.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
-.intro .i_tit .intro_top h1 {
+.intro .i_tit .intro_top > h1 {
   font-size: 70px;
 }
 .intro .i_tit .intro_top p {
   line-height: 15vh;
+  letter-spacing: -0.07em;
+}
+.intro .i_tit .intro_top span {
+  letter-spacing: -0.1em;
+}
+.intro .i_tit .intro_top .exp_com {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  padding-top: 70px;
+}
+.intro .i_tit .intro_top .exp_com h1 {
+  font-size: 50px;
+}
+.intro .i_tit .intro_top .exp_com span {
+  padding-top: -50px;
 }
 .edu {
   width: 100%;
@@ -127,19 +147,89 @@ body {
   text-align: center;
   justify-content: center;
   align-items: center;
+  background: #eef9ff;
 }
-.edu .e_tit {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 200px;
+.edu .e_left,
+.edu .e_right {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 1.2s ease, opacity 1s ease;
+}
+.edu.is-visible .e_left {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.edu.is-visible .e_right {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
 }
 .edu .e_tit .e_left h1 {
+  padding-bottom: 100px;
   font-size: 70px;
 }
 .edu .e_tit .e_right span {
   font-size: 25px;
   line-height: 10vh;
+}
+.skill {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background: #eef9ff;
+  margin: 0 auto;
+}
+.skill .s_intro {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 1.2s ease, opacity 1s ease;
+}
+.skill .s_intro p {
+  text-align: center;
+  color: #2428fc;
+  font-size: 40px;
+  padding-bottom: 70px;
+}
+.skill .s_intro h1 {
+  text-align: left;
+  font-size: 60px;
+  padding-bottom: 100px;
+}
+.skill .s_program {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: transform 1.2s ease, opacity 1s ease;
+}
+.skill.is-visible .s_intro {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.skill.is-visible .s_program {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.6s;
+}
+.skill .s_program ul {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
+}
+.skill .s_program ul span {
+  display: flex;
+  flex-wrap: wrap;
 }
 @media screen and (max-width: 1600px) {
   .header {
@@ -168,8 +258,8 @@ body {
     max-width: 70%;
   }
   .intro {
-    flex-wrap: wrap;
-    min-height: 65vh;
+    min-height: 100%;
+    height: auto;
     padding: 6vh 24px;
   }
   .header .h_tit > .tit_bottom > p {
@@ -205,6 +295,16 @@ body {
     top: 51%;
     height: auto;
     max-width: 70%;
+  }
+  .intro {
+    height: 140%;
+    min-height: auto;
+    padding: 4vh 12px;
+  }
+  .edu {
+    height: 100%;
+    min-height: auto;
+    padding: 4vh 12px;
   }
   .intro .i_tit .intro_top h1,
   .e_tit .e_left h1 {
@@ -258,6 +358,11 @@ body {
   .intro .i_tit > .intro_top > span {
     font-size: clamp(14px, 3.5vw, 19px);
   }
+  .edu {
+    height: 100%;
+    min-height: auto;
+    padding: 4vh 12px;
+  }
 }
 @media screen and (max-width: 500px) {
   .header {
@@ -284,7 +389,7 @@ body {
     max-width: 100%;
   }
   .intro {
-    height: 100%;
+    height: 130%;
     min-height: auto;
     padding: 4vh 12px;
   }
@@ -295,10 +400,10 @@ body {
     font-size: clamp(12px, 4.5vw, 18px);
   }
   .intro .i_tit > .intro_top > span {
-    font-size: clamp(12px, 4.5vw, 13px);
+    font-size: clamp(12px, 4.5vw, 14px);
   }
   .edu {
-    height: 70%;
+    height: 80%;
     min-height: auto;
     padding: 4vh 12px;
   }
